@@ -1,6 +1,6 @@
 
 
-#include <stan/math.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 TEST(MathFunctions, expInt) {
   using stan::math::exp;
