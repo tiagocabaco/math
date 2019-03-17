@@ -1,8 +1,6 @@
 
 
-
-
-#include <stan/math.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <vector>
 // Test that start of each row's values in NZE vector (w) is correctly
