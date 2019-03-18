@@ -1,6 +1,6 @@
 
 
-#include <stan/math/prim.hpp>
+#include <stan/math.hpp>
 #include <gtest/gtest.h>
 #include <vector>
 // Test that sparse and dense multiplication results is the same after
