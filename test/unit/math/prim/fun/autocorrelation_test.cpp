@@ -14,11 +14,13 @@
 #include <fstream>
 #include <vector>
 #include <stdexcept>
+#include <iostream>
+
 TEST(ProbAutocorrelation, test1) {
   // ar1.csv generated in R with
   //   > x[1] <- rnorm(1, 0, 1)
   //   > for (n in 2:1000) x[n] <- rnorm(1, 0.8 * x[n-1], 1)
-  std::fstream f("test/unit/math/prim/mat/fun/ar1.csv");
+  std::fstream f("test/unit/math/prim/fun/ar1.csv");
   size_t N = 1000;
   std::vector<double> y;
   for (size_t i = 0; i < N; ++i) {
@@ -31,8 +33,9 @@ TEST(ProbAutocorrelation, test1) {
   std::vector<double> ac;
   stan::math::autocorrelation(y, ac);
 
+  std::cout << "DEBUG ACF\n";
   EXPECT_EQ(1000U, ac.size());
-
+  std::cout << ac[0] << "\n";
   EXPECT_NEAR(1.00, ac[0], 0.001);
   EXPECT_NEAR(0.80, ac[1], 0.01);
   EXPECT_NEAR(0.64, ac[2], 0.01);
@@ -45,7 +48,7 @@ TEST(ProbAutocorrelation, test2) {
   // ar1.csv generated in R with
   //   > x[1] <- rnorm(1, 0, 1)
   //   > for (n in 2:1000) x[n] <- rnorm(1, 0.8 * x[n-1], 1)
-  std::fstream f("test/unit/math/prim/mat/fun/ar1.csv");
+  std::fstream f("test/unit/math/prim/fun/ar1.csv");
   size_t N = 1000;
   Eigen::VectorXd y(N);
   for (size_t i = 0; i < N; ++i) {
