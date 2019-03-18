@@ -1,7 +1,7 @@
 
 
 #include <gtest/gtest.h>
-#include <stan/math/prim.hpp>
+#include <stan/math.hpp>
 #include <test/unit/util.hpp>
 #include <iostream>
 #include <limits>
