@@ -1,6 +1,6 @@
 
 
-#include <stan/math/prim.hpp>
+#include <stan/math.hpp>
 #include <gtest/gtest.h>
 #include <vector>
 // Test that dense multiplication results is correct (CSR).
