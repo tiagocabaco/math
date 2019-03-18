@@ -1,8 +1,6 @@
-
-
-
-#include <stan/math.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 TEST(MathFunctions, logInt) {
   using stan::math::log;
   using std::log;
