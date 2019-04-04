@@ -1,14 +1,26 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_FACTOR_U_HPP
-#define STAN_MATH_PRIM_MAT_FUN_FACTOR_U_HPP
+#ifndef STAN_MATH_PRIM_FUN_FACTOR_U_HPP
+#define STAN_MATH_PRIM_FUN_FACTOR_U_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+
+
+
+
 
 #include <cmath>
 #include <cstddef>
 #include <limits>
 #include <stdexcept>
 #include <vector>
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {
@@ -43,7 +55,9 @@ void factor_U(const Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic>& U,
     position += pull;
     pull--;
     temp = U.row(i).tail(pull);
-    temp /= sqrt(acc.tail(pull) / acc(i));
+Eigen::Array<T, -1, 1> temp2 = sqrt(acc.tail(pull) / acc(i));
+temp /= temp2;
+    
     CPCs.segment(position, pull) = temp;
     acc.tail(pull) *= 1.0 - temp.square();
   }
