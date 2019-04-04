@@ -1,7 +1,11 @@
-#include <stan/math.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 // Test that sparse and dense multiplication results is the same after
 // plumbing through csr_extract_*.
 TEST(SparseStuff, csr_to_dense_matrix_two_route) {
