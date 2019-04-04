@@ -1,7 +1,11 @@
-#include <stan/math.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 // Test that start of each row's values in NZE vector (w) is correctly
 // extracted from a dense matrix in sparse format.
 TEST(SparseStuff, csr_extract_u_dense) {
