@@ -1,7 +1,11 @@
-#include <stan/math.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 // Test that dense multiplication results is correct (CSR).
 TEST(SparseStuff, csr_matrix_times_vector_dense_multiply) {
   stan::math::matrix_d m(2, 3);
