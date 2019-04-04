@@ -1,11 +1,16 @@
-#include <stan/math/prim/scal.hpp>
-#include <stan/math/rev/scal.hpp>
-#include <stan/math/rev/core.hpp>
-#include <stan/math/fwd/core.hpp>
-#include <stan/math/fwd/scal.hpp>
 
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
+
+
 
 using stan::math::fvar;
 using stan::math::var;
