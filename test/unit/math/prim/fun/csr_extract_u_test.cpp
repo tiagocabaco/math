@@ -1,5 +1,8 @@
 
-#include <stan/math/prim.hpp>
+
+
+
+#include <stan/math.hpp>
 #include <gtest/gtest.h>
 
 #include <vector>
