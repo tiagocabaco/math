@@ -1,9 +1,13 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_POSITIVE_ORDERED_CONSTRAIN_HPP
-#define STAN_MATH_PRIM_MAT_FUN_POSITIVE_ORDERED_CONSTRAIN_HPP
+#ifndef STAN_MATH_PRIM_FUN_POSITIVE_ORDERED_CONSTRAIN_HPP
+#define STAN_MATH_PRIM_FUN_POSITIVE_ORDERED_CONSTRAIN_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+
 #include <cmath>
+
+
+
 
 namespace stan {
 namespace math {

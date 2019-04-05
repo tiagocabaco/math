@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(MathFunctions, Phi_approx) {
   EXPECT_EQ(0.5, stan::math::Phi_approx(0.0));
   EXPECT_NEAR(stan::math::Phi(0.9), stan::math::Phi_approx(0.9), 0.00014);

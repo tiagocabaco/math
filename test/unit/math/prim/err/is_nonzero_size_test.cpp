@@ -1,9 +1,15 @@
-#include <stan/math/prim/arr.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
+
 #include <limits>
 #include <vector>
-
 TEST(ErrorHandlingMatrix, IsNonzeroSizeMatrix) {
   using stan::math::is_nonzero_size;
 

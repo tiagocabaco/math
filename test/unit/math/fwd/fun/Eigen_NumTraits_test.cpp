@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixEigenNumTraits, insertion_operator) {
   using stan::math::fvar;
   std::stringstream output;

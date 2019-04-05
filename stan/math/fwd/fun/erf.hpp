@@ -1,11 +1,17 @@
-#ifndef STAN_MATH_FWD_SCAL_FUN_ERF_HPP
-#define STAN_MATH_FWD_SCAL_FUN_ERF_HPP
+#ifndef STAN_MATH_FWD_FUN_ERF_HPP
+#define STAN_MATH_FWD_FUN_ERF_HPP
 
 #include <stan/math/fwd/core.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/erf.hpp>
-#include <stan/math/prim/scal/fun/square.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/erf.hpp>
+#include <stan/math/prim/fun/square.hpp>
+
 #include <cmath>
+
+
+
+
+
 
 namespace stan {
 namespace math {

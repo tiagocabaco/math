@@ -1,8 +1,12 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/round.hpp>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
-
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 TEST(AgradFwdRound, Fvar) {
   using stan::math::fvar;
   using stan::math::round;

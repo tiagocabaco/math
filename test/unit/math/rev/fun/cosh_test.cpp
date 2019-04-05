@@ -1,10 +1,17 @@
-#include <stan/math/rev/scal.hpp>
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/util.hpp>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
+#include <test/unit/math/rev/fun/nan_util.hpp>
+
 #include <cmath>
 #include <limits>
-
 TEST(AgradRev, cosh_var) {
   AVAR a = 0.68;
   AVAR f = cosh(a);

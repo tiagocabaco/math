@@ -1,14 +1,25 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <boost/numeric/odeint.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/prim/arr/functor/harmonic_oscillator.hpp>
+#include <test/unit/math/prim/functor/harmonic_oscillator.hpp>
 #include <test/unit/util.hpp>
+
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include <limits>
 #include <string>
-
 template <typename F>
 void sho_value_test(F harm_osc, std::vector<double>& y0, double t0,
                     std::vector<double>& ts, std::vector<double>& theta,

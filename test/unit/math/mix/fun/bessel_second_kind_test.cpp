@@ -1,8 +1,12 @@
-#include <stan/math/mix/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/util.hpp>
-#include <test/unit/math/mix/scal/fun/nan_util.hpp>
 
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/mix/fun/nan_util.hpp>
 TEST(AgradFwdBesselSecondKind, FvarVar_1stDeriv) {
   using stan::math::bessel_second_kind;
   using stan::math::fvar;

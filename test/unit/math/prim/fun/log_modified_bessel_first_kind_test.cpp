@@ -1,9 +1,15 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <boost/math/special_functions/bessel.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(MathFunctions, log_modified_bessel_first_kind) {
   using stan::math::log_modified_bessel_first_kind;
   using std::log;

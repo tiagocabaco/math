@@ -1,9 +1,15 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <stdexcept>
-
 TEST(MathFunctions, erfc) {
   using stan::math::erfc;
   EXPECT_FLOAT_EQ(1.983790458590775, erfc(-1.7));

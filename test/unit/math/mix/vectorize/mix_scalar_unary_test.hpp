@@ -1,10 +1,14 @@
-#ifndef TEST_UNIT_MATH_MIX_MAT_VECTORIZE_MIX_SCALAR_UNARY_TEST_HPP
-#define TEST_UNIT_MATH_MIX_MAT_VECTORIZE_MIX_SCALAR_UNARY_TEST_HPP
+#ifndef TEST_UNIT_MATH_MIX_VECTORIZE_MIX_SCALAR_UNARY_TEST_HPP
+#define TEST_UNIT_MATH_MIX_VECTORIZE_MIX_SCALAR_UNARY_TEST_HPP
 
-#include <stan/math/mix/mat.hpp>
-#include <test/unit/math/prim/mat/vectorize/expect_types.hpp>
-#include <test/unit/math/mix/mat/vectorize/expect_mix_values.hpp>
-#include <test/unit/math/mix/mat/vectorize/expect_mix_errors.hpp>
+#include <stan/math/mix.hpp>
+#include <test/unit/math/prim/vectorize/expect_types.hpp>
+#include <test/unit/math/mix/vectorize/expect_mix_values.hpp>
+#include <test/unit/math/mix/vectorize/expect_mix_errors.hpp>
+
+
+
+
 
 template <typename T>
 class mix_scalar_unary_test : public ::testing::Test {};

@@ -1,8 +1,13 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/fpclassify.hpp>
-#include <limits>
 
+#include <limits>
 TEST(AgradFwd, primitiveValue) {
   using stan::math::fvar;
   using stan::math::primitive_value;

@@ -1,8 +1,13 @@
-#include <stan/math/fwd/mat.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
+
 #include <stdexcept>
 #include <vector>
-
 template <typename T>
 void test_rank() {
   using stan::math::rank;

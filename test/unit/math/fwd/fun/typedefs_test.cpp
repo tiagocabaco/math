@@ -1,2 +1,4 @@
-#include <stan/math/fwd/mat.hpp>
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
+

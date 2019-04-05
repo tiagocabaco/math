@@ -1,8 +1,13 @@
-#include <stan/math/fwd/mat.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <algorithm>
-
 using stan::math::fvar;
 TEST(AgradFwdMatrixMax, fd_vector) {
   using stan::math::max;

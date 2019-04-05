@@ -1,7 +1,10 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-
 TEST(MathMatrix, cholesky_decompose) {
   stan::math::matrix_d m0;
   stan::math::matrix_d m1(2, 3);

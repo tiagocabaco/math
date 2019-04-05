@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_PRIM_SCAL_META_MAX_SIZE_HPP
-#define STAN_MATH_PRIM_SCAL_META_MAX_SIZE_HPP
+#ifndef STAN_MATH_PRIM_META_MAX_SIZE_HPP
+#define STAN_MATH_PRIM_META_MAX_SIZE_HPP
 
-#include <stan/math/prim/scal/meta/length.hpp>
+#include <stan/math/prim/meta/length.hpp>
+
 
 namespace stan {
 

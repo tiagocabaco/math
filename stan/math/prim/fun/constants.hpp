@@ -1,8 +1,11 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_CONSTANTS_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_CONSTANTS_HPP
+#ifndef STAN_MATH_PRIM_FUN_CONSTANTS_HPP
+#define STAN_MATH_PRIM_FUN_CONSTANTS_HPP
 
 #include <boost/math/constants/constants.hpp>
+
 #include <limits>
+
+
 
 namespace stan {
 namespace math {

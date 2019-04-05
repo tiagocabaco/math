@@ -1,7 +1,11 @@
+
+
+
+
+
 #include <cmath>
 #include <vector>
 #include <iomanip>
-
 void test_hess_eq(Eigen::Matrix<double, -1, -1> hess_1,
                   Eigen::Matrix<double, -1, -1> hess_2) {
   for (int i = 0; i < hess_1.size(); ++i) {

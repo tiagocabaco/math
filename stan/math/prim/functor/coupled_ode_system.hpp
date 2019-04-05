@@ -1,9 +1,14 @@
-#ifndef STAN_MATH_PRIM_ARR_FUNCTOR_COUPLED_ODE_SYSTEM_HPP
-#define STAN_MATH_PRIM_ARR_FUNCTOR_COUPLED_ODE_SYSTEM_HPP
+#ifndef STAN_MATH_PRIM_FUNCTOR_COUPLED_ODE_SYSTEM_HPP
+#define STAN_MATH_PRIM_FUNCTOR_COUPLED_ODE_SYSTEM_HPP
 
-#include <stan/math/prim/scal/err/check_size_match.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+
+
 #include <ostream>
 #include <vector>
+
+
+
 
 namespace stan {
 namespace math {

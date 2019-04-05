@@ -1,8 +1,11 @@
-#ifndef TEST_UNIT_MATH_REV_MAT_VECTORIZE_BUILD_REV_VECTOR_HPP
-#define TEST_UNIT_MATH_REV_MAT_VECTORIZE_BUILD_REV_VECTOR_HPP
+#ifndef TEST_UNIT_MATH_REV_VECTORIZE_BUILD_REV_VECTOR_HPP
+#define TEST_UNIT_MATH_REV_VECTORIZE_BUILD_REV_VECTOR_HPP
 
-#include <stan/math/rev/core/var.hpp>
+#include <stan/math/rev.hpp>
+
 #include <vector>
+
+
 
 template <typename F>
 static inline std::vector<stan::math::var> build_rev_vector() {

@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_MODIFIED_BESSEL_SECOND_KIND_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_MODIFIED_BESSEL_SECOND_KIND_HPP
+#ifndef STAN_MATH_PRIM_FUN_MODIFIED_BESSEL_SECOND_KIND_HPP
+#define STAN_MATH_PRIM_FUN_MODIFIED_BESSEL_SECOND_KIND_HPP
 
 #include <boost/math/special_functions/bessel.hpp>
+
 
 namespace stan {
 namespace math {

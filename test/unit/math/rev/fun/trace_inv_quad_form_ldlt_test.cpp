@@ -1,9 +1,15 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
-#include <vector>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <vector>
 TEST(AgradRevMatrix, trace_inv_quad_form_ldlt_mat) {
   using stan::math::matrix_d;
   using stan::math::matrix_v;

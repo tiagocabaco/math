@@ -1,7 +1,11 @@
-#include <stan/math/mix/arr.hpp>
-#include <gtest/gtest.h>
-#include <sstream>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+
+#include <sstream>
 TEST(AgradFwdFvar, insertion_operator) {
   using stan::math::fvar;
   using stan::math::var;

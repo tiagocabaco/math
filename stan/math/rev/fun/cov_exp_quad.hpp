@@ -1,19 +1,35 @@
-#ifndef STAN_MATH_REV_MAT_FUN_COV_EXP_QUAD_HPP
-#define STAN_MATH_REV_MAT_FUN_COV_EXP_QUAD_HPP
+#ifndef STAN_MATH_REV_FUN_COV_EXP_QUAD_HPP
+#define STAN_MATH_REV_FUN_COV_EXP_QUAD_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/rev/scal/fun/value_of.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/fun/square.hpp>
-#include <stan/math/prim/scal/fun/squared_distance.hpp>
-#include <stan/math/prim/scal/fun/exp.hpp>
-#include <stan/math/prim/scal/meta/scalar_type.hpp>
+#include <stan/math/rev/fun/value_of.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/fun/square.hpp>
+#include <stan/math/prim/fun/squared_distance.hpp>
+#include <stan/math/prim/fun/exp.hpp>
+#include <stan/math/prim/meta/scalar_type.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
+
 #include <type_traits>
 #include <vector>
 #include <cmath>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,7 +1,11 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <string>
 
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+
+#include <string>
 const char* function_ = "function";
 const char* y_name_ = "y";
 const char* msg1_ = "error_message ";

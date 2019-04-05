@@ -1,9 +1,13 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_FUN_SORT_TEST_UTIL_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_FUN_SORT_TEST_UTIL_HPP
+#ifndef TEST_UNIT_MATH_PRIM_FUN_SORT_TEST_UTIL_HPP
+#define TEST_UNIT_MATH_PRIM_FUN_SORT_TEST_UTIL_HPP
 
-#include <stan/math/prim/mat.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
+
+
+
 
 template <typename C>
 void test_sort_asc_throws() {

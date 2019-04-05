@@ -1,15 +1,26 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_GRAD_REG_INC_GAMMA_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_GRAD_REG_INC_GAMMA_HPP
+#ifndef STAN_MATH_PRIM_FUN_GRAD_REG_INC_GAMMA_HPP
+#define STAN_MATH_PRIM_FUN_GRAD_REG_INC_GAMMA_HPP
 
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/scal/fun/gamma_p.hpp>
-#include <stan/math/prim/scal/fun/gamma_q.hpp>
-#include <stan/math/prim/scal/fun/is_inf.hpp>
-#include <stan/math/prim/scal/fun/is_nan.hpp>
-#include <stan/math/prim/scal/fun/square.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/fun/gamma_p.hpp>
+#include <stan/math/prim/fun/gamma_q.hpp>
+#include <stan/math/prim/fun/is_inf.hpp>
+#include <stan/math/prim/fun/is_nan.hpp>
+#include <stan/math/prim/fun/square.hpp>
+
+
 #include <cmath>
 #include <limits>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

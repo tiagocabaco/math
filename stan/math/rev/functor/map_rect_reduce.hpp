@@ -1,13 +1,20 @@
-#ifndef STAN_MATH_REV_MAT_FUNCTOR_MAP_RECT_REDUCE_HPP
-#define STAN_MATH_REV_MAT_FUNCTOR_MAP_RECT_REDUCE_HPP
+#ifndef STAN_MATH_REV_FUNCTOR_MAP_RECT_REDUCE_HPP
+#define STAN_MATH_REV_FUNCTOR_MAP_RECT_REDUCE_HPP
 
-#include <stan/math/prim/mat/functor/map_rect_reduce.hpp>
-#include <stan/math/prim/mat/fun/typedefs.hpp>
+#include <stan/math/prim/functor/map_rect_reduce.hpp>
+#include <stan/math/prim/fun/typedefs.hpp>
 #include <stan/math/rev/core/var.hpp>
-#include <stan/math/rev/mat/fun/typedefs.hpp>
-#include <stan/math/rev/mat/fun/to_var.hpp>
+#include <stan/math/rev/fun/typedefs.hpp>
+#include <stan/math/rev/fun/to_var.hpp>
 
 #include <vector>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

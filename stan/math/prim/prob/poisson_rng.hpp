@@ -1,15 +1,24 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_POISSON_RNG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_POISSON_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_POISSON_RNG_HPP
+#define STAN_MATH_PRIM_PROB_POISSON_RNG_HPP
 
-#include <stan/math/prim/scal/err/check_less.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <stan/math/prim/scal/meta/length.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
-#include <stan/math/prim/scal/meta/VectorBuilder.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
+#include <stan/math/prim/err/check_less.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/meta/length.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
+#include <stan/math/prim/meta/VectorBuilder.hpp>
+#include <stan/math/prim/fun/constants.hpp>
 #include <boost/random/poisson_distribution.hpp>
 #include <boost/random/variate_generator.hpp>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

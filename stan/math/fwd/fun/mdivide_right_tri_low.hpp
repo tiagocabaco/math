@@ -1,17 +1,29 @@
-#ifndef STAN_MATH_FWD_MAT_FUN_MDIVIDE_RIGHT_TRI_LOW_HPP
-#define STAN_MATH_FWD_MAT_FUN_MDIVIDE_RIGHT_TRI_LOW_HPP
+#ifndef STAN_MATH_FWD_FUN_MDIVIDE_RIGHT_TRI_LOW_HPP
+#define STAN_MATH_FWD_FUN_MDIVIDE_RIGHT_TRI_LOW_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/mdivide_right.hpp>
-#include <stan/math/prim/mat/fun/typedefs.hpp>
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/fwd/mat/fun/typedefs.hpp>
-#include <stan/math/fwd/mat/fun/to_fvar.hpp>
-#include <stan/math/fwd/mat/fun/multiply.hpp>
-#include <stan/math/fwd/mat/fun/inverse.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/mdivide_right.hpp>
+#include <stan/math/prim/fun/typedefs.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/fwd/fun/typedefs.hpp>
+#include <stan/math/fwd/fun/to_fvar.hpp>
+#include <stan/math/fwd/fun/multiply.hpp>
+#include <stan/math/fwd/fun/inverse.hpp>
 #include <stan/math/fwd/core.hpp>
+
 #include <vector>
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

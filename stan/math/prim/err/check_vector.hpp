@@ -1,11 +1,18 @@
-#ifndef STAN_MATH_PRIM_MAT_ERR_CHECK_VECTOR_HPP
-#define STAN_MATH_PRIM_MAT_ERR_CHECK_VECTOR_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_VECTOR_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_VECTOR_HPP
 
-#include <stan/math/prim/scal/meta/scalar_type.hpp>
-#include <stan/math/prim/scal/err/invalid_argument.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/meta/scalar_type.hpp>
+#include <stan/math/prim/err/invalid_argument.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+
+
 #include <sstream>
 #include <string>
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(MathFunctions, inv_sqrt) {
   double y = 4.0;
   EXPECT_FLOAT_EQ(1 / 2.0, stan::math::inv_sqrt(y));

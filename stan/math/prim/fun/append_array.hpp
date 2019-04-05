@@ -1,14 +1,23 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_APPEND_ARRAY_HPP
-#define STAN_MATH_PRIM_MAT_FUN_APPEND_ARRAY_HPP
+#ifndef STAN_MATH_PRIM_FUN_APPEND_ARRAY_HPP
+#define STAN_MATH_PRIM_FUN_APPEND_ARRAY_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/dims.hpp>
-#include <stan/math/prim/mat/fun/resize.hpp>
-#include <stan/math/prim/mat/fun/assign.hpp>
-#include <stan/math/prim/mat/meta/append_return_type.hpp>
-#include <stan/math/prim/arr/err/check_matching_sizes.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/dims.hpp>
+#include <stan/math/prim/fun/resize.hpp>
+#include <stan/math/prim/fun/assign.hpp>
+#include <stan/math/prim/meta/append_return_type.hpp>
+#include <stan/math/prim/err/check_matching_sizes.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+
 #include <vector>
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

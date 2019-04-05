@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(MathFunctions, Phi) {
   EXPECT_EQ(0.5 + 0.5 * stan::math::erf(0.0), stan::math::Phi(0.0));
   EXPECT_FLOAT_EQ(0.5 + 0.5 * stan::math::erf(0.9 / std::sqrt(2.0)),

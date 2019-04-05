@@ -1,11 +1,13 @@
+
+
+
+
+
+
 #include <stan/math.hpp>
-#include <stan/math/rev/core.hpp>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <stan/math/rev/mat/functor/idas_forward_system.hpp>
-#include <stan/math/rev/mat/functor/idas_integrator.hpp>
-
+#include <stan/math/rev.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
 #include <nvector/nvector_serial.h>
-
 #include <test/unit/util.hpp>
 #include <gtest/gtest.h>
 
@@ -16,6 +18,18 @@
 #include <fstream>
 #include <vector>
 #include <limits>
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct chemical_kinetics {
   template <typename T0, typename TYY, typename TYP, typename TPAR>

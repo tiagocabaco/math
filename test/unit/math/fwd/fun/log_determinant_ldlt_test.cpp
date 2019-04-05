@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixLogDeterminantLDLT, fd) {
   using stan::math::fvar;
   using stan::math::log_determinant_ldlt;

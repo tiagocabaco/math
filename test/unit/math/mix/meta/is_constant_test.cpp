@@ -1,6 +1,8 @@
-#include <stan/math/mix/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
 TEST(MetaTraits, isConstant) {
   using stan::is_constant;
   using stan::math::fvar;

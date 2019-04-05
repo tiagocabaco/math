@@ -1,8 +1,13 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <string>
-
 TEST(ErrorHandlingMatrix, checkSymmetric) {
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y;
 

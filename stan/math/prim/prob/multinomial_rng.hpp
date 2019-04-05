@@ -1,18 +1,31 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_MULTINOMIAL_RNG_HPP
-#define STAN_MATH_PRIM_MAT_PROB_MULTINOMIAL_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_MULTINOMIAL_RNG_HPP
+#define STAN_MATH_PRIM_PROB_MULTINOMIAL_RNG_HPP
 
-#include <stan/math/prim/mat/err/check_simplex.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/err/check_nonnegative.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/fun/multiply_log.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/prob/binomial_rng.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
+#include <stan/math/prim/err/check_simplex.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/check_nonnegative.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/fun/multiply_log.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/prob/binomial_rng.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
 #include <boost/math/special_functions/gamma.hpp>
 #include <boost/random/uniform_01.hpp>
 #include <boost/random/variate_generator.hpp>
+
 #include <vector>
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

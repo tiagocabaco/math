@@ -1,6 +1,8 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(ProbInternalMath, grad_reg_inc_beta_fd) {
   using stan::math::digamma;
   using stan::math::exp;

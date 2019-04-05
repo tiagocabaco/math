@@ -1,6 +1,8 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
 TEST(MetaTraits, partials_type) {
   using stan::math::var;
   using stan::partials_type;

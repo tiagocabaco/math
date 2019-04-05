@@ -1,8 +1,13 @@
-#include <stan/math/prim/mat.hpp>
-#include <test/unit/math/prim/mat/fun/expect_matrix_eq.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+
+#include <stan/math/prim.hpp>
+#include <test/unit/math/prim/fun/expect_matrix_eq.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 using Eigen::Dynamic;
 using Eigen::Matrix;
 using stan::math::to_array_1d;

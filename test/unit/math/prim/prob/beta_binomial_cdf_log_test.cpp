@@ -1,7 +1,11 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
-#include <cmath>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <cmath>
 TEST(ProbBetaBinomial, cdf_log_matches_lcdf) {
   int n = 2;
   int N = 6;

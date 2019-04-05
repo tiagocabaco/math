@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixEltDivide, fd_vec_vv) {
   using stan::math::elt_divide;
   using stan::math::vector_fd;

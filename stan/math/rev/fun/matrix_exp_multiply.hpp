@@ -1,14 +1,22 @@
-#ifndef STAN_MATH_REV_MAT_FUN_MATRIX_EXP_MULTIPLY_HPP
-#define STAN_MATH_REV_MAT_FUN_MATRIX_EXP_MULTIPLY_HPP
+#ifndef STAN_MATH_REV_FUN_MATRIX_EXP_MULTIPLY_HPP
+#define STAN_MATH_REV_FUN_MATRIX_EXP_MULTIPLY_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/arr/err/check_nonzero_size.hpp>
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/fun/matrix_exp.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/rev/mat/fun/multiply.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_nonzero_size.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/fun/matrix_exp.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/rev/fun/multiply.hpp>
 #include <stan/math/rev/core.hpp>
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,7 +1,11 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 using stan::math::check_3F2_converges;
 
 TEST(passesOnConvergentArgs, Check3F2Converges) {

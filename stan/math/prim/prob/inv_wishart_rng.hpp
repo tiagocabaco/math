@@ -1,11 +1,16 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_INV_WISHART_RNG_HPP
-#define STAN_MATH_PRIM_MAT_PROB_INV_WISHART_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_INV_WISHART_RNG_HPP
+#define STAN_MATH_PRIM_PROB_INV_WISHART_RNG_HPP
 
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/fun/inverse_spd.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
-#include <stan/math/prim/mat/prob/wishart_rng.hpp>
-#include <stan/math/prim/scal/err/check_greater.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/fun/inverse_spd.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+#include <stan/math/prim/prob/wishart_rng.hpp>
+#include <stan/math/prim/err/check_greater.hpp>
+
+
+
+
+
 
 namespace stan {
 namespace math {

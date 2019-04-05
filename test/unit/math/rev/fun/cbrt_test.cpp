@@ -1,8 +1,12 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
 
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
 TEST(AgradRev, cbrt) {
   AVAR a = 27.0;
   AVAR f = cbrt(a);

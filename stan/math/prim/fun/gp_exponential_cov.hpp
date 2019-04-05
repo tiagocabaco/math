@@ -1,16 +1,27 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_GP_EXPONENTIAL_COV_HPP
-#define STAN_MATH_PRIM_MAT_FUN_GP_EXPONENTIAL_COV_HPP
+#ifndef STAN_MATH_PRIM_FUN_GP_EXPONENTIAL_COV_HPP
+#define STAN_MATH_PRIM_FUN_GP_EXPONENTIAL_COV_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/distance.hpp>
-#include <stan/math/prim/mat/fun/divide_columns.hpp>
-#include <stan/math/prim/scal/err/check_positive_finite.hpp>
-#include <stan/math/prim/scal/fun/square.hpp>
-#include <stan/math/prim/scal/fun/distance.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/meta/size_of.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/distance.hpp>
+#include <stan/math/prim/fun/divide_columns.hpp>
+#include <stan/math/prim/err/check_positive_finite.hpp>
+#include <stan/math/prim/fun/square.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/meta/size_of.hpp>
+
+
 #include <cmath>
 #include <vector>
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

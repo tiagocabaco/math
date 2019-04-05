@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbOrderedProbit, log_matches_lpmf) {
   int K = 5;
   Eigen::Matrix<double, Eigen::Dynamic, 1> c(K - 1);

@@ -1,6 +1,8 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
 TEST(AgradMixMatrixCols, vector_fv) {
   using stan::math::cols;
   using stan::math::fvar;

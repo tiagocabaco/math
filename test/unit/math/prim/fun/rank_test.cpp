@@ -1,7 +1,11 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 template <typename T>
 void test_rank() {
   using stan::math::rank;

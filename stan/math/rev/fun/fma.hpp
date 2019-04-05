@@ -1,12 +1,19 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_FMA_HPP
-#define STAN_MATH_REV_SCAL_FUN_FMA_HPP
+#ifndef STAN_MATH_REV_FUN_FMA_HPP
+#define STAN_MATH_REV_FUN_FMA_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/fma.hpp>
-#include <stan/math/prim/scal/fun/is_nan.hpp>
-#include <stan/math/prim/scal/meta/likely.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/fma.hpp>
+#include <stan/math/prim/fun/is_nan.hpp>
+#include <stan/math/prim/meta/likely.hpp>
+
 #include <limits>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

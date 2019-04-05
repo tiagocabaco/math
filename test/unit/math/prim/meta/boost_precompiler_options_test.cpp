@@ -1,5 +1,6 @@
-#include <gtest/gtest.h>
 
+
+#include <gtest/gtest.h>
 TEST(BoostPrecompilerOption, BoostUseTr1Def) {
   bool BOOST_RESULT_OF_USE_TR1_is_defined = false;
 

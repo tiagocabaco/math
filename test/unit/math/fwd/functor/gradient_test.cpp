@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <stdexcept>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <stdexcept>
 using Eigen::Dynamic;
 using Eigen::Matrix;
 

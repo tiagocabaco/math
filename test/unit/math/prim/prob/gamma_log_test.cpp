@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbGamma, log_matches_lpdf) {
   double y = 0.8;
   double alpha = 1.1;

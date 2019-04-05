@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbPoissonLog, log_matches_lpmf) {
   int y = 3;
   double alpha = -0.3;

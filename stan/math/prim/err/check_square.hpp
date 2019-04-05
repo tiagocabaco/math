@@ -1,9 +1,13 @@
-#ifndef STAN_MATH_PRIM_MAT_ERR_CHECK_SQUARE_HPP
-#define STAN_MATH_PRIM_MAT_ERR_CHECK_SQUARE_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_SQUARE_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_SQUARE_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+
 #include <sstream>
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,12 +1,19 @@
-#ifndef STAN_MATH_FWD_MAT_FUN_DIVIDE_HPP
-#define STAN_MATH_FWD_MAT_FUN_DIVIDE_HPP
+#ifndef STAN_MATH_FWD_FUN_DIVIDE_HPP
+#define STAN_MATH_FWD_FUN_DIVIDE_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
 #include <stan/math/fwd/core.hpp>
-#include <stan/math/fwd/mat/fun/to_fvar.hpp>
-#include <stan/math/fwd/mat/fun/typedefs.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
+#include <stan/math/fwd/fun/to_fvar.hpp>
+#include <stan/math/fwd/fun/typedefs.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+
 #include <vector>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

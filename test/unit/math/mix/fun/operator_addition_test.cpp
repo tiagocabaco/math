@@ -1,11 +1,14 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
+
+
+
 using stan::math::fvar;
 TEST(AgradMixMatrixOperatorAddition, fv_scalar_matrix_1stDeriv) {
   using stan::math::add;
   using stan::math::matrix_fv;
 
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
   matrix_fv v(2, 2);
   v << 1, 2, 3, 4;
   v(0, 0).d_ = 1.0;

@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixDeterminant, matrix_fd) {
   using stan::math::fvar;
   using stan::math::matrix_d;

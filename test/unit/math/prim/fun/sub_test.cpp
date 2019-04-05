@@ -1,9 +1,15 @@
-#include <stan/math/prim/arr.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <vector>
-
 TEST(MathFunctions, sub) {
   std::vector<double> x(3), y(3), result(3);
 

@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(ProbDistributionsOrdLog, fv_fv) {
   using stan::math::fvar;
   using stan::math::ordered_logistic_lpmf;

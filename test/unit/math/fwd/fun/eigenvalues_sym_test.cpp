@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixEigenvaluesSym, exceptions_matrix_fd) {
   stan::math::matrix_fd m0;
   stan::math::matrix_fd m1(2, 3);

@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <vector>
-
 TEST(AgradMixMath, fv_cov_exp_quad1) {
   using stan::math::cov_exp_quad;
   using stan::math::fvar;

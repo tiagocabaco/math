@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_WIENER_LOG_HPP
-#define STAN_MATH_PRIM_MAT_PROB_WIENER_LOG_HPP
+#ifndef STAN_MATH_PRIM_PROB_WIENER_LOG_HPP
+#define STAN_MATH_PRIM_PROB_WIENER_LOG_HPP
 
-#include <stan/math/prim/scal/prob/wiener_lpdf.hpp>
+#include <stan/math/prim/prob/wiener_lpdf.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
 
 namespace stan {
 namespace math {

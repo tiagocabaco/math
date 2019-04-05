@@ -1,6 +1,8 @@
-#include <stan/math/mix/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdLogInvLogitDiff, FvarVar) {
   using stan::math::fvar;
   using stan::math::log_inv_logit_diff;

@@ -1,7 +1,11 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(AgradPartialsVari, OperandsAndPartialsUniMixMat) {
   using stan::math::fvar;
   using stan::math::operands_and_partials;

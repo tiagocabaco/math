@@ -1,9 +1,15 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
-#include <vector>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <vector>
 TEST(AgradRev, Phi) {
   using stan::math::var;
   using std::exp;

@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(AgradFwdMatrixSize, fvar_double) {
   using Eigen::Dynamic;
   using Eigen::Matrix;

@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_MODIFIED_BESSEL_FIRST_KIND_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_MODIFIED_BESSEL_FIRST_KIND_HPP
+#ifndef STAN_MATH_PRIM_FUN_MODIFIED_BESSEL_FIRST_KIND_HPP
+#define STAN_MATH_PRIM_FUN_MODIFIED_BESSEL_FIRST_KIND_HPP
 
 #include <boost/math/special_functions/bessel.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+
+
 
 namespace stan {
 namespace math {

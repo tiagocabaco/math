@@ -1,8 +1,13 @@
-#include <stan/math/fwd/mat.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
+
 #include <stdexcept>
 #include <vector>
-
 using stan::math::fvar;
 
 TEST(AgradFwdMatrixTail, TailVector1_fd) {

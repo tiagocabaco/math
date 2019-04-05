@@ -1,9 +1,15 @@
+
+
+
+
+
+
 #include <gtest/gtest.h>
-#include <stan/math/prim/mat.hpp>
+#include <stan/math/prim.hpp>
+
 #include <limits>
 #include <string>
 #include <vector>
-
 TEST(MathPrimMat, zero_sizes) {
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> mat(0, 0);
   Eigen::Matrix<double, Eigen::Dynamic, 1> to_add1(0);

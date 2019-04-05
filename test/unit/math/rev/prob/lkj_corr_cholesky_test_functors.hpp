@@ -1,6 +1,9 @@
-#include <stan/math/rev/mat.hpp>
-#include <vector>
 
+
+
+#include <stan/math/rev.hpp>
+
+#include <vector>
 namespace stan {
 
 namespace math {

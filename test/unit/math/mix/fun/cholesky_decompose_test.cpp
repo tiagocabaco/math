@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <vector>
 
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+
+#include <vector>
 struct chol_functor {
   int i, j, K;
   chol_functor(int i_, int j_, int K_) : i(i_), j(j_), K(K_) {}

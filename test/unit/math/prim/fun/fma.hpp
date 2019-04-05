@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(MathFunctions, fma_double) {
   using stan::math::fma;
   EXPECT_FLOAT_EQ(1.0, fma(3.0, 2.0, -5));

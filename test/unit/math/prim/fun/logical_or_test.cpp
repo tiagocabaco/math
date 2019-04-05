@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(MathFunctions, logical_or) {
   using stan::math::logical_or;
   EXPECT_TRUE(logical_or(1, 0));

@@ -1,10 +1,17 @@
-#include <stan/math/fwd/mat.hpp>
+
+
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
+
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
-
 TEST(AgradFwdMatrixStanPrint, fvar_double) {
   using Eigen::Dynamic;
   using Eigen::Matrix;

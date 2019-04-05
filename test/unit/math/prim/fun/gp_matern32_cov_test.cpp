@@ -1,12 +1,19 @@
+
+
+
+
+
+
+
+
+
 #include <gtest/gtest.h>
-#include <stan/math/prim/mat.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/scal/meta/size_of.hpp>
+#include <stan/math/prim.hpp>
+
 #include <cmath>
 #include <limits>
 #include <string>
 #include <vector>
-
 template <typename T_x, typename T_s, typename T_l>
 std::string pull_msg(std::vector<T_x> x, T_s sigma, T_l l) {
   std::string message;

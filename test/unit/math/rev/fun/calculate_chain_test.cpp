@@ -1,2 +1,4 @@
-#include <stan/math/rev/scal.hpp>
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
+

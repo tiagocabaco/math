@@ -1,8 +1,13 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-#include <vector>
 
+#include <vector>
 TEST(checkConsistentSizesMvt, checkConsistentSizesMvt) {
   using stan::math::check_consistent_sizes_mvt;
 

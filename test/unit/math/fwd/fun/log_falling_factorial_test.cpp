@@ -1,8 +1,12 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/digamma.hpp>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
-
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 TEST(AgradFwdLogFallingFactorial, Fvar) {
   using boost::math::digamma;
   using stan::math::fvar;

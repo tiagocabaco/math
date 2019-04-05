@@ -1,9 +1,15 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
-#include <limits>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <limits>
 TEST(AgradRev, log_a) {
   AVAR a(5.0);
   AVAR f = log(a);

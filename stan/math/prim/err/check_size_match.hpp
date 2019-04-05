@@ -1,11 +1,18 @@
-#ifndef STAN_MATH_PRIM_SCAL_ERR_CHECK_SIZE_MATCH_HPP
-#define STAN_MATH_PRIM_SCAL_ERR_CHECK_SIZE_MATCH_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_SIZE_MATCH_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_SIZE_MATCH_HPP
 
 #include <boost/type_traits/common_type.hpp>
-#include <stan/math/prim/scal/err/invalid_argument.hpp>
-#include <stan/math/prim/scal/meta/likely.hpp>
+#include <stan/math/prim/err/invalid_argument.hpp>
+#include <stan/math/prim/meta/likely.hpp>
+
+
 #include <sstream>
 #include <string>
+
+
+
+
+
 
 namespace stan {
 namespace math {

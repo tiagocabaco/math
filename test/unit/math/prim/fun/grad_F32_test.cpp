@@ -1,7 +1,11 @@
-#include <gtest/gtest.h>
-#include <stan/math/prim/scal/fun/grad_F32.hpp>
-#include <vector>
 
+
+
+
+#include <gtest/gtest.h>
+#include <stan/math/prim.hpp>
+
+#include <vector>
 // converge
 TEST(MathPrimScalFun, grad_F32_converges_by_z) {
   std::vector<double> g(6);

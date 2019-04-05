@@ -1,7 +1,10 @@
-#include <stan/math/rev/scal.hpp>
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-
 using stan::math::include_summand;
 using stan::math::var;
 

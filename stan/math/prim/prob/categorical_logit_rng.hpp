@@ -1,13 +1,20 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_CATEGORICAL_LOGIT_RNG_HPP
-#define STAN_MATH_PRIM_MAT_PROB_CATEGORICAL_LOGIT_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_CATEGORICAL_LOGIT_RNG_HPP
+#define STAN_MATH_PRIM_PROB_CATEGORICAL_LOGIT_RNG_HPP
 
 #include <boost/random/uniform_01.hpp>
 #include <boost/random/variate_generator.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/mat/err/check_simplex.hpp>
-#include <stan/math/prim/mat/fun/cumulative_sum.hpp>
-#include <stan/math/prim/mat/fun/softmax.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_simplex.hpp>
+#include <stan/math/prim/fun/cumulative_sum.hpp>
+#include <stan/math/prim/fun/softmax.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

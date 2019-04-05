@@ -1,10 +1,15 @@
-#ifndef TEST_UNIT_MATH_FWD_MAT_VECTORIZE_EXPECT_FWD_STD_VECTOR_VALUE_HPP
-#define TEST_UNIT_MATH_FWD_MAT_VECTORIZE_EXPECT_FWD_STD_VECTOR_VALUE_HPP
+#ifndef TEST_UNIT_MATH_FWD_VECTORIZE_EXPECT_FWD_STD_VECTOR_VALUE_HPP
+#define TEST_UNIT_MATH_FWD_VECTORIZE_EXPECT_FWD_STD_VECTOR_VALUE_HPP
 
-#include <stan/math/fwd/mat.hpp>
-#include <test/unit/math/fwd/mat/vectorize/build_fwd_vector.hpp>
-#include <test/unit/math/fwd/mat/vectorize/expect_val_deriv_eq.hpp>
+#include <stan/math/fwd.hpp>
+#include <test/unit/math/fwd/vectorize/build_fwd_vector.hpp>
+#include <test/unit/math/fwd/vectorize/expect_val_deriv_eq.hpp>
+
 #include <vector>
+
+
+
+
 
 template <typename F, typename T>
 void expect_fwd_std_vector_value() {

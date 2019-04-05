@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_BOOST_POLICY_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_BOOST_POLICY_HPP
+#ifndef STAN_MATH_PRIM_FUN_BOOST_POLICY_HPP
+#define STAN_MATH_PRIM_FUN_BOOST_POLICY_HPP
 
 #include <boost/math/policies/policy.hpp>
 #include <boost/math/policies/error_handling.hpp>
+
+
 
 namespace stan {
 namespace math {

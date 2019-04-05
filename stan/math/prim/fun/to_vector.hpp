@@ -1,9 +1,12 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_TO_VECTOR_HPP
-#define STAN_MATH_PRIM_MAT_FUN_TO_VECTOR_HPP
+#ifndef STAN_MATH_PRIM_FUN_TO_VECTOR_HPP
+#define STAN_MATH_PRIM_FUN_TO_VECTOR_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-// stan::scalar_type
+#include <stan/math/prim/fun/Eigen.hpp>
+
 #include <vector>
+
+// stan::scalar_type
+
 
 namespace stan {
 namespace math {

@@ -1,8 +1,13 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
-#include <limits>
 
+
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
+
+#include <limits>
 TEST(MathFunctions, inv_Phi) {
   using stan::math::Phi;
   using stan::math::fvar;

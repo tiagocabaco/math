@@ -1,19 +1,34 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_POISSON_LOG_GLM_LPMF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_POISSON_LOG_GLM_LPMF_HPP
+#ifndef STAN_MATH_PRIM_PROB_POISSON_LOG_GLM_LPMF_HPP
+#define STAN_MATH_PRIM_PROB_POISSON_LOG_GLM_LPMF_HPP
 
-#include <stan/math/prim/scal/meta/is_constant_struct.hpp>
-#include <stan/math/prim/scal/meta/partials_return_type.hpp>
-#include <stan/math/prim/scal/meta/operands_and_partials.hpp>
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/scal/err/check_nonnegative.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/lgamma.hpp>
-#include <stan/math/prim/mat/fun/value_of.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
-#include <stan/math/prim/mat/meta/is_vector.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
+#include <stan/math/prim/meta/is_constant_struct.hpp>
+#include <stan/math/prim/meta/partials_return_type.hpp>
+#include <stan/math/prim/meta/operands_and_partials.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/err/check_nonnegative.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/lgamma.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+#include <stan/math/prim/meta/is_vector.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
+
+
 #include <cmath>
 #include <limits>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

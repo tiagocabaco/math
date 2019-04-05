@@ -1,7 +1,10 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/prim/scal/fun/promote_type_test_util.hpp>
 
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/prim/fun/promote_type_test_util.hpp>
 // there is no agrad-defined version of promote_scalar, so this is
 // just testing that it works with non-inter-convertible types (double
 // can be assigned to var, but not vice-versa)

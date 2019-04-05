@@ -1,10 +1,15 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_MEAN_HPP
-#define STAN_MATH_PRIM_MAT_FUN_MEAN_HPP
+#ifndef STAN_MATH_PRIM_FUN_MEAN_HPP
+#define STAN_MATH_PRIM_FUN_MEAN_HPP
 
-#include <stan/math/prim/arr/err/check_nonzero_size.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_nonzero_size.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
 #include <boost/math/tools/promotion.hpp>
+
 #include <vector>
+
+
+
+
 
 namespace stan {
 namespace math {

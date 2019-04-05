@@ -1,8 +1,12 @@
-#include <stan/math/mix/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/util.hpp>
-#include <test/unit/math/mix/scal/fun/nan_util.hpp>
 
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/mix/fun/nan_util.hpp>
 double deriv(const int y, const double y_hat) {
   if (y == 0)
     return 1.0 / (1.0 - y_hat);

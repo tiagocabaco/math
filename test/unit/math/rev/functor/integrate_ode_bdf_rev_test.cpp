@@ -1,14 +1,25 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
 #include <boost/numeric/odeint.hpp>
-#include <test/unit/math/rev/mat/functor/util_cvodes_bdf.hpp>
-#include <test/unit/math/prim/arr/functor/harmonic_oscillator.hpp>
-#include <test/unit/math/prim/arr/functor/lorenz.hpp>
+#include <test/unit/math/rev/functor/util_cvodes_bdf.hpp>
+#include <test/unit/math/prim/functor/harmonic_oscillator.hpp>
+#include <test/unit/math/prim/functor/lorenz.hpp>
+
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include <string>
-
 template <typename F, typename T_y0, typename T_theta>
 void sho_value_test(F harm_osc, std::vector<double>& y0, double t0,
                     std::vector<double>& ts, std::vector<double>& theta,

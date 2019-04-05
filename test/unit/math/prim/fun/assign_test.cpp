@@ -1,11 +1,19 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <test/unit/util.hpp>
 #include <gtest/gtest.h>
+
 #include <sstream>
 #include <stdexcept>
 #include <vector>
 #include <string>
-
 template <int N>
 void test_print_mat_size(const std::string& expected) {
   using stan::math::print_mat_size;

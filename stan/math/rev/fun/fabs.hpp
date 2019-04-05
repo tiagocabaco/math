@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_FABS_HPP
-#define STAN_MATH_REV_SCAL_FUN_FABS_HPP
+#ifndef STAN_MATH_REV_FUN_FABS_HPP
+#define STAN_MATH_REV_FUN_FABS_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+
+
 
 namespace stan {
 namespace math {

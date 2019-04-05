@@ -1,7 +1,9 @@
-#include <stan/math/prim/mat/fun/typedefs.hpp>
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbDirichlet, log_matches_lpmf) {
   using stan::math::vector_d;
   Eigen::Matrix<double, Eigen::Dynamic, 1> theta(3, 1);

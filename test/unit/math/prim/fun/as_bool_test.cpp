@@ -1,7 +1,11 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 TEST(MathFunctions, as_bool) {
   using stan::math::as_bool;
   EXPECT_TRUE(as_bool(1));

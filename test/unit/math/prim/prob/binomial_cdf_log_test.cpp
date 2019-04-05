@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbBinomial, cdf_log_matches_lcdf) {
   int n = 3;
   int N = 6;

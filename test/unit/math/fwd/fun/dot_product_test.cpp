@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(AgradFwdMatrixDotProduct, vector_vector_fd) {
   using stan::math::vector_d;
   using stan::math::vector_fd;

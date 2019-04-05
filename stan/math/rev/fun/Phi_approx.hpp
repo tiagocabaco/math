@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_PHI_APPROX_HPP
-#define STAN_MATH_REV_SCAL_FUN_PHI_APPROX_HPP
+#ifndef STAN_MATH_REV_FUN_PHI_APPROX_HPP
+#define STAN_MATH_REV_FUN_PHI_APPROX_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/inv_logit.hpp>
+#include <stan/math/prim/fun/inv_logit.hpp>
+
+
 
 namespace stan {
 namespace math {

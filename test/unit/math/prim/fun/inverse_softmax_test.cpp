@@ -1,9 +1,15 @@
-#include <stan/math/prim/arr.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <vector>
-
 TEST(MathFunctions, inverse_softmax_exception) {
   std::vector<double> simplex(2);
   std::vector<double> y(3);

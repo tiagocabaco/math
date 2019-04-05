@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_EXPONENTIAL_LOG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_EXPONENTIAL_LOG_HPP
+#ifndef STAN_MATH_PRIM_PROB_EXPONENTIAL_LOG_HPP
+#define STAN_MATH_PRIM_PROB_EXPONENTIAL_LOG_HPP
 
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/prob/exponential_lpdf.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/prob/exponential_lpdf.hpp>
+
+
 
 namespace stan {
 namespace math {

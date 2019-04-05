@@ -27,25 +27,44 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 // THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef STAN_MATH_PRIM_MAT_PROB_WIENER_LPDF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_WIENER_LPDF_HPP
-
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/square.hpp>
-#include <stan/math/prim/scal/fun/value_of.hpp>
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/scal/err/check_bounded.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/fun/size_zero.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
+#ifndef STAN_MATH_PRIM_PROB_WIENER_LPDF_HPP
+#define STAN_MATH_PRIM_PROB_WIENER_LPDF_HPP
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/square.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/err/check_bounded.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/fun/size_zero.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
 #include <boost/math/distributions.hpp>
+
+
+
 #include <algorithm>
 #include <cmath>
 #include <string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

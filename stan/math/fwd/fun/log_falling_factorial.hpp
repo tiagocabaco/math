@@ -1,10 +1,13 @@
-#ifndef STAN_MATH_FWD_SCAL_FUN_LOG_FALLING_FACTORIAL_HPP
-#define STAN_MATH_FWD_SCAL_FUN_LOG_FALLING_FACTORIAL_HPP
+#ifndef STAN_MATH_FWD_FUN_LOG_FALLING_FACTORIAL_HPP
+#define STAN_MATH_FWD_FUN_LOG_FALLING_FACTORIAL_HPP
 
 #include <stan/math/fwd/core.hpp>
-
-#include <stan/math/prim/scal/fun/log_falling_factorial.hpp>
+#include <stan/math/prim/fun/log_falling_factorial.hpp>
 #include <boost/math/special_functions/digamma.hpp>
+
+
+
+
 
 namespace stan {
 namespace math {

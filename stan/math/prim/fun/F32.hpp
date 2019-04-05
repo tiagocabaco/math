@@ -1,11 +1,17 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_F32_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_F32_HPP
+#ifndef STAN_MATH_PRIM_FUN_F32_HPP
+#define STAN_MATH_PRIM_FUN_F32_HPP
 
-#include <stan/math/prim/scal/fun/sign.hpp>
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/scal/fun/is_inf.hpp>
-#include <stan/math/prim/scal/err/check_3F2_converges.hpp>
+#include <stan/math/prim/fun/sign.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/fun/is_inf.hpp>
+#include <stan/math/prim/err/check_3F2_converges.hpp>
+
 #include <cmath>
+
+
+
+
+
 
 namespace stan {
 namespace math {

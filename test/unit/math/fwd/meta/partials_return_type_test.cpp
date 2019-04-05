@@ -1,7 +1,15 @@
-#include <stan/math/fwd/scal.hpp>
 
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
+
+#include <vector>
+
+
+
+
+
+
 
 using stan::math::fvar;
 using stan::partials_return_type;
@@ -27,4 +35,16 @@ TEST(MetaTraits, PartialsReturnTypeFvarFvarDoubleTenParams) {
       fvar<double>, partials_return_type<double, fvar<fvar<double> >, double,
                                          int, double, float, float, float,
                                          fvar<fvar<double> >, int>::type>();
+}
+
+
+
+
+TEST(MetaTraits_arr, partials_return_type) {
+  using stan::math::fvar;
+  using stan::partials_return_type;
+
+  partials_return_type<double, fvar<double>, std::vector<fvar<double> > >::type
+      a(5.0);
+  EXPECT_EQ(5.0, a);
 }

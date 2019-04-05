@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbWishart, log_matches_lpmf) {
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> Sigma(2, 2);
   Sigma << 1.848220, 1.899623, 1.899623, 12.751941;

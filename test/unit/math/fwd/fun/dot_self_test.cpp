@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 using stan::math::fvar;
 TEST(AgradFwdMatrixDotSelf, vec_fd) {
   using stan::math::dot_self;

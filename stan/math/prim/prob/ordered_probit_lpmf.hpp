@@ -1,16 +1,27 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_ORDERED_PROBIT_LPMF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_ORDERED_PROBIT_LPMF_HPP
+#ifndef STAN_MATH_PRIM_PROB_ORDERED_PROBIT_LPMF_HPP
+#define STAN_MATH_PRIM_PROB_ORDERED_PROBIT_LPMF_HPP
 
-#include <stan/math/prim/scal/fun/Phi.hpp>
-#include <stan/math/prim/scal/fun/log1m.hpp>
-#include <stan/math/prim/scal/err/check_bounded.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/check_greater.hpp>
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/arr/err/check_ordered.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
+#include <stan/math/prim/fun/Phi.hpp>
+#include <stan/math/prim/fun/log1m.hpp>
+#include <stan/math/prim/err/check_bounded.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_greater.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/err/check_ordered.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
 #include <Eigen/Dense>
+
 #include <vector>
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

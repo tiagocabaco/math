@@ -1,7 +1,10 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
 
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
 TEST(AgradRevMatrix, cols_vector) {
   using stan::math::cols;
   using stan::math::row_vector_v;

@@ -1,8 +1,13 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <string>
-
 using stan::math::check_corr_matrix;
 
 TEST(ErrorHandlingMatrix, CheckCorrMatrix) {

@@ -1,10 +1,17 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
 #include <limits>
 #include <string>
 #include <vector>
-
 template <typename T_x1, typename T_x2, typename T_sigma, typename T_l>
 std::string pull_msg(std::vector<T_x1> x1, std::vector<T_x2> x2, T_sigma sigma,
                      T_l l) {

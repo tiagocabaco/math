@@ -1,19 +1,26 @@
-#ifndef STAN_MATH_PRIM_MAT_FUNCTOR_MAP_RECT_HPP
-#define STAN_MATH_PRIM_MAT_FUNCTOR_MAP_RECT_HPP
+#ifndef STAN_MATH_PRIM_FUNCTOR_MAP_RECT_HPP
+#define STAN_MATH_PRIM_FUNCTOR_MAP_RECT_HPP
 
-#include <stan/math/prim/arr/err/check_matching_sizes.hpp>
-#include <stan/math/prim/mat/fun/dims.hpp>
-#include <stan/math/prim/mat/fun/typedefs.hpp>
+#include <stan/math/prim/err/check_matching_sizes.hpp>
+#include <stan/math/prim/fun/dims.hpp>
+#include <stan/math/prim/fun/typedefs.hpp>
+#include <stan/math/prim/functor/map_rect_mpi.hpp>
+#include <stan/math/prim/functor/map_rect_concurrent.hpp>
+
+#include <vector>
+
+
+
 
 #define STAN_REGISTER_MAP_RECT(CALLID, FUNCTOR)
 
 #ifdef STAN_MPI
-#include <stan/math/prim/mat/functor/map_rect_mpi.hpp>
+
 #else
-#include <stan/math/prim/mat/functor/map_rect_concurrent.hpp>
+
 #endif
 
-#include <vector>
+
 
 namespace stan {
 namespace math {

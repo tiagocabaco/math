@@ -1,8 +1,24 @@
-#include <stan/math/prim/scal.hpp>
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <boost/random/mersenne_twister.hpp>
-#include <test/unit/math/prim/scal/prob/util.hpp>
+#include <test/unit/math/prim/prob/util.hpp>
+
+#include <boost/math/distributions.hpp>
+#include <test/unit/math/prim/prob/vector_rng_test_helper.hpp>
+#include <test/unit/math/prim/prob/VectorIntRNGTestRig.hpp>
 #include <vector>
+#include <limits>
+
+
+
+
+
+
+
+
+
+
 
 TEST(ProbDistributionsBernoulliLogit, error_check) {
   boost::random::mt19937 rng;
@@ -33,4 +49,38 @@ TEST(ProbDistributionsBernoulliLogit, logitChiSquareGoodnessFitTest) {
   }
 
   assert_chi_squared(counts, expected, 1e-6);
+}
+
+
+
+
+
+
+
+
+
+class BernoulliLogitTestRig : public VectorIntRNGTestRig {
+ public:
+  BernoulliLogitTestRig()
+      : VectorIntRNGTestRig(10000, 10, {0, 1},
+                            {-5.7, -1.0, 0.0, 0.2, 1.0, 10.0}, {-3, -2, 0, 1},
+                            {}, {}) {}
+
+  template <typename T1, typename T2, typename T3, typename T_rng>
+  auto generate_samples(const T1& t, const T2&, const T3&, T_rng& rng) const {
+    return stan::math::bernoulli_logit_rng(t, rng);
+  }
+
+  template <typename T1>
+  double pmf(int y, T1 t, double, double) const {
+    return std::exp(stan::math::bernoulli_logit_lpmf(y, t));
+  }
+};
+
+TEST(ProbDistributionsBernoulliLogit_mat, errorCheck) {
+  check_dist_throws_all_types(BernoulliLogitTestRig());
+}
+
+TEST(ProbDistributionsBernoulliLogit_mat, distributionCheck) {
+  check_counts_real(BernoulliLogitTestRig());
 }

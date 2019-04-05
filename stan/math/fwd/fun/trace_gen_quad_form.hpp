@@ -1,12 +1,18 @@
-#ifndef STAN_MATH_FWD_MAT_FUN_TRACE_GEN_QUAD_FORM_HPP
-#define STAN_MATH_FWD_MAT_FUN_TRACE_GEN_QUAD_FORM_HPP
+#ifndef STAN_MATH_FWD_FUN_TRACE_GEN_QUAD_FORM_HPP
+#define STAN_MATH_FWD_FUN_TRACE_GEN_QUAD_FORM_HPP
 
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/fwd/mat/fun/multiply.hpp>
-#include <stan/math/prim/mat/fun/trace.hpp>
-#include <stan/math/prim/mat/fun/multiply.hpp>
-#include <stan/math/prim/mat/fun/transpose.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/fwd/fun/multiply.hpp>
+#include <stan/math/prim/fun/trace.hpp>
+#include <stan/math/prim/fun/multiply.hpp>
+#include <stan/math/prim/fun/transpose.hpp>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

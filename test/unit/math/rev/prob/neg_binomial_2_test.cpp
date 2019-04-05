@@ -1,7 +1,11 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(ProbDistributionsNegBinomial, derivatives) {
   using stan::math::is_nan;
   using stan::math::neg_binomial_2_log;

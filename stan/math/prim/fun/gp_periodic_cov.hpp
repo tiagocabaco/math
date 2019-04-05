@@ -1,21 +1,37 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_GP_PERIODIC_COV_HPP
-#define STAN_MATH_PRIM_MAT_FUN_GP_PERIODIC_COV_HPP
+#ifndef STAN_MATH_PRIM_FUN_GP_PERIODIC_COV_HPP
+#define STAN_MATH_PRIM_FUN_GP_PERIODIC_COV_HPP
+
+
+#include <stan/math/prim/fun/distance.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/inv.hpp>
+#include <stan/math/prim/fun/inv_square.hpp>
+#include <stan/math/prim/fun/square.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+
 
 #include <math.h>
-#include <stan/math/prim/mat/fun/distance.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/distance.hpp>
-#include <stan/math/prim/scal/fun/inv.hpp>
-#include <stan/math/prim/scal/fun/inv_square.hpp>
-#include <stan/math/prim/scal/fun/square.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
 #include <cmath>
-
 #include <vector>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

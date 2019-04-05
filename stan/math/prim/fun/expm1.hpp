@@ -1,7 +1,13 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_EXPM1_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_EXPM1_HPP
+#ifndef STAN_MATH_PRIM_FUN_EXPM1_HPP
+#define STAN_MATH_PRIM_FUN_EXPM1_HPP
+
+
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
 
 #include <cmath>
+
+
+
 
 namespace stan {
 namespace math {
@@ -24,6 +30,43 @@ inline double expm1(double x) { return std::expm1(x); }
  */
 inline double expm1(int x) { return std::expm1(x); }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap expm1() so that it can be vectorized.
+ * @param x Variable.
+ * @tparam T Variable type.
+ * @return Natural exponential of x minus one.
+ */
+struct expm1_fun {
+  template <typename T>
+  static inline T fun(const T& x) {
+    return expm1(x);
+  }
+};
+
+/**
+ * Vectorized version of expm1().
+ * @param x Container.
+ * @tparam T Container type.
+ * @return Natural exponential of each value in x minus one.
+ */
+template <typename T>
+inline typename apply_scalar_unary<expm1_fun, T>::return_t expm1(const T& x) {
+  return apply_scalar_unary<expm1_fun, T>::apply(x);
+}
+
 }  // namespace math
 }  // namespace stan
+
 #endif

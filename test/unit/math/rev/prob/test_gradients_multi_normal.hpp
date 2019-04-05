@@ -1,8 +1,13 @@
+
+
+
+
+
+
 #include <cmath>
 #include <vector>
 #include <iomanip>
 #include <stdexcept>
-
 std::vector<stan::math::var> get_vvar(std::vector<double> vd) {
   size_t size = vd.size();
   std::vector<stan::math::var> vv;

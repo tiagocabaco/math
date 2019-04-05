@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_REV_SCAL_META_AD_PROMOTABLE_HPP
-#define STAN_MATH_REV_SCAL_META_AD_PROMOTABLE_HPP
+#ifndef STAN_MATH_REV_META_AD_PROMOTABLE_HPP
+#define STAN_MATH_REV_META_AD_PROMOTABLE_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/meta/ad_promotable.hpp>
+#include <stan/math/prim/meta/ad_promotable.hpp>
+
+
 
 namespace stan {
 namespace math {

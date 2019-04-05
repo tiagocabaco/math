@@ -1,8 +1,11 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_LOG10_HPP
-#define STAN_MATH_PRIM_MAT_FUN_LOG10_HPP
+#ifndef STAN_MATH_PRIM_FUN_LOG10_HPP
+#define STAN_MATH_PRIM_FUN_LOG10_HPP
 
-#include <stan/math/prim/mat/vectorize/apply_scalar_unary.hpp>
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
+
 #include <cmath>
+
+
 
 namespace stan {
 namespace math {

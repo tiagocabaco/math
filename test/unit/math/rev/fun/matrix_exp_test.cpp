@@ -1,13 +1,23 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/expect_matrix_eq.hpp>
-#include <test/unit/math/rev/mat/fun/util.hpp>
+#include <test/unit/math/rev/fun/expect_matrix_eq.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+
 #include <random>
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
 #include <vector>
-
 TEST(MathMatrix, matrix_exp_1x1) {
   stan::math::matrix_v m1(1, 1), m2(1, 1), m1_exp;
   Eigen::Matrix<stan::math::var, 1, 1> m3, m3_exp;

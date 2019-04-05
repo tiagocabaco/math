@@ -1,12 +1,18 @@
-#ifndef STAN_MATH_PRIM_SCAL_ERR_CHECK_NOT_NAN_HPP
-#define STAN_MATH_PRIM_SCAL_ERR_CHECK_NOT_NAN_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_NOT_NAN_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_NOT_NAN_HPP
 
-#include <stan/math/prim/scal/meta/length.hpp>
-#include <stan/math/prim/scal/meta/is_vector_like.hpp>
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/scal/err/domain_error_vec.hpp>
-#include <stan/math/prim/scal/fun/value_of_rec.hpp>
-#include <stan/math/prim/scal/fun/is_nan.hpp>
+#include <stan/math/prim/meta/length.hpp>
+#include <stan/math/prim/meta/is_vector_like.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/err/domain_error_vec.hpp>
+#include <stan/math/prim/fun/value_of_rec.hpp>
+#include <stan/math/prim/fun/is_nan.hpp>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,13 +1,20 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_QUAD_FORM_HPP
-#define STAN_MATH_PRIM_MAT_FUN_QUAD_FORM_HPP
+#ifndef STAN_MATH_PRIM_FUN_QUAD_FORM_HPP
+#define STAN_MATH_PRIM_FUN_QUAD_FORM_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/err/check_symmetric.hpp>
-#include <stan/math/prim/mat/fun/dot_product.hpp>
-#include <stan/math/prim/mat/fun/multiply.hpp>
-#include <stan/math/prim/mat/fun/transpose.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/err/check_symmetric.hpp>
+#include <stan/math/prim/fun/dot_product.hpp>
+#include <stan/math/prim/fun/multiply.hpp>
+#include <stan/math/prim/fun/transpose.hpp>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

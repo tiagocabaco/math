@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 template <typename T>
 void test_cumulative_sum() {
   using stan::math::cumulative_sum;

@@ -1,15 +1,25 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_LOG_MIX_HPP
-#define STAN_MATH_REV_SCAL_FUN_LOG_MIX_HPP
+#ifndef STAN_MATH_REV_FUN_LOG_MIX_HPP
+#define STAN_MATH_REV_FUN_LOG_MIX_HPP
 
-#include <stan/math/prim/scal/err/check_bounded.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <stan/math/prim/scal/fun/log1m.hpp>
-#include <stan/math/prim/scal/fun/value_of.hpp>
-#include <stan/math/prim/scal/fun/log_mix.hpp>
-#include <stan/math/rev/scal/fun/value_of.hpp>
-#include <stan/math/prim/scal/meta/is_constant_struct.hpp>
-#include <stan/math/prim/scal/meta/operands_and_partials.hpp>
+#include <stan/math/prim/err/check_bounded.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/fun/log1m.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/fun/log_mix.hpp>
+#include <stan/math/rev/fun/value_of.hpp>
+#include <stan/math/prim/meta/is_constant_struct.hpp>
+#include <stan/math/prim/meta/operands_and_partials.hpp>
+
 #include <cmath>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

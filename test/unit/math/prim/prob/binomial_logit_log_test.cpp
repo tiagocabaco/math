@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbBinomialLogit, log_matches_lpmf) {
   int n = 3;
   int N = 6;

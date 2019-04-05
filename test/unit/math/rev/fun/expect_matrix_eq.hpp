@@ -1,8 +1,10 @@
-#ifndef TEST_UNIT_MATH_REV_MAT_EXPECT_MATRIX_EQ_HPP
-#define TEST_UNIT_MATH_REV_MAT_EXPECT_MATRIX_EQ_HPP
+#ifndef TEST_UNIT_MATH_REV_EXPECT_MATRIX_EQ_HPP
+#define TEST_UNIT_MATH_REV_EXPECT_MATRIX_EQ_HPP
 
-#include <stan/math/rev/mat.hpp>
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
+
+
 
 template <typename T1, typename T2>
 void expect_matrix_eq(

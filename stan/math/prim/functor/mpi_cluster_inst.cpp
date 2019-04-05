@@ -1,6 +1,7 @@
 #ifdef STAN_MPI
 
-#include <stan/math/prim/arr/functor/mpi_cluster.hpp>
+#include <stan/math/prim/functor/mpi_cluster.hpp>
+
 
 // register stop worker command (instantiates boost serialization
 // templates)

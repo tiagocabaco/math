@@ -1,9 +1,15 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
+
 #include <cmath>
 #include <limits>
-
 TEST(AgradFwdAcosh, Fvar) {
   using stan::math::acosh;
   using stan::math::fvar;

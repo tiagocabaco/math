@@ -1,8 +1,13 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-#include <limits>
 
+#include <limits>
 TEST(ErrorHandlingMatrix, checkMatchingDimsMatrix) {
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y;
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> x;

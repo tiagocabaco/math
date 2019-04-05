@@ -1,8 +1,11 @@
-#ifndef TEST_UNIT_MATH_FWD_MAT_VECTORIZE_BUILD_FWD_VECTOR_HPP
-#define TEST_UNIT_MATH_FWD_MAT_VECTORIZE_BUILD_FWD_VECTOR_HPP
+#ifndef TEST_UNIT_MATH_FWD_VECTORIZE_BUILD_FWD_VECTOR_HPP
+#define TEST_UNIT_MATH_FWD_VECTORIZE_BUILD_FWD_VECTOR_HPP
 
-#include <stan/math/fwd/mat.hpp>
+#include <stan/math/fwd.hpp>
+
 #include <vector>
+
+
 
 template <typename F>
 static inline std::vector<double> build_fwd_vector(

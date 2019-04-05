@@ -1,9 +1,15 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/arr/fun/util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
-#include <limits>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <limits>
 TEST(AgradRev, step) {
   AVAR a = 3.5;
   AVAR f = stan::math::step(a);

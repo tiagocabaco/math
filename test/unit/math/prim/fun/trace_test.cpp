@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, trace) {
   using stan::math::trace;
   stan::math::matrix_d m;

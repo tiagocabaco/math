@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_LOG1P_HPP
-#define STAN_MATH_REV_SCAL_FUN_LOG1P_HPP
+#ifndef STAN_MATH_REV_FUN_LOG1P_HPP
+#define STAN_MATH_REV_FUN_LOG1P_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/log1p.hpp>
+#include <stan/math/prim/fun/log1p.hpp>
+
+
 
 namespace stan {
 namespace math {

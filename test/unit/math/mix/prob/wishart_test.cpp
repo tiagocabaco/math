@@ -1,9 +1,14 @@
-#include <stan/math/mix/mat.hpp>
+
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
 #include <boost/random/mersenne_twister.hpp>
 #include <boost/math/special_functions/digamma.hpp>
 #include <boost/math/distributions.hpp>
-
 using Eigen::Dynamic;
 using Eigen::Matrix;
 

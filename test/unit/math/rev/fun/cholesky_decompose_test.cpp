@@ -1,11 +1,18 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <boost/random/mersenne_twister.hpp>
-#include <vector>
 
-#ifdef STAN_OPENCL
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <boost/random/mersenne_twister.hpp>
+
 #include <stan/math/opencl/opencl_context.hpp>
+#include <vector>
+#ifdef STAN_OPENCL
+
 #endif
 
 template <typename T_x>

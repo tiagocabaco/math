@@ -1,9 +1,15 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
+
 #include <stdexcept>
 #include <limits>
-
 TEST(AgradFwdLog1p, Fvar) {
   using stan::math::fvar;
   using stan::math::log1p;

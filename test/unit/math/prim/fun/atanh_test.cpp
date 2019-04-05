@@ -1,10 +1,17 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <stdexcept>
 #include <cmath>
-
 TEST(MathFunctions, atanh) {
   using stan::math::atanh;
   EXPECT_FLOAT_EQ(-3.341680472883148, atanh(-0.9975));

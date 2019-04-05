@@ -1,11 +1,15 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_HYPERGEOMETRIC_RNG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_HYPERGEOMETRIC_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_HYPERGEOMETRIC_RNG_HPP
+#define STAN_MATH_PRIM_PROB_HYPERGEOMETRIC_RNG_HPP
 
 #include <boost/math/distributions/hypergeometric.hpp>
+#include <stan/math/prim/err/check_bounded.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/prob/uniform_rng.hpp>
 
-#include <stan/math/prim/scal/err/check_bounded.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/prob/uniform_rng.hpp>
+
+
+
+
 
 namespace stan {
 namespace math {

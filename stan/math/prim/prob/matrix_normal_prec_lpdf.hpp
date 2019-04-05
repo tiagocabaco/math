@@ -1,20 +1,34 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_MATRIX_NORMAL_PREC_LPDF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_MATRIX_NORMAL_PREC_LPDF_HPP
+#ifndef STAN_MATH_PRIM_PROB_MATRIX_NORMAL_PREC_LPDF_HPP
+#define STAN_MATH_PRIM_PROB_MATRIX_NORMAL_PREC_LPDF_HPP
 
-#include <stan/math/prim/mat/err/check_ldlt_factor.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/mat/err/check_symmetric.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/mat/fun/log.hpp>
-#include <stan/math/prim/mat/fun/log_determinant.hpp>
-#include <stan/math/prim/mat/fun/log_determinant_ldlt.hpp>
-#include <stan/math/prim/mat/fun/subtract.hpp>
-#include <stan/math/prim/mat/fun/trace_quad_form.hpp>
-#include <stan/math/prim/mat/fun/trace_gen_quad_form.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
+#include <stan/math/prim/err/check_ldlt_factor.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/check_symmetric.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/fun/log.hpp>
+#include <stan/math/prim/fun/log_determinant.hpp>
+#include <stan/math/prim/fun/log_determinant_ldlt.hpp>
+#include <stan/math/prim/fun/subtract.hpp>
+#include <stan/math/prim/fun/trace_quad_form.hpp>
+#include <stan/math/prim/fun/trace_gen_quad_form.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

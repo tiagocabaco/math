@@ -1,12 +1,19 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_COV_MATRIX_FREE_HPP
-#define STAN_MATH_PRIM_MAT_FUN_COV_MATRIX_FREE_HPP
+#ifndef STAN_MATH_PRIM_FUN_COV_MATRIX_FREE_HPP
+#define STAN_MATH_PRIM_FUN_COV_MATRIX_FREE_HPP
 
-#include <stan/math/prim/arr/err/check_nonzero_size.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
+#include <stan/math/prim/err/check_nonzero_size.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+
 #include <cmath>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

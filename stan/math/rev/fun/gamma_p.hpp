@@ -1,15 +1,26 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_GAMMA_P_HPP
-#define STAN_MATH_REV_SCAL_FUN_GAMMA_P_HPP
+#ifndef STAN_MATH_REV_FUN_GAMMA_P_HPP
+#define STAN_MATH_REV_FUN_GAMMA_P_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/is_inf.hpp>
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/scal/fun/digamma.hpp>
-#include <stan/math/prim/scal/fun/gamma_p.hpp>
-#include <stan/math/prim/scal/fun/lgamma.hpp>
-#include <stan/math/prim/scal/fun/grad_reg_lower_inc_gamma.hpp>
+#include <stan/math/prim/fun/is_inf.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/fun/digamma.hpp>
+#include <stan/math/prim/fun/gamma_p.hpp>
+#include <stan/math/prim/fun/lgamma.hpp>
+#include <stan/math/prim/fun/grad_reg_lower_inc_gamma.hpp>
+
+
 #include <valarray>
 #include <limits>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

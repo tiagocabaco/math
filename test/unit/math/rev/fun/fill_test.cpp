@@ -1,8 +1,13 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <vector>
 
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+
+#include <vector>
 TEST(AgradRevMatrix, fill) {
   using Eigen::Dynamic;
   using Eigen::Matrix;

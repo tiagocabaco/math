@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_STEP_HPP
-#define STAN_MATH_REV_SCAL_FUN_STEP_HPP
+#ifndef STAN_MATH_REV_FUN_STEP_HPP
+#define STAN_MATH_REV_FUN_STEP_HPP
 
 #include <stan/math/rev/core.hpp>
+
 
 namespace stan {
 namespace math {

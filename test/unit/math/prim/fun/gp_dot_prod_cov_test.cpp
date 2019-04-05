@@ -1,9 +1,15 @@
+
+
+
+
+
+
 #include <gtest/gtest.h>
-#include <stan/math/prim/mat.hpp>
+#include <stan/math/prim.hpp>
+
 #include <limits>
 #include <string>
 #include <vector>
-
 template <typename T_x, typename T_sigma>
 std::string pull_msg(std::vector<T_x> x, T_sigma sigma) {
   std::string message;

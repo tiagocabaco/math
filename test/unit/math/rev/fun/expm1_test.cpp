@@ -1,9 +1,14 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
-#include <boost/math/special_functions/expm1.hpp>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
+#include <boost/math/special_functions/expm1.hpp>
 TEST(AgradRev, expm1) {
   AVAR a = 1.3;
   AVAR f = expm1(a);

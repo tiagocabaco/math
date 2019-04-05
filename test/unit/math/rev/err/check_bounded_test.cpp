@@ -1,6 +1,15 @@
-#include <stan/math/rev/scal.hpp>
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
+#include <vector>
+
+
+
+
+
+
 
 TEST(AgradRevErrorHandlingScalar, CheckBounded_X) {
   using stan::math::check_bounded;
@@ -130,5 +139,31 @@ TEST(AgradRevErrorHandlingScalar, CheckBoundedVarCheckUnivariate) {
       = stan::math::ChainableStack::instance().var_stack_.size();
   EXPECT_EQ(1U, stack_size_after_call);
 
+  stan::math::recover_memory();
+}
+
+
+
+
+TEST(AgradRevErrorHandlingScalar_arr, CheckBoundedVarCheckVectorized) {
+  using stan::math::check_bounded;
+  using stan::math::var;
+  using std::vector;
+
+  int N = 5;
+  const char* function = "check_bounded";
+  vector<var> a;
+
+  for (int i = 0; i < N; ++i)
+    a.push_back(var(i));
+
+  size_t stack_size = stan::math::ChainableStack::instance().var_stack_.size();
+
+  EXPECT_EQ(5U, stack_size);
+  EXPECT_NO_THROW(check_bounded(function, "a", a, -1.0, 6.0));
+
+  size_t stack_size_after_call
+      = stan::math::ChainableStack::instance().var_stack_.size();
+  EXPECT_EQ(5U, stack_size_after_call);
   stan::math::recover_memory();
 }

@@ -1,12 +1,16 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
+
+
+
+
 TEST(AgradRev, owens_t_vv) {
   using boost::math::owens_t;
   using stan::math::owens_t;
   using stan::math::var;
 
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
   var h = 1.0;
   var a = 2.0;
   var f = owens_t(h, a);

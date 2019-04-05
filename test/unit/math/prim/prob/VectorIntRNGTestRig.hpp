@@ -1,8 +1,11 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_PROB_VECTOR_INT_RNG_TEST_RIG_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_PROB_VECTOR_INT_RNG_TEST_RIG_HPP
+#ifndef TEST_UNIT_MATH_PRIM_PROB_VECTOR_INT_RNG_TEST_RIG_HPP
+#define TEST_UNIT_MATH_PRIM_PROB_VECTOR_INT_RNG_TEST_RIG_HPP
 
-#include <test/unit/math/prim/mat/prob/VectorRNGTestRig.hpp>
+#include <test/unit/math/prim/prob/VectorRNGTestRig.hpp>
+
 #include <vector>
+
+
 
 /*
  * VectorIntRNGTestRig is a subclass of VectorRNGTestRig specialized for

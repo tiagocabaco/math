@@ -1,7 +1,13 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_INV_CLOGLOG_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_INV_CLOGLOG_HPP
+#ifndef STAN_MATH_PRIM_FUN_INV_CLOGLOG_HPP
+#define STAN_MATH_PRIM_FUN_INV_CLOGLOG_HPP
+
+
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
 
 #include <cmath>
+
+
+
 
 namespace stan {
 namespace math {
@@ -47,6 +53,44 @@ namespace math {
 inline double inv_cloglog(double x) {
   using std::exp;
   return 1 - exp(-exp(x));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap inv_cloglog() so that it can be vectorized.
+ * @param x Variable.
+ * @tparam T Variable type.
+ * @return 1 - exp(-exp(x)).
+ */
+struct inv_cloglog_fun {
+  template <typename T>
+  static inline T fun(const T& x) {
+    return inv_cloglog(x);
+  }
+};
+
+/**
+ * Vectorized version of inv_cloglog().
+ * @param x Container.
+ * @tparam T Container type.
+ * @return 1 - exp(-exp()) applied to each value in x.
+ */
+template <typename T>
+inline typename apply_scalar_unary<inv_cloglog_fun, T>::return_t inv_cloglog(
+    const T& x) {
+  return apply_scalar_unary<inv_cloglog_fun, T>::apply(x);
 }
 
 }  // namespace math

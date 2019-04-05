@@ -1,9 +1,15 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/prob/expect_eq_diffs.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
-#include <string>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/prob/expect_eq_diffs.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <string>
 template <typename T_y, typename T_dof, typename T_scale>
 void expect_propto(T_y W1, T_dof nu1, T_scale S1, T_y W2, T_dof nu2, T_scale S2,
                    std::string message) {

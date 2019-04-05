@@ -1,11 +1,18 @@
-#include <stan/math/rev/arr.hpp>
+
+
+
+// very small michaelis menten example
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
 #include <boost/numeric/odeint.hpp>
-// very small michaelis menten example
-#include <test/unit/math/rev/arr/functor/coupled_mm.hpp>
+#include <test/unit/math/rev/functor/coupled_mm.hpp>
 #include <test/unit/util.hpp>
-#include <vector>
 
+#include <vector>
 // test which triggers the too much work exception from odeint
 TEST(StanOde_tooMuchWork_test, odeint_coupled_mm) {
   coupled_mm_ode_fun f_;

@@ -1,7 +1,10 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 double deriv(const int y, const double y_hat) {
   if (y == 0)
     return 1.0 / (1.0 - y_hat);

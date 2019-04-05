@@ -1,9 +1,14 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_ATAN_HPP
-#define STAN_MATH_REV_SCAL_FUN_ATAN_HPP
+#ifndef STAN_MATH_REV_FUN_ATAN_HPP
+#define STAN_MATH_REV_FUN_ATAN_HPP
 
 #include <stan/math/rev/core.hpp>
+
+
 #include <cmath>
 #include <valarray>
+
+
+
 
 namespace stan {
 namespace math {

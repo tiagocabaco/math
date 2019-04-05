@@ -1,18 +1,31 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_PROB_VECTOR_RNG_TEST_HELPER_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_PROB_VECTOR_RNG_TEST_HELPER_HPP
+#ifndef TEST_UNIT_MATH_PRIM_PROB_VECTOR_RNG_TEST_HELPER_HPP
+#define TEST_UNIT_MATH_PRIM_PROB_VECTOR_RNG_TEST_HELPER_HPP
 
 #include <gtest/gtest.h>
 #include <boost/math/distributions.hpp>
 #include <boost/random/mersenne_twister.hpp>
-#include <stan/math/prim/mat.hpp>
-#include <test/unit/math/prim/scal/prob/util.hpp>
-#include <test/unit/math/prim/scal/meta/apply_template_permutations.hpp>
-#include <test/unit/math/prim/mat/prob/VectorRealRNGTestRig.hpp>
-#include <test/unit/math/prim/mat/prob/VectorIntRNGTestRig.hpp>
+#include <stan/math/prim.hpp>
+#include <test/unit/math/prim/prob/util.hpp>
+#include <test/unit/math/prim/meta/apply_template_permutations.hpp>
+#include <test/unit/math/prim/prob/VectorRealRNGTestRig.hpp>
+#include <test/unit/math/prim/prob/VectorIntRNGTestRig.hpp>
+
 #include <algorithm>
 #include <map>
 #include <tuple>
 #include <vector>
+
+
+
+
+
+
+
+
+
+
+
+
 
 using ArgumentTypes
     = std::tuple<int, double, std::vector<int>, std::vector<double>,

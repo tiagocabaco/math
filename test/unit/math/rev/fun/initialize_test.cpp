@@ -1,6 +1,8 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, initializeVar) {
   using stan::math::initialize;
   using stan::math::var;

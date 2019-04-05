@@ -1,10 +1,17 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/jacobian.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
+#include <test/unit/math/rev/fun/jacobian.hpp>
+#include <test/unit/math/rev/util.hpp>
+
 #include <vector>
 #include <random>
-
 using Eigen::Dynamic;
 using Eigen::Matrix;
 

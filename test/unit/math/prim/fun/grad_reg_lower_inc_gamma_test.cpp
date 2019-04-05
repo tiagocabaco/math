@@ -1,7 +1,11 @@
-#include <stan/math/prim/scal/fun/grad_reg_lower_inc_gamma.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 // NOLINT()
 TEST(PrimScalFun, lower_reg_inc_gamma_accuarcy) {
   const int n_tests = 9600;

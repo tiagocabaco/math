@@ -3,12 +3,18 @@
 #ifdef STAN_MPI
 
 #include <gtest/gtest.h>
-
-#include <stan/math/prim/arr.hpp>
+#include <stan/math/prim.hpp>
 
 #include <iostream>
 #include <vector>
 #include <memory>
+
+
+
+
+
+
+
 
 TEST(mpi_cluster, chunk_mapping) {
   boost::mpi::communicator world;

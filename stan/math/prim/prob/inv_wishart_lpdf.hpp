@@ -1,17 +1,28 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_INV_WISHART_LPDF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_INV_WISHART_LPDF_HPP
+#ifndef STAN_MATH_PRIM_PROB_INV_WISHART_LPDF_HPP
+#define STAN_MATH_PRIM_PROB_INV_WISHART_LPDF_HPP
 
-#include <stan/math/prim/mat/err/check_ldlt_factor.hpp>
-#include <stan/math/prim/scal/err/check_greater.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
-#include <stan/math/prim/mat/fun/log_determinant_ldlt.hpp>
-#include <stan/math/prim/mat/fun/mdivide_left_ldlt.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
-#include <stan/math/prim/scal/fun/lmgamma.hpp>
-#include <stan/math/prim/mat/fun/trace.hpp>
+#include <stan/math/prim/err/check_ldlt_factor.hpp>
+#include <stan/math/prim/err/check_greater.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+#include <stan/math/prim/fun/log_determinant_ldlt.hpp>
+#include <stan/math/prim/fun/mdivide_left_ldlt.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+#include <stan/math/prim/fun/lmgamma.hpp>
+#include <stan/math/prim/fun/trace.hpp>
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

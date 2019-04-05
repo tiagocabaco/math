@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, row) {
   stan::math::matrix_d m(3, 4);
   m << 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;

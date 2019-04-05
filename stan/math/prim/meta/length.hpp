@@ -1,7 +1,18 @@
-#ifndef STAN_MATH_PRIM_SCAL_META_LENGTH_HPP
-#define STAN_MATH_PRIM_SCAL_META_LENGTH_HPP
+#ifndef STAN_MATH_PRIM_META_LENGTH_HPP
+#define STAN_MATH_PRIM_META_LENGTH_HPP
 
+
+
+#include <stan/math/prim/fun/Eigen.hpp>
 #include <cstdlib>
+#include <vector>
+
+
+
+
+
+
+
 
 namespace stan {
 /**
@@ -11,6 +22,48 @@ namespace stan {
 template <typename T>
 size_t length(const T& /*x*/) {
   return 1U;
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Returns the length of the provided std::vector.
+ *
+ * @param x input vector
+ * @tparam T type of the elements in the vector
+ * @return the length of the input vector
+ */
+template <typename T>
+size_t length(const std::vector<T>& x) {
+  return x.size();
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Returns the size of the provided Eigen matrix.
+ *
+ * @param m a const Eigen matrix
+ * @tparam T type of matrix.
+ * @tparam R number of rows in the input matrix.
+ * @tparam C number of columns in the input matrix.
+ * @return the size of the input matrix
+ */
+template <typename T, int R, int C>
+size_t length(const Eigen::Matrix<T, R, C>& m) {
+  return m.size();
 }
 }  // namespace stan
 #endif

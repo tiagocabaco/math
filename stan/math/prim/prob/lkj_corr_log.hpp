@@ -1,9 +1,12 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_LKJ_CORR_LOG_HPP
-#define STAN_MATH_PRIM_MAT_PROB_LKJ_CORR_LOG_HPP
+#ifndef STAN_MATH_PRIM_PROB_LKJ_CORR_LOG_HPP
+#define STAN_MATH_PRIM_PROB_LKJ_CORR_LOG_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/prob/lkj_corr_lpdf.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/prob/lkj_corr_lpdf.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
+
 
 namespace stan {
 namespace math {

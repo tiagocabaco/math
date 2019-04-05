@@ -1,8 +1,12 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
 
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/rev/util.hpp>
 TEST(AgradRevMatrix, elt_multiply_vec_vv) {
   using stan::math::elt_multiply;
   using stan::math::vector_v;

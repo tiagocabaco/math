@@ -1,9 +1,13 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_SCALAR_ERROR_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_SCALAR_ERROR_HPP
+#ifndef TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_SCALAR_ERROR_HPP
+#define TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_SCALAR_ERROR_HPP
 
 #include <gtest/gtest.h>
+
 #include <exception>
 #include <vector>
+
+
+
 
 template <typename F, typename T>
 void expect_scalar_error() {

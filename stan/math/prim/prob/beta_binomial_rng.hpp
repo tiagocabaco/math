@@ -1,9 +1,12 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_BETA_BINOMIAL_RNG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_BETA_BINOMIAL_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_BETA_BINOMIAL_RNG_HPP
+#define STAN_MATH_PRIM_PROB_BETA_BINOMIAL_RNG_HPP
 
-#include <stan/math/prim/scal/meta/VectorBuilder.hpp>
-#include <stan/math/prim/scal/prob/binomial_rng.hpp>
-#include <stan/math/prim/scal/prob/beta_rng.hpp>
+#include <stan/math/prim/meta/VectorBuilder.hpp>
+#include <stan/math/prim/prob/binomial_rng.hpp>
+#include <stan/math/prim/prob/beta_rng.hpp>
+
+
+
 
 namespace stan {
 namespace math {

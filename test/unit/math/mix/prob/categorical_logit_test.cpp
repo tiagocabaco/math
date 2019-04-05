@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <vector>
-
 using Eigen::Dynamic;
 using Eigen::Matrix;
 using stan::math::log_softmax;

@@ -1,9 +1,15 @@
-#include <stan/math/mix/mat.hpp>
+
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/fpclassify.hpp>
+
 #include <vector>
 #include <limits>
-
 using stan::math::fvar;
 using stan::math::var;
 

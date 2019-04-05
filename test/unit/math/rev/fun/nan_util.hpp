@@ -1,10 +1,15 @@
 #ifndef TEST__UNIT_AGRAD_REV__NAN_UTIL_HPP
 #define TEST__UNIT_AGRAD_REV__NAN_UTIL_HPP
 
-#include <test/unit/math/rev/arr/fun/util.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
+
+
+
+
 
 template <typename F>
 void test_nan_vd(const F& f, const double& arg1, const double& arg2,

@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_BINOMIAL_COEFFICIENT_LOG_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_BINOMIAL_COEFFICIENT_LOG_HPP
+#ifndef STAN_MATH_PRIM_FUN_BINOMIAL_COEFFICIENT_LOG_HPP
+#define STAN_MATH_PRIM_FUN_BINOMIAL_COEFFICIENT_LOG_HPP
 
-#include <stan/math/prim/scal/fun/lgamma.hpp>
+#include <stan/math/prim/fun/lgamma.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
 
 namespace stan {
 namespace math {

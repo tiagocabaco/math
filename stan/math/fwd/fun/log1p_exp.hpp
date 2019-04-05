@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_FWD_SCAL_FUN_LOG1P_EXP_HPP
-#define STAN_MATH_FWD_SCAL_FUN_LOG1P_EXP_HPP
+#ifndef STAN_MATH_FWD_FUN_LOG1P_EXP_HPP
+#define STAN_MATH_FWD_FUN_LOG1P_EXP_HPP
 
 #include <stan/math/fwd/core.hpp>
-#include <stan/math/prim/scal/fun/log1p_exp.hpp>
+#include <stan/math/prim/fun/log1p_exp.hpp>
+
+
 
 namespace stan {
 namespace math {

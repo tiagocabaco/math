@@ -1,12 +1,21 @@
-#include <stan/math/rev/mat.hpp>
-#include <stan/math/prim/mat/fun/matrix_exp_pade.hpp>
+
+
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/expect_matrix_eq.hpp>
-#include <test/unit/math/rev/mat/fun/util.hpp>
+#include <test/unit/math/rev/fun/expect_matrix_eq.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+
 #include <algorithm>
 #include <vector>
 #include <random>
-
 TEST(MathMatrix, matrix_exp_pade_1x1) {
   stan::math::matrix_v m1(1, 1), m2(1, 1), m1_exp;
   m1 << 0;

@@ -1,7 +1,11 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(ProbAgradDistributionsNormal, fwd) {
   using stan::math::fvar;
   using stan::math::normal_log;

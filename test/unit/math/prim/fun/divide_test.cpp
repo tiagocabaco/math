@@ -1,5 +1,9 @@
-#include <stan/math/prim/scal.hpp>
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
+
+
 
 TEST(MathFunctions, divide) {
   using stan::math::divide;
@@ -51,4 +55,17 @@ TEST(MathFunctions, int_divide_by_0) {
   int x = 1;
   int y = 0;
   EXPECT_THROW(stan::math::divide(x, y), std::domain_error);
+}
+
+
+
+TEST(MathMatrix_mat, divide) {
+  stan::math::vector_d v0;
+  stan::math::row_vector_d rv0;
+  stan::math::matrix_d m0;
+
+  using stan::math::divide;
+  EXPECT_NO_THROW(divide(v0, 2.0));
+  EXPECT_NO_THROW(divide(rv0, 2.0));
+  EXPECT_NO_THROW(divide(m0, 2.0));
 }

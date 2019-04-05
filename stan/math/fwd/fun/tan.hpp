@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_FWD_SCAL_FUN_TAN_HPP
-#define STAN_MATH_FWD_SCAL_FUN_TAN_HPP
+#ifndef STAN_MATH_FWD_FUN_TAN_HPP
+#define STAN_MATH_FWD_FUN_TAN_HPP
 
 #include <stan/math/fwd/core.hpp>
+
 
 namespace stan {
 namespace math {

@@ -1,10 +1,15 @@
-#ifndef TEST_UNIT_MATH_FWD_MAT_VECTORIZE_BUILD_FWD_MATRIX_HPP
-#define TEST_UNIT_MATH_FWD_MAT_VECTORIZE_BUILD_FWD_MATRIX_HPP
+#ifndef TEST_UNIT_MATH_FWD_VECTORIZE_BUILD_FWD_MATRIX_HPP
+#define TEST_UNIT_MATH_FWD_VECTORIZE_BUILD_FWD_MATRIX_HPP
 
-#include <stan/math/fwd/mat.hpp>
-#include <test/unit/math/fwd/mat/vectorize/build_fwd_vector.hpp>
+#include <stan/math/fwd.hpp>
+#include <test/unit/math/fwd/vectorize/build_fwd_vector.hpp>
 #include <Eigen/Dense>
+
 #include <vector>
+
+
+
+
 
 template <typename F, typename T, int R, int C>
 static inline Eigen::Matrix<T, R, C> build_fwd_matrix(

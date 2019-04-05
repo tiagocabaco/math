@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixColumnsDotProduct, vector_vector_fd) {
   using stan::math::vector_d;
   using stan::math::vector_fd;

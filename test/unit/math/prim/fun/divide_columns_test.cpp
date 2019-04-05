@@ -1,11 +1,18 @@
+
+
+
+
+
+
+
+
 #include <gtest/gtest.h>
-#include <stan/math/prim/mat.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim.hpp>
+
 #include <cmath>
 #include <limits>
 #include <string>
 #include <vector>
-
 TEST(MathPrimMat, vec_of_rvec_vec) {
   std::vector<Eigen::Matrix<double, -1, 1>> x(3);
   for (size_t i = 0; i < x.size(); ++i) {

@@ -1,13 +1,24 @@
-#ifndef STAN_MATH_PRIM_SCAL_ERR_CHECK_3F2_CONVERGES_HPP
-#define STAN_MATH_PRIM_SCAL_ERR_CHECK_3F2_CONVERGES_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_3F2_CONVERGES_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_3F2_CONVERGES_HPP
 
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <stan/math/prim/scal/fun/is_nonpositive_integer.hpp>
-#include <stan/math/prim/scal/fun/value_of_rec.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/fun/is_nonpositive_integer.hpp>
+#include <stan/math/prim/fun/value_of_rec.hpp>
+
+
+
+
 #include <cmath>
 #include <limits>
 #include <sstream>
 #include <stdexcept>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,7 +1,11 @@
-#include <stan/math/prim/arr.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(MathMatrix, rep_array) {
   using stan::math::rep_array;
   std::vector<double> x = rep_array(2.0, 3);

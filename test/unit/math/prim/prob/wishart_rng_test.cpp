@@ -1,10 +1,17 @@
-#include <stan/math/prim/mat.hpp>
-#include <test/unit/math/prim/mat/util.hpp>
+
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
+#include <test/unit/math/prim/util.hpp>
 #include <boost/random/mersenne_twister.hpp>
 #include <gtest/gtest.h>
+
 #include <stdexcept>
 #include <vector>
-
 TEST(ProbDistributionsWishartRng, rng) {
   using Eigen::MatrixXd;
   using stan::math::wishart_rng;

@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixColumnsDotSelf, matrix_fd) {
   using stan::math::columns_dot_self;
   using stan::math::matrix_fd;

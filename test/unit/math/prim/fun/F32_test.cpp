@@ -1,6 +1,8 @@
-#include <gtest/gtest.h>
-#include <stan/math/prim/scal/fun/F32.hpp>
 
+
+
+#include <gtest/gtest.h>
+#include <stan/math/prim.hpp>
 // converge
 TEST(MathPrimScalFun, F32_converges_by_z) {
   EXPECT_NEAR(2.5, stan::math::F32(1.0, 1.0, 1.0, 1.0, 1.0, 0.6, 1e-10), 1e-8);

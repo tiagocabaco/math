@@ -1,13 +1,21 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_INC_BETA_HPP
-#define STAN_MATH_REV_SCAL_FUN_INC_BETA_HPP
+#ifndef STAN_MATH_REV_FUN_INC_BETA_HPP
+#define STAN_MATH_REV_FUN_INC_BETA_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/grad_reg_inc_beta.hpp>
-#include <stan/math/rev/scal/fun/pow.hpp>
-#include <stan/math/prim/scal/fun/lbeta.hpp>
-#include <stan/math/prim/scal/fun/digamma.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/grad_reg_inc_beta.hpp>
+#include <stan/math/rev/fun/pow.hpp>
+#include <stan/math/prim/fun/lbeta.hpp>
+#include <stan/math/prim/fun/digamma.hpp>
+
 #include <valarray>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

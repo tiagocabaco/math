@@ -1,11 +1,18 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_CHOOSE_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_CHOOSE_HPP
+#ifndef STAN_MATH_PRIM_FUN_CHOOSE_HPP
+#define STAN_MATH_PRIM_FUN_CHOOSE_HPP
 
-#include <stan/math/prim/scal/err/check_nonnegative.hpp>
-#include <stan/math/prim/scal/err/check_less_or_equal.hpp>
+#include <stan/math/prim/err/check_nonnegative.hpp>
+#include <stan/math/prim/err/check_less_or_equal.hpp>
 #include <boost/math/special_functions/binomial.hpp>
+
+
 #include <limits>
 #include <cmath>
+
+
+
+
+
 
 namespace stan {
 namespace math {

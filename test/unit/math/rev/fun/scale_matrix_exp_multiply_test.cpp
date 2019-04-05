@@ -1,12 +1,19 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-// #include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
-#include <stan/math/rev/mat/fun/scale_matrix_exp_multiply.hpp>
-#include <stan/math/rev/mat/fun/to_var.hpp>
-#include <vector>
 
+
+// 
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+// #include <stan/math/prim.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <vector>
 inline void test_scale_matrix_exp_multiply_dv(int N, int M) {
   using stan::math::value_of;
   using stan::math::var;

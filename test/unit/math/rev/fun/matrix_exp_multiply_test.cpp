@@ -1,12 +1,19 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-// #include <stan/math/prim/scal/err/check_not_nan.hpp>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
-#include <stan/math/rev/mat/fun/matrix_exp_multiply.hpp>
-#include <stan/math/rev/mat/fun/to_var.hpp>
-#include <vector>
 
+
+// 
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+// #include <stan/math/prim.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <vector>
 TEST(MathRev, matrix_multiply_exp__vd__segfault) {
   Eigen::Matrix<stan::math::var, -1, -1> A(5, 5);
   A << -0.96871, 0.398827, 0.241306, 0.741373, 0.108926, 0.888077, -0.915624,

@@ -1,7 +1,10 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-
 using stan::math::include_summand;
 
 TEST(MetaTraits, IncludeSummandProptoFalse) {

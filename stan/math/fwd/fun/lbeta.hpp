@@ -1,10 +1,13 @@
-#ifndef STAN_MATH_FWD_SCAL_FUN_LBETA_HPP
-#define STAN_MATH_FWD_SCAL_FUN_LBETA_HPP
+#ifndef STAN_MATH_FWD_FUN_LBETA_HPP
+#define STAN_MATH_FWD_FUN_LBETA_HPP
 
 #include <stan/math/fwd/core.hpp>
-
 #include <boost/math/special_functions/digamma.hpp>
-#include <stan/math/prim/scal/fun/lbeta.hpp>
+#include <stan/math/prim/fun/lbeta.hpp>
+
+
+
+
 
 namespace stan {
 namespace math {

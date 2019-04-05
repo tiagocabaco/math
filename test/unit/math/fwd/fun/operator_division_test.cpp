@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 using stan::math::fvar;
 TEST(AgradFwdMatrixOperatorDivision, fd_scalar) {
   using stan::math::divide;

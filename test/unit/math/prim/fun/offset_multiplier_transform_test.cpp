@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <test/unit/util.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(prob_transform, offset_multiplier) {
   EXPECT_FLOAT_EQ(2.0 - 5.0 * 1.0,
                   stan::math::offset_multiplier_constrain(-1.0, 2.0, 5.0));

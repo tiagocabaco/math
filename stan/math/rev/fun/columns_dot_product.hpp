@@ -1,17 +1,30 @@
-#ifndef STAN_MATH_REV_MAT_FUN_COLUMNS_DOT_PRODUCT_HPP
-#define STAN_MATH_REV_MAT_FUN_COLUMNS_DOT_PRODUCT_HPP
+#ifndef STAN_MATH_REV_FUN_COLUMNS_DOT_PRODUCT_HPP
+#define STAN_MATH_REV_FUN_COLUMNS_DOT_PRODUCT_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/typedefs.hpp>
-#include <stan/math/prim/mat/err/check_vector.hpp>
-#include <stan/math/prim/arr/err/check_matching_sizes.hpp>
-#include <stan/math/prim/scal/fun/value_of.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/typedefs.hpp>
+#include <stan/math/prim/err/check_vector.hpp>
+#include <stan/math/prim/err/check_matching_sizes.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
 #include <stan/math/rev/core.hpp>
-#include <stan/math/rev/mat/fun/typedefs.hpp>
-#include <stan/math/rev/scal/fun/value_of.hpp>
-#include <stan/math/rev/mat/fun/dot_product.hpp>
+#include <stan/math/rev/fun/typedefs.hpp>
+#include <stan/math/rev/fun/value_of.hpp>
+#include <stan/math/rev/fun/dot_product.hpp>
+
+
 #include <vector>
 #include <type_traits>
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

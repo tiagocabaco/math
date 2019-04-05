@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_FMAX_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_FMAX_HPP
+#ifndef STAN_MATH_PRIM_FUN_FMAX_HPP
+#define STAN_MATH_PRIM_FUN_FMAX_HPP
 
-#include <stan/math/prim/scal/fun/is_nan.hpp>
+#include <stan/math/prim/fun/is_nan.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
 
 namespace stan {
 namespace math {

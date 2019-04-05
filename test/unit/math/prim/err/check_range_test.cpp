@@ -1,9 +1,15 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
+
 #include <string>
 #include <vector>
-
 TEST(ErrorHandlingMatrix, checkRange_6_arg_std_vector) {
   using stan::math::check_range;
   std::vector<double> x;

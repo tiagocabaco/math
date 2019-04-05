@@ -1,8 +1,10 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_PRIM_EXPECT_VAL_EQ_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_PRIM_EXPECT_VAL_EQ_HPP
+#ifndef TEST_UNIT_MATH_PRIM_VECTORIZE_PRIM_EXPECT_VAL_EQ_HPP
+#define TEST_UNIT_MATH_PRIM_VECTORIZE_PRIM_EXPECT_VAL_EQ_HPP
 
-#include <stan/math/prim/scal/fun/is_nan.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
+
 
 void expect_val_eq(double exp_val, double test_val) {
   using stan::math::is_nan;

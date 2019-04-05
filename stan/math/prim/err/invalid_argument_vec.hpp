@@ -1,12 +1,20 @@
-#ifndef STAN_MATH_PRIM_SCAL_ERR_INVALID_ARGUMENT_VEC_HPP
-#define STAN_MATH_PRIM_SCAL_ERR_INVALID_ARGUMENT_VEC_HPP
+#ifndef STAN_MATH_PRIM_ERR_INVALID_ARGUMENT_VEC_HPP
+#define STAN_MATH_PRIM_ERR_INVALID_ARGUMENT_VEC_HPP
 
-#include <stan/math/prim/scal/err/invalid_argument.hpp>
-#include <stan/math/prim/scal/meta/value_type.hpp>
-#include <stan/math/prim/scal/meta/error_index.hpp>
-#include <stan/math/prim/scal/meta/get.hpp>
+#include <stan/math/prim/err/invalid_argument.hpp>
+#include <stan/math/prim/meta/value_type.hpp>
+#include <stan/math/prim/meta/error_index.hpp>
+#include <stan/math/prim/meta/get.hpp>
+
+
 #include <sstream>
 #include <string>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

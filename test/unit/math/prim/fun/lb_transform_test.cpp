@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <test/unit/util.hpp>
 #include <gtest/gtest.h>
-#include <limits>
 
+#include <limits>
 TEST(prob_transform, lb) {
   EXPECT_FLOAT_EQ(exp(-1.0) + 2.0, stan::math::lb_constrain(-1.0, 2.0));
   EXPECT_FLOAT_EQ(7.9, stan::math::lb_constrain(

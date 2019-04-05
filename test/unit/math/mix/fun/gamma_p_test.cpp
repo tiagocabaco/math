@@ -1,8 +1,12 @@
-#include <stan/math/prim/scal/fun/gamma_p.hpp>
-#include <stan/math/prim/scal/fun/boost_policy.hpp>
-#include <test/unit/math/mix/mat/util/autodiff_tester.hpp>
+
+
+
+
+#include <stan/math/prim.hpp>
+#include <test/unit/math/mix/util/autodiff_tester.hpp>
 
 #include <vector>
+
 
 struct op_gamma_p_f {
   template <typename T1, typename T2>

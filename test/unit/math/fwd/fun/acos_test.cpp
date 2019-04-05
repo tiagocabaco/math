@@ -1,7 +1,10 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 TEST(AgradFwdAcos, Fvar) {
   using stan::math::NEGATIVE_INFTY;
   using stan::math::fvar;

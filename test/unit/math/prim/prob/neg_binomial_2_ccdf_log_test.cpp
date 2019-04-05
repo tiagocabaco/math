@@ -1,8 +1,12 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <boost/random/mersenne_twister.hpp>
 #include <boost/math/distributions.hpp>
-
 TEST(ProbNegBinomial2, ccdf_log_matches_lccdf) {
   double y = 0.8;
   double mu = 1.1;

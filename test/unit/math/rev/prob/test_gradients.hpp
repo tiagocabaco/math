@@ -1,7 +1,11 @@
+
+
+
+
+
 #include <cmath>
 #include <vector>
 #include <iomanip>
-
 void test_grad_eq(Eigen::Matrix<double, -1, 1> grad_1,
                   Eigen::Matrix<double, -1, 1> grad_2) {
   ASSERT_EQ(grad_1.size(), grad_2.size());

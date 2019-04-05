@@ -1,9 +1,15 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <stan/math/prim/scal/fun/value_of.hpp>
+#include <stan/math/prim.hpp>
+
 #include <vector>
 #include <cmath>
-
 using Eigen::Dynamic;
 using Eigen::Matrix;
 using stan::math::var;

@@ -1,13 +1,20 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_BERNOULLI_LOGIT_RNG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_BERNOULLI_LOGIT_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_BERNOULLI_LOGIT_RNG_HPP
+#define STAN_MATH_PRIM_PROB_BERNOULLI_LOGIT_RNG_HPP
 
-#include <stan/math/prim/scal/fun/inv_logit.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/meta/length.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
-#include <stan/math/prim/scal/meta/VectorBuilder.hpp>
+#include <stan/math/prim/fun/inv_logit.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/meta/length.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
+#include <stan/math/prim/meta/VectorBuilder.hpp>
 #include <boost/random/bernoulli_distribution.hpp>
 #include <boost/random/variate_generator.hpp>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,9 +1,15 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/fpclassify.hpp>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
-#include <limits>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 
+#include <limits>
 TEST(AgradFwdAbs, Fvar) {
   using stan::math::fvar;
   using std::abs;

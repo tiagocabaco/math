@@ -1,9 +1,15 @@
-#include <stan/math/mix/mat.hpp>
+
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+
 #include <limits>
 #include <algorithm>
-
 using stan::math::fvar;
 TEST(AgradMixMatrixMin, fv_vector_1stDeriv) {
   using stan::math::min;

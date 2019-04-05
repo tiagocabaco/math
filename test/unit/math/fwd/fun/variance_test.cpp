@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(AgradFwdMatrixVariance, fd_vector) {
   using stan::math::variance;
   using stan::math::vector_d;

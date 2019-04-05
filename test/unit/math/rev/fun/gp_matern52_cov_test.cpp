@@ -1,11 +1,19 @@
+
+
+
+
+
+
+
+
 #include <gtest/gtest.h>
-#include <stan/math/rev/mat.hpp>
+#include <stan/math/rev.hpp>
+
 #include <cmath>
 #include <limits>
 #include <string>
 #include <vector>
 #include <type_traits>
-
 TEST(MathPrimMat, vec_double_gp_matern52_cov1) {
   stan::math::var sigma = 0.2;
   stan::math::var l = 5.0;

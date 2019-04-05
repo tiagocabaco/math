@@ -1,9 +1,13 @@
-#ifndef TEST_UNIT_MATH_MIX_SCAL_FUN_NAN_UTIL_HPP
-#define TEST_UNIT_MATH_MIX_SCAL_FUN_NAN_UTIL_HPP
+#ifndef TEST_UNIT_MATH_MIX_FUN_NAN_UTIL_HPP
+#define TEST_UNIT_MATH_MIX_FUN_NAN_UTIL_HPP
 
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <boost/math/tools/promotion.hpp>
+
 #include <limits>
+
+
+
 
 template <typename F>
 void test_nan_fv1(const F& f, const double& arg1, const bool& throws) {

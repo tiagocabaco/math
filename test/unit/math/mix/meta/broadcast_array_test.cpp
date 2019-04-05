@@ -1,9 +1,15 @@
-#include <gtest/gtest.h>
-#include <stan/math/fwd/core/fvar.hpp>
-#include <stan/math/rev/core/var.hpp>
-#include <stan/math/prim/scal/meta/broadcast_array.hpp>
-#include <vector>
 
+
+
+
+
+
+#include <gtest/gtest.h>
+#include <stan/math/fwd.hpp>
+#include <stan/math/rev.hpp>
+#include <stan/math/prim.hpp>
+
+#include <vector>
 TEST(foo, bar) {
   using stan::math::fvar;
   using stan::math::internal::broadcast_array;

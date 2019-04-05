@@ -1,12 +1,19 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+
+#define TEST_CVODES_ADAMS 1
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <stan/math/rev/mat/functor/gradient.hpp>
+
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include <stdexcept>
-
-#define TEST_CVODES_ADAMS 1
 #define TEST_CVODES_BDF 2
 
 using std::cos;

@@ -1,7 +1,10 @@
-#include <stan/math/fwd/mat.hpp>
-#include <stan/math/prim/mat/fun/matrix_exp_2x2.hpp>
-#include <gtest/gtest.h>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, matrix_exp_2x2_1) {
   stan::math::fvar<double> a;
   a.val_ = 3.0;

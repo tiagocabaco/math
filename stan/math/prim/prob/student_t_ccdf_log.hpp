@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_STUDENT_T_CCDF_LOG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_STUDENT_T_CCDF_LOG_HPP
+#ifndef STAN_MATH_PRIM_PROB_STUDENT_T_CCDF_LOG_HPP
+#define STAN_MATH_PRIM_PROB_STUDENT_T_CCDF_LOG_HPP
 
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/prob/student_t_lccdf.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/prob/student_t_lccdf.hpp>
+
+
 
 namespace stan {
 namespace math {

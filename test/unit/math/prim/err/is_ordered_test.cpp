@@ -1,9 +1,15 @@
-#include <stan/math/prim/arr.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <string>
 #include <vector>
-
 using stan::math::is_ordered;
 
 TEST(ErrorHandling, isOrdered) {

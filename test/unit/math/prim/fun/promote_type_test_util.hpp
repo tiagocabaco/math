@@ -1,10 +1,15 @@
 #ifndef TEST_MATH_UNIT_FUNCTIONS_PROMOTE_TYPE_TEST_UTIL_HPP
 #define TEST_MATH_UNIT_FUNCTIONS_PROMOTE_TYPE_TEST_UTIL_HPP
 
-#include <stan/math/prim/scal.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <boost/typeof/typeof.hpp>
+
 #include <type_traits>
+
+
+
+
 
 template <typename T, typename S>
 void expect_type(S s) {

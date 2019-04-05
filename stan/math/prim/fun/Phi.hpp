@@ -1,10 +1,20 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_PHI_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_PHI_HPP
+#ifndef STAN_MATH_PRIM_FUN_PHI_HPP
+#define STAN_MATH_PRIM_FUN_PHI_HPP
 
-#include <stan/math/prim/scal/fun/erf.hpp>
-#include <stan/math/prim/scal/fun/erfc.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
+#include <stan/math/prim/fun/erf.hpp>
+#include <stan/math/prim/fun/erfc.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {
@@ -38,6 +48,43 @@ inline double Phi(double x) {
     return 0.5 * (1.0 + erf(INV_SQRT_2 * x));
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap Phi() so it can be vectorized.
+ * @param x Argument variable.
+ * @tparam T Argument type.
+ * @return Unit normal CDF of x.
+ */
+struct Phi_fun {
+  template <typename T>
+  static inline T fun(const T& x) {
+    return Phi(x);
+  }
+};
+
+/**
+ * Vectorized version of Phi().
+ * @param x Container.
+ * @tparam T Container type.
+ * @return Unit normal CDF of each value in x.
+ */
+template <typename T>
+inline typename apply_scalar_unary<Phi_fun, T>::return_t Phi(const T& x) {
+  return apply_scalar_unary<Phi_fun, T>::apply(x);
+}
+
 }  // namespace math
 }  // namespace stan
+
 #endif

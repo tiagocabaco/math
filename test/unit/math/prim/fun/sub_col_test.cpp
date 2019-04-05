@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrixSubCol, SubCol1) {
   using stan::math::sub_col;
   Eigen::MatrixXd m(3, 4);

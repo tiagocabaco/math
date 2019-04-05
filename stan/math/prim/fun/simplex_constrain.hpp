@@ -1,13 +1,21 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_SIMPLEX_CONSTRAIN_HPP
-#define STAN_MATH_PRIM_MAT_FUN_SIMPLEX_CONSTRAIN_HPP
+#ifndef STAN_MATH_PRIM_FUN_SIMPLEX_CONSTRAIN_HPP
+#define STAN_MATH_PRIM_FUN_SIMPLEX_CONSTRAIN_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
-#include <stan/math/prim/scal/fun/inv_logit.hpp>
-#include <stan/math/prim/scal/fun/log1m.hpp>
-#include <stan/math/prim/scal/fun/log1p_exp.hpp>
-#include <stan/math/prim/scal/fun/logit.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+#include <stan/math/prim/fun/inv_logit.hpp>
+#include <stan/math/prim/fun/log1m.hpp>
+#include <stan/math/prim/fun/log1p_exp.hpp>
+#include <stan/math/prim/fun/logit.hpp>
+
 #include <cmath>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

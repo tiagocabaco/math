@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_OWENS_T_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_OWENS_T_HPP
+#ifndef STAN_MATH_PRIM_FUN_OWENS_T_HPP
+#define STAN_MATH_PRIM_FUN_OWENS_T_HPP
 
 #include <boost/math/special_functions/owens_t.hpp>
+
 
 namespace stan {
 namespace math {

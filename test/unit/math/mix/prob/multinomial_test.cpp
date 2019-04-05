@@ -1,9 +1,15 @@
-#include <stan/math/mix/mat.hpp>
+
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
 #include <boost/random/mersenne_twister.hpp>
 #include <boost/math/distributions.hpp>
-#include <vector>
 
+#include <vector>
 using Eigen::Dynamic;
 using Eigen::Matrix;
 

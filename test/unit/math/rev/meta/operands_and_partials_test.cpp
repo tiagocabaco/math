@@ -1,8 +1,12 @@
-#include <stan/math/rev/mat.hpp>
-#include <stan/math/rev/mat/fun/typedefs.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(AgradPartialsVari, OperandsAndPartialsScal) {
   using stan::math::operands_and_partials;
   using stan::math::var;

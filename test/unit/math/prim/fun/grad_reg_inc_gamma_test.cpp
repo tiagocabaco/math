@@ -1,8 +1,10 @@
-#include <gtest/gtest.h>
-#include <stan/math/prim/scal/fun/digamma.hpp>
-#include <stan/math/prim/scal/fun/tgamma.hpp>
-#include <stan/math/prim/scal/fun/grad_reg_inc_gamma.hpp>
 
+
+
+
+
+#include <gtest/gtest.h>
+#include <stan/math/prim.hpp>
 // converge
 TEST(MathPrimScalFun, grad_reg_inc_gamma_1) {
   double alpha = 1.1;

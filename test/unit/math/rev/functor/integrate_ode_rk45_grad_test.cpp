@@ -1,11 +1,18 @@
-#include <stan/math/rev/arr.hpp>
+
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <stan/math/rev/mat/functor/gradient.hpp>
+
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include <stdexcept>
-
 using std::cos;
 using std::sin;
 

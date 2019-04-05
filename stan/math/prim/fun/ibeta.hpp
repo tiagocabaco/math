@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_IBETA_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_IBETA_HPP
+#ifndef STAN_MATH_PRIM_FUN_IBETA_HPP
+#define STAN_MATH_PRIM_FUN_IBETA_HPP
 
 #include <boost/math/special_functions/beta.hpp>
-#include <stan/math/prim/scal/err/check_not_nan.hpp>
+#include <stan/math/prim/err/check_not_nan.hpp>
+
+
 
 namespace stan {
 namespace math {

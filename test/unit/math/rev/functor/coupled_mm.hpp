@@ -1,8 +1,11 @@
-#ifndef TEST_UNIT_MATH_REV_ARR_FUNCTOR_COUPLED_MM_HPP
-#define TEST_UNIT_MATH_REV_ARR_FUNCTOR_COUPLED_MM_HPP
+#ifndef TEST_UNIT_MATH_REV_FUNCTOR_COUPLED_MM_HPP
+#define TEST_UNIT_MATH_REV_FUNCTOR_COUPLED_MM_HPP
 
-#include <stan/math/rev/core.hpp>
+#include <stan/math/rev.hpp>
+
 #include <vector>
+
+
 
 struct coupled_mm_ode_fun {
   template <typename T0, typename T1, typename T2>

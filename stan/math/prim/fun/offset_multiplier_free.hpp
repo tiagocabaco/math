@@ -1,12 +1,20 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_OFFSET_MULTIPLIER_FREE_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_OFFSET_MULTIPLIER_FREE_HPP
+#ifndef STAN_MATH_PRIM_FUN_OFFSET_MULTIPLIER_FREE_HPP
+#define STAN_MATH_PRIM_FUN_OFFSET_MULTIPLIER_FREE_HPP
 
-#include <stan/math/prim/scal/fun/identity_free.hpp>
-#include <stan/math/prim/scal/err/check_positive_finite.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
+#include <stan/math/prim/fun/identity_free.hpp>
+#include <stan/math/prim/err/check_positive_finite.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
 #include <cmath>
 #include <limits>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

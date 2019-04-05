@@ -1,7 +1,11 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(MathMatrix, sd) {
   using stan::math::sd;
   std::vector<double> x;

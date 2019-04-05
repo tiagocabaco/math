@@ -1,8 +1,11 @@
-#ifndef STAN_MATH_FWD_SCAL_FUN_FLOOR_HPP
-#define STAN_MATH_FWD_SCAL_FUN_FLOOR_HPP
+#ifndef STAN_MATH_FWD_FUN_FLOOR_HPP
+#define STAN_MATH_FWD_FUN_FLOOR_HPP
 
 #include <stan/math/fwd/core.hpp>
+
 #include <cmath>
+
+
 
 namespace stan {
 namespace math {

@@ -1,9 +1,14 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_INITIALIZE_HPP
-#define STAN_MATH_PRIM_MAT_FUN_INITIALIZE_HPP
+#ifndef STAN_MATH_PRIM_FUN_INITIALIZE_HPP
+#define STAN_MATH_PRIM_FUN_INITIALIZE_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+
+
 #include <vector>
 #include <type_traits>
+
+
+
 
 namespace stan {
 namespace math {

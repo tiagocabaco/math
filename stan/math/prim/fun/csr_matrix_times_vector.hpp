@@ -1,14 +1,23 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_CSR_MATRIX_TIMES_VECTOR_HPP
-#define STAN_MATH_PRIM_MAT_FUN_CSR_MATRIX_TIMES_VECTOR_HPP
+#ifndef STAN_MATH_PRIM_FUN_CSR_MATRIX_TIMES_VECTOR_HPP
+#define STAN_MATH_PRIM_FUN_CSR_MATRIX_TIMES_VECTOR_HPP
 
-#include <stan/math/prim/mat/fun/csr_u_to_z.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/dot_product.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/mat/err/check_range.hpp>
+#include <stan/math/prim/fun/csr_u_to_z.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/dot_product.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/err/check_range.hpp>
 #include <boost/math/tools/promotion.hpp>
+
 #include <vector>
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

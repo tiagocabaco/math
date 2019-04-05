@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbPareto, ccdf_log_matches_lccdf) {
   double y = 2.0;
   double y_min = 1.1;

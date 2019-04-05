@@ -1,7 +1,11 @@
-#include <stan/math/mix/scal.hpp>
-#include <gtest/gtest.h>
-#include <string>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+
+#include <string>
 TEST(MathMeta, primitive_to_mix) {
   EXPECT_TRUE(
       (stan::math::ad_promotable<bool,

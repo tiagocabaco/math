@@ -1,17 +1,29 @@
-#ifndef STAN_MATH_REV_MAT_FUN_QUAD_FORM_SYM_HPP
-#define STAN_MATH_REV_MAT_FUN_QUAD_FORM_SYM_HPP
+#ifndef STAN_MATH_REV_FUN_QUAD_FORM_SYM_HPP
+#define STAN_MATH_REV_FUN_QUAD_FORM_SYM_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/typedefs.hpp>
-#include <stan/math/rev/mat/fun/typedefs.hpp>
-#include <stan/math/prim/mat/fun/value_of.hpp>
-#include <stan/math/prim/mat/fun/quad_form.hpp>
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/err/check_symmetric.hpp>
-#include <stan/math/rev/mat/fun/quad_form.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/typedefs.hpp>
+#include <stan/math/rev/fun/typedefs.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/fun/quad_form.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/err/check_symmetric.hpp>
+#include <stan/math/rev/fun/quad_form.hpp>
+
 #include <type_traits>
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

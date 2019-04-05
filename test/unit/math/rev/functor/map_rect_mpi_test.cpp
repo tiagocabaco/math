@@ -2,15 +2,23 @@
 // MPI
 #ifdef STAN_MPI
 
-#include <stan/math/rev/mat.hpp>
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-
-#include <test/unit/math/prim/mat/functor/hard_work.hpp>
-#include <test/unit/math/prim/mat/functor/faulty_functor.hpp>
+#include <test/unit/math/prim/functor/hard_work.hpp>
+#include <test/unit/math/prim/functor/faulty_functor.hpp>
 
 #include <iostream>
 #include <vector>
+
+
+
+
+
+
+
+
+
 
 STAN_REGISTER_MAP_RECT(0, hard_work)
 STAN_REGISTER_MAP_RECT(1, faulty_functor)

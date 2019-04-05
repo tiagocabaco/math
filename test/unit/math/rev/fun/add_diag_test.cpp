@@ -1,9 +1,15 @@
+
+
+
+
+
+
 #include <gtest/gtest.h>
-#include <stan/math/rev/mat.hpp>
+#include <stan/math/rev.hpp>
+
 #include <limits>
 #include <string>
 #include <vector>
-
 TEST(AgradRevMatrix, var_mat_double_add_diag) {
   Eigen::Matrix<stan::math::var, Eigen::Dynamic, Eigen::Dynamic> mat(2, 3);
   mat << 1, 1, 1, 1, 1, 1;

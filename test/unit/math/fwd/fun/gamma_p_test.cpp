@@ -1,9 +1,14 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <boost/math/special_functions/gamma.hpp>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
-
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 TEST(AgradFwdGammaP, gamma_p) {
   using boost::math::gamma_p;
   using stan::math::fvar;

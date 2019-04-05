@@ -1,9 +1,13 @@
-#ifndef STAN_MATH_FWD_MAT_FUNCTOR_HESSIAN_HPP
-#define STAN_MATH_FWD_MAT_FUNCTOR_HESSIAN_HPP
+#ifndef STAN_MATH_FWD_FUNCTOR_HESSIAN_HPP
+#define STAN_MATH_FWD_FUNCTOR_HESSIAN_HPP
 
 #include <stan/math/fwd/core.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+
 #include <stdexcept>
+
+
+
 
 namespace stan {
 namespace math {

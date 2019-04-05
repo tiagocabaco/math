@@ -1,12 +1,20 @@
-#ifndef STAN_MATH_PRIM_MAT_ERR_CHECK_MATCHING_DIMS_HPP
-#define STAN_MATH_PRIM_MAT_ERR_CHECK_MATCHING_DIMS_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_MATCHING_DIMS_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_MATCHING_DIMS_HPP
 
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/err/invalid_argument.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/invalid_argument.hpp>
+
+
 #include <sstream>
 #include <string>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

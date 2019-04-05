@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathFunctions, inc_beta_dda) {
   using stan::math::digamma;
   using stan::math::inc_beta_dda;

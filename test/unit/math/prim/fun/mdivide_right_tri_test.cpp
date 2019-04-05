@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, mdivide_right_tri_val) {
   using stan::math::mdivide_right_tri;
   stan::math::matrix_d Ad(2, 2);

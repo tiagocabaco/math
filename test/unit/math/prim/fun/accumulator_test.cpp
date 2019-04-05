@@ -1,7 +1,11 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 // test sum of first n numbers for sum of a
 template <typename T>
 void test_sum(stan::math::accumulator<T>& a, int n) {

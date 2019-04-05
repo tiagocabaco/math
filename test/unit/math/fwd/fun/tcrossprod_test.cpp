@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixTCrossProd, fd_3x3_matrix) {
   using stan::math::matrix_d;
   using stan::math::matrix_fd;

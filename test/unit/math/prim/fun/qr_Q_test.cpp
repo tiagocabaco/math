@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, qr_Q) {
   stan::math::matrix_d m0(0, 0);
   stan::math::matrix_d m1(3, 2);

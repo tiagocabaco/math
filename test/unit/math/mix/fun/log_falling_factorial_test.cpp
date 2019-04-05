@@ -1,9 +1,14 @@
-#include <stan/math/mix/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/digamma.hpp>
-#include <test/unit/math/rev/scal/fun/util.hpp>
-#include <test/unit/math/mix/scal/fun/nan_util.hpp>
-
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/mix/fun/nan_util.hpp>
 double eps = 1e-6;
 double first_deriv_a = (stan::math::log_falling_factorial(5.0 + eps, 3.0)
                         - stan::math::log_falling_factorial(5.0 - eps, 3.0))

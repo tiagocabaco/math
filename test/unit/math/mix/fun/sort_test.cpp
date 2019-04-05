@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
-#include <test/unit/math/prim/mat/fun/sort_test_util.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <test/unit/math/prim/fun/sort_test_util.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 typedef std::vector<double> VEC;
 using stan::math::fvar;
 using stan::math::var;

@@ -1,13 +1,21 @@
-#ifndef STAN_MATH_PRIM_ARR_ERR_CHECK_OPENCL_HPP
-#define STAN_MATH_PRIM_ARR_ERR_CHECK_OPENCL_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_OPENCL_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_OPENCL_HPP
 #ifdef STAN_OPENCL
 #define __CL_ENABLE_EXCEPTIONS
 
-#include <stan/math/prim/scal/err/system_error.hpp>
+#include <stan/math/prim/err/system_error.hpp>
 #include <CL/cl.hpp>
+
+
+
 #include <iostream>
 #include <stdexcept>
 #include <string>
+
+
+
+
+
 
 /** @file stan/math/prim/arr/err/check_opencl.hpp
  *    @brief checking OpenCL error numbers

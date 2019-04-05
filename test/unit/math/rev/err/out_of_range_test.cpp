@@ -1,9 +1,15 @@
-#include <stan/math/rev/arr.hpp>
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
+
 #include <vector>
 #include <string>
-
 const char* function_ = "function";
 const char* msg1_ = "error_message1 ";
 const char* msg2_ = "error_message2 ";

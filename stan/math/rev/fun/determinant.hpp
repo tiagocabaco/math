@@ -1,12 +1,19 @@
-#ifndef STAN_MATH_REV_MAT_FUN_DETERMINANT_HPP
-#define STAN_MATH_REV_MAT_FUN_DETERMINANT_HPP
+#ifndef STAN_MATH_REV_FUN_DETERMINANT_HPP
+#define STAN_MATH_REV_FUN_DETERMINANT_HPP
 
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/typedefs.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/typedefs.hpp>
 #include <stan/math/rev/core.hpp>
-#include <stan/math/rev/mat/fun/typedefs.hpp>
+#include <stan/math/rev/fun/typedefs.hpp>
+
 #include <vector>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

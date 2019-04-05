@@ -1,16 +1,26 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_BETA_PROPORTION_RNG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_BETA_PROPORTION_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_BETA_PROPORTION_RNG_HPP
+#define STAN_MATH_PRIM_PROB_BETA_PROPORTION_RNG_HPP
 
 #include <boost/random/gamma_distribution.hpp>
 #include <boost/random/uniform_real_distribution.hpp>
 #include <boost/random/variate_generator.hpp>
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/scal/err/check_positive_finite.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/fun/log_sum_exp.hpp>
-#include <stan/math/prim/scal/meta/VectorBuilder.hpp>
-#include <stan/math/prim/scal/meta/max_size.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/err/check_positive_finite.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/fun/log_sum_exp.hpp>
+#include <stan/math/prim/meta/VectorBuilder.hpp>
+#include <stan/math/prim/meta/max_size.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

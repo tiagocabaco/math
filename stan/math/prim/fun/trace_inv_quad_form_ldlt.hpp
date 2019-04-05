@@ -1,14 +1,22 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_TRACE_INV_QUAD_FORM_LDLT_HPP
-#define STAN_MATH_PRIM_MAT_FUN_TRACE_INV_QUAD_FORM_LDLT_HPP
+#ifndef STAN_MATH_PRIM_FUN_TRACE_INV_QUAD_FORM_LDLT_HPP
+#define STAN_MATH_PRIM_FUN_TRACE_INV_QUAD_FORM_LDLT_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/LDLT_factor.hpp>
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
-#include <stan/math/prim/mat/fun/mdivide_left_ldlt.hpp>
-#include <stan/math/prim/mat/fun/trace.hpp>
-#include <stan/math/prim/mat/fun/transpose.hpp>
-#include <stan/math/prim/mat/fun/multiply.hpp>
-#include <stan/math/prim/scal/meta/is_var.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/LDLT_factor.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+#include <stan/math/prim/fun/mdivide_left_ldlt.hpp>
+#include <stan/math/prim/fun/trace.hpp>
+#include <stan/math/prim/fun/transpose.hpp>
+#include <stan/math/prim/fun/multiply.hpp>
+#include <stan/math/prim/meta/is_var.hpp>
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

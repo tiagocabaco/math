@@ -1,9 +1,15 @@
-#include <stan/math/rev/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
+
 #include <vector>
 #include <limits>
 #include <string>
-
 TEST(normal_ccdf_log, tail) {
   using stan::math::normal_ccdf_log;
   using stan::math::var;

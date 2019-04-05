@@ -1,9 +1,15 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <algorithm>
 #include <vector>
-
 TEST(MathMatrix, min) {
   using stan::math::min;
   std::vector<int> n;

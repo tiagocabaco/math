@@ -1,8 +1,13 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
-#include <cmath>
 
+
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
+
+#include <cmath>
 TEST(AgradFwdExpm1, Fvar) {
   using stan::math::fvar;
   using std::exp;

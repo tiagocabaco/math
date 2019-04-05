@@ -1,7 +1,11 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
-#include <random>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <random>
 TEST(ProbDistributionsLkjCorr, testIdentity) {
   std::random_device rd;
   std::mt19937 mt(rd());

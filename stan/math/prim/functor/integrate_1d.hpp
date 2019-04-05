@@ -1,16 +1,30 @@
-#ifndef STAN_MATH_PRIM_ARR_FUNCTOR_integrate_1d_HPP
-#define STAN_MATH_PRIM_ARR_FUNCTOR_integrate_1d_HPP
+#ifndef STAN_MATH_PRIM_FUNCTOR_integrate_1d_HPP
+#define STAN_MATH_PRIM_FUNCTOR_integrate_1d_HPP
 
-#include <stan/math/prim/scal/err/check_less_or_equal.hpp>
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
+#include <stan/math/prim/err/check_less_or_equal.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
 #include <boost/math/quadrature/exp_sinh.hpp>
 #include <boost/math/quadrature/sinh_sinh.hpp>
 #include <boost/math/quadrature/tanh_sinh.hpp>
+
+
+
+
 #include <functional>
 #include <limits>
 #include <ostream>
 #include <vector>
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

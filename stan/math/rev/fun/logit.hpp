@@ -1,9 +1,12 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_LOGIT_HPP
-#define STAN_MATH_REV_SCAL_FUN_LOGIT_HPP
+#ifndef STAN_MATH_REV_FUN_LOGIT_HPP
+#define STAN_MATH_REV_FUN_LOGIT_HPP
 
-#include <stan/math/prim/scal/fun/logit.hpp>
+#include <stan/math/prim/fun/logit.hpp>
 #include <stan/math/rev/core.hpp>
 #include <stan/math/rev/core/precomp_v_vari.hpp>
+
+
+
 
 namespace stan {
 namespace math {

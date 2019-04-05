@@ -1,10 +1,16 @@
-#include <stan/math/prim/mat.hpp>
-#include <stan/math/prim/mat/fun/matrix_exp_pade.hpp>
+
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/prim/mat/fun/expect_matrix_eq.hpp>
+#include <test/unit/math/prim/fun/expect_matrix_eq.hpp>
+
 #include <algorithm>
 #include <random>
-
 TEST(MathMatrix, matrix_exp_pade_1x1) {
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> m1(1, 1), m2(1, 1);
   m1 << 0;

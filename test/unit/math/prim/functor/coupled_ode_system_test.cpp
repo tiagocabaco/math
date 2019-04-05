@@ -1,12 +1,21 @@
-#include <stan/math/prim/arr.hpp>
+
+
+
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-#include <test/unit/math/prim/arr/functor/harmonic_oscillator.hpp>
-#include <test/unit/math/prim/arr/functor/mock_ode_functor.hpp>
-#include <test/unit/math/prim/arr/functor/mock_throwing_ode_functor.hpp>
+#include <test/unit/math/prim/functor/harmonic_oscillator.hpp>
+#include <test/unit/math/prim/functor/mock_ode_functor.hpp>
+#include <test/unit/math/prim/functor/mock_throwing_ode_functor.hpp>
+
 #include <vector>
 #include <string>
-
 struct StanMathOde : public ::testing::Test {
   std::stringstream msgs;
   std::vector<double> x;

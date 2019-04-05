@@ -1,8 +1,11 @@
-#ifndef TEST_UNIT_MATH_MIX_MAT_VECTORIZE_BUILD_MIX_VECTOR_HPP
-#define TEST_UNIT_MATH_MIX_MAT_VECTORIZE_BUILD_MIX_VECTOR_HPP
+#ifndef TEST_UNIT_MATH_MIX_VECTORIZE_BUILD_MIX_VECTOR_HPP
+#define TEST_UNIT_MATH_MIX_VECTORIZE_BUILD_MIX_VECTOR_HPP
 
-#include <stan/math/mix/mat.hpp>
+#include <stan/math/mix.hpp>
+
 #include <vector>
+
+
 
 template <typename F>
 static inline std::vector<stan::math::var> build_mix_vector(

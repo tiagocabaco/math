@@ -1,17 +1,28 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_MULTI_GP_CHOLESKY_LPDF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_MULTI_GP_CHOLESKY_LPDF_HPP
+#ifndef STAN_MATH_PRIM_PROB_MULTI_GP_CHOLESKY_LPDF_HPP
+#define STAN_MATH_PRIM_PROB_MULTI_GP_CHOLESKY_LPDF_HPP
 
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
-#include <stan/math/prim/mat/fun/dot_self.hpp>
-#include <stan/math/prim/mat/fun/log.hpp>
-#include <stan/math/prim/mat/fun/mdivide_left_tri_low.hpp>
-#include <stan/math/prim/mat/fun/multiply.hpp>
-#include <stan/math/prim/mat/fun/row.hpp>
-#include <stan/math/prim/mat/fun/sum.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+#include <stan/math/prim/fun/dot_self.hpp>
+#include <stan/math/prim/fun/log.hpp>
+#include <stan/math/prim/fun/mdivide_left_tri_low.hpp>
+#include <stan/math/prim/fun/multiply.hpp>
+#include <stan/math/prim/fun/row.hpp>
+#include <stan/math/prim/fun/sum.hpp>
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

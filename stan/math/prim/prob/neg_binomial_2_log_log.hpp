@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_NEG_BINOMIAL_2_LOG_LOG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_NEG_BINOMIAL_2_LOG_LOG_HPP
+#ifndef STAN_MATH_PRIM_PROB_NEG_BINOMIAL_2_LOG_LOG_HPP
+#define STAN_MATH_PRIM_PROB_NEG_BINOMIAL_2_LOG_LOG_HPP
 
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/prob/neg_binomial_2_log_lpmf.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/prob/neg_binomial_2_log_lpmf.hpp>
+
+
 
 namespace stan {
 namespace math {

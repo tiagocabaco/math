@@ -1,8 +1,13 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-#include <string>
 
+#include <string>
 TEST(ErrorHandlingScalar, CheckPositiveSize) {
   using stan::math::check_positive_size;
   const char* function = "function";

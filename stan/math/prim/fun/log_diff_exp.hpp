@@ -1,11 +1,18 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_LOG_DIFF_EXP_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_LOG_DIFF_EXP_HPP
+#ifndef STAN_MATH_PRIM_FUN_LOG_DIFF_EXP_HPP
+#define STAN_MATH_PRIM_FUN_LOG_DIFF_EXP_HPP
 
-#include <stan/math/prim/scal/fun/log1m_exp.hpp>
+#include <stan/math/prim/fun/log1m_exp.hpp>
 #include <boost/math/tools/promotion.hpp>
 #include <boost/throw_exception.hpp>
+
+
 #include <limits>
 #include <stdexcept>
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbNegBinomial2, cdf_log_matches_lcdf) {
   double y = 0.8;
   double mu = 1.1;

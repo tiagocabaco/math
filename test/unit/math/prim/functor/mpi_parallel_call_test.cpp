@@ -2,14 +2,21 @@
 // MPI
 #ifdef STAN_MPI
 
-#include <stan/math/prim/mat.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-
-#include <test/unit/math/prim/mat/functor/faulty_functor.hpp>
+#include <test/unit/math/prim/functor/faulty_functor.hpp>
 
 #include <iostream>
 #include <vector>
+
+
+
+
+
+
+
+
 
 using stan::math::matrix_d;
 using stan::math::vector_d;

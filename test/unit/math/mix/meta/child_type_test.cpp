@@ -1,7 +1,10 @@
-#include <stan/math/mix/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/prim/scal/fun/promote_type_test_util.hpp>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/prim/fun/promote_type_test_util.hpp>
 TEST(MathMeta, value_type) {
   using stan::math::child_type;
   using stan::math::fvar;

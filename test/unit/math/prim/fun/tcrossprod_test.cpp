@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 void test_tcrossprod(const stan::math::matrix_d& x) {
   using stan::math::tcrossprod;
   stan::math::matrix_d y = tcrossprod(x);

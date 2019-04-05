@@ -1,7 +1,11 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 TEST(AgradFwd, asBool) {
   using stan::math::as_bool;
   using stan::math::fvar;

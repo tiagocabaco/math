@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathFunctions, modulus) {
   using stan::math::modulus;
   EXPECT_EQ(0, modulus(4, 2));

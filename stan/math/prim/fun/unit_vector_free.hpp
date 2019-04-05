@@ -1,10 +1,15 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_UNIT_VECTOR_FREE_HPP
-#define STAN_MATH_PRIM_MAT_FUN_UNIT_VECTOR_FREE_HPP
+#ifndef STAN_MATH_PRIM_FUN_UNIT_VECTOR_FREE_HPP
+#define STAN_MATH_PRIM_FUN_UNIT_VECTOR_FREE_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
-#include <stan/math/prim/mat/err/check_unit_vector.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+#include <stan/math/prim/err/check_unit_vector.hpp>
+
 #include <cmath>
+
+
+
+
 
 namespace stan {
 namespace math {

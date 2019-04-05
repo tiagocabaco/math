@@ -1,8 +1,12 @@
-#include <stan/math/prim/scal.hpp>
-#include <stan/math/prim/scal/meta/is_var_or_arithmetic.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(MathMeta, is_var_or_arithmetic_simple) {
   using stan::is_var_or_arithmetic;
   EXPECT_TRUE(stan::is_var_or_arithmetic<double>::value);

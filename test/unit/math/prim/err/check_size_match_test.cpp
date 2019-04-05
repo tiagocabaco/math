@@ -1,7 +1,10 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
-
 TEST(ErrorHandlingMatrix, checkSizeMatch) {
   using stan::math::check_size_match;
   int x;

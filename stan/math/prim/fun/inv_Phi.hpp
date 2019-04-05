@@ -1,10 +1,20 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_INV_PHI_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_INV_PHI_HPP
+#ifndef STAN_MATH_PRIM_FUN_INV_PHI_HPP
+#define STAN_MATH_PRIM_FUN_INV_PHI_HPP
 
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/err/check_bounded.hpp>
-#include <stan/math/prim/scal/fun/Phi.hpp>
-#include <stan/math/prim/scal/fun/log1m.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/err/check_bounded.hpp>
+#include <stan/math/prim/fun/Phi.hpp>
+#include <stan/math/prim/fun/log1m.hpp>
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {
@@ -72,6 +82,46 @@ inline double inv_Phi(double p) {
   return x;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap inv_Phi() so it can be vectorized.
+ * @param x Variable in range [0, 1].
+ * @tparam T Variable type.
+ * @return Inverse unit normal CDF of x.
+ * @throw std::domain_error if x is not between 0 and 1.
+ */
+struct inv_Phi_fun {
+  template <typename T>
+  static inline T fun(const T& x) {
+    return inv_Phi(x);
+  }
+};
+
+/**
+ * Vectorized version of inv_Phi().
+ * @param x Container of variables in range [0, 1].
+ * @tparam T Container type.
+ * @return Inverse unit normal CDF of each value in x.
+ * @throw std::domain_error if any value is not between 0 and 1.
+ */
+template <typename T>
+inline typename apply_scalar_unary<inv_Phi_fun, T>::return_t inv_Phi(
+    const T& x) {
+  return apply_scalar_unary<inv_Phi_fun, T>::apply(x);
+}
+
 }  // namespace math
 }  // namespace stan
+
 #endif

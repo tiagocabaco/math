@@ -1,11 +1,16 @@
-#ifndef STAN_MATH_REV_MAT_FUN_LOG_DETERMINANT_SPD_HPP
-#define STAN_MATH_REV_MAT_FUN_LOG_DETERMINANT_SPD_HPP
+#ifndef STAN_MATH_REV_FUN_LOG_DETERMINANT_SPD_HPP
+#define STAN_MATH_REV_FUN_LOG_DETERMINANT_SPD_HPP
 
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
 #include <stan/math/rev/core.hpp>
+
+
+
+
+
 
 namespace stan {
 namespace math {

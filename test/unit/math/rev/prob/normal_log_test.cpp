@@ -1,6 +1,8 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
 TEST(ProbDistributionsNormal, intVsDouble) {
   using stan::math::var;
   for (double thetaval = -5.0; thetaval < 6.0; thetaval += 0.5) {

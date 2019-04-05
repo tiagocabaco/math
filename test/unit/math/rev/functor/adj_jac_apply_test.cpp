@@ -1,11 +1,19 @@
-#include <stan/math/rev/core.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
+
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <test/unit/math/rev/util.hpp>
 #include <gtest/gtest.h>
+
 #include <algorithm>
 #include <sstream>
 #include <tuple>
 #include <vector>
-
 /*
  * Check scalar return type
  */

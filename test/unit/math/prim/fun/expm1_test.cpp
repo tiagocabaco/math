@@ -1,10 +1,17 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <stdexcept>
 #include <cmath>
-
 TEST(MathFunctions, expm1) {
   using stan::math::expm1;
   using std::exp;

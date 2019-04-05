@@ -1,30 +1,54 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_BINOMIAL_LOGIT_LPMF_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_BINOMIAL_LOGIT_LPMF_HPP
+#ifndef STAN_MATH_PRIM_PROB_BINOMIAL_LOGIT_LPMF_HPP
+#define STAN_MATH_PRIM_PROB_BINOMIAL_LOGIT_LPMF_HPP
 
-#include <stan/math/prim/scal/meta/is_constant_struct.hpp>
-#include <stan/math/prim/scal/meta/partials_return_type.hpp>
-#include <stan/math/prim/scal/meta/operands_and_partials.hpp>
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/scal/err/check_bounded.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/check_greater_or_equal.hpp>
-#include <stan/math/prim/scal/err/check_less_or_equal.hpp>
-#include <stan/math/prim/scal/err/check_nonnegative.hpp>
-#include <stan/math/prim/scal/fun/size_zero.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/inv_logit.hpp>
-#include <stan/math/prim/scal/fun/log1m.hpp>
-#include <stan/math/prim/scal/fun/log_inv_logit.hpp>
-#include <stan/math/prim/scal/fun/multiply_log.hpp>
-#include <stan/math/prim/scal/fun/value_of.hpp>
-#include <stan/math/prim/scal/fun/binomial_coefficient_log.hpp>
-#include <stan/math/prim/scal/fun/lbeta.hpp>
-#include <stan/math/prim/scal/meta/VectorBuilder.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
-#include <stan/math/prim/scal/fun/inc_beta.hpp>
+#include <stan/math/prim/meta/is_constant_struct.hpp>
+#include <stan/math/prim/meta/partials_return_type.hpp>
+#include <stan/math/prim/meta/operands_and_partials.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/err/check_bounded.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_greater_or_equal.hpp>
+#include <stan/math/prim/err/check_less_or_equal.hpp>
+#include <stan/math/prim/err/check_nonnegative.hpp>
+#include <stan/math/prim/fun/size_zero.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/inv_logit.hpp>
+#include <stan/math/prim/fun/log1m.hpp>
+#include <stan/math/prim/fun/log_inv_logit.hpp>
+#include <stan/math/prim/fun/multiply_log.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/fun/binomial_coefficient_log.hpp>
+#include <stan/math/prim/fun/lbeta.hpp>
+#include <stan/math/prim/meta/VectorBuilder.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
+#include <stan/math/prim/fun/inc_beta.hpp>
 #include <boost/random/binomial_distribution.hpp>
 #include <boost/random/variate_generator.hpp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

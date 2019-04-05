@@ -1,7 +1,11 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 using Eigen::Dynamic;
 using Eigen::Matrix;
 using stan::math::fvar;

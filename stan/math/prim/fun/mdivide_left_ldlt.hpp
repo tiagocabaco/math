@@ -1,12 +1,19 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_MDIVIDE_LEFT_LDLT_HPP
-#define STAN_MATH_PRIM_MAT_FUN_MDIVIDE_LEFT_LDLT_HPP
+#ifndef STAN_MATH_PRIM_FUN_MDIVIDE_LEFT_LDLT_HPP
+#define STAN_MATH_PRIM_FUN_MDIVIDE_LEFT_LDLT_HPP
 
 #include <boost/math/tools/promotion.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/LDLT_factor.hpp>
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
-#include <stan/math/prim/mat/fun/promote_common.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/LDLT_factor.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+#include <stan/math/prim/fun/promote_common.hpp>
+
 #include <type_traits>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

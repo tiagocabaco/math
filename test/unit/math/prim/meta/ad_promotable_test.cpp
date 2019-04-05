@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal/meta/ad_promotable.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMeta, primitive_to_double) {
   EXPECT_TRUE((stan::math::ad_promotable<bool, double>::value));
   EXPECT_TRUE((stan::math::ad_promotable<char, double>::value));

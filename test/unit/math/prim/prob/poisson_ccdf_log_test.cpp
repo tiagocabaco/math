@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbPoisson, ccdf_log_matches_lccdf) {
   int y = 3;
   double lambda = 2.3;

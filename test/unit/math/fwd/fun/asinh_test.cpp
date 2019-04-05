@@ -1,8 +1,12 @@
-#include <stan/math/fwd/scal.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/asinh.hpp>
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
-
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 class AgradFwdAsinh : public testing::Test {
   void SetUp() {}
 };

@@ -1,8 +1,11 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
-// Phi_approx needs inv_logit in order for this to work
-#include <test/unit/math/fwd/scal/fun/nan_util.hpp>
 
+
+// Phi_approx needs inv_logit in order for this to work
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/fwd/fun/nan_util.hpp>
 TEST(AgradFwdPhi_approx, Fvar) {
   using stan::math::Phi_approx;
   using stan::math::fvar;

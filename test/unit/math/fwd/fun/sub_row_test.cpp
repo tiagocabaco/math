@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <stdexcept>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <stdexcept>
 TEST(AgradFwdMatrixSubRow, SubRow1_matrix_fd) {
   using stan::math::sub_row;
   stan::math::matrix_fd m(3, 4);

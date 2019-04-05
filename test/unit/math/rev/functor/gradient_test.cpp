@@ -1,10 +1,17 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
+
 #include <stdexcept>
 #include <vector>
 #include <thread>
 #include <future>
-
 using Eigen::Dynamic;
 using Eigen::Matrix;
 using Eigen::MatrixXd;

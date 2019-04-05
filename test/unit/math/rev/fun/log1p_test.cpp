@@ -1,10 +1,17 @@
-#include <stan/math/rev/scal.hpp>
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
+#include <test/unit/math/rev/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
 #include <stdexcept>
 #include <limits>
-
 TEST(AgradRev, log1p) {
   AVAR a = 0.1;
   AVAR f = stan::math::log1p(a);

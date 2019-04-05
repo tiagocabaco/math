@@ -1,8 +1,13 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/prob/expect_eq_diffs.hpp>
-#include <string>
 
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/prob/expect_eq_diffs.hpp>
+
+#include <string>
 template <typename T_prob>
 void expect_propto(unsigned int n1, T_prob theta1, unsigned int n2,
                    T_prob theta2, std::string message) {

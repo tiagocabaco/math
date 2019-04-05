@@ -1,15 +1,24 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_PARETO_TYPE_2_RNG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_PARETO_TYPE_2_RNG_HPP
+#ifndef STAN_MATH_PRIM_PROB_PARETO_TYPE_2_RNG_HPP
+#define STAN_MATH_PRIM_PROB_PARETO_TYPE_2_RNG_HPP
 
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/check_positive_finite.hpp>
-#include <stan/math/prim/scal/meta/max_size.hpp>
-#include <stan/math/prim/scal/meta/VectorBuilder.hpp>
-#include <stan/math/prim/scal/prob/exponential_rng.hpp>
-#include <stan/math/prim/scal/prob/normal_rng.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_positive_finite.hpp>
+#include <stan/math/prim/meta/max_size.hpp>
+#include <stan/math/prim/meta/VectorBuilder.hpp>
+#include <stan/math/prim/prob/exponential_rng.hpp>
+#include <stan/math/prim/prob/normal_rng.hpp>
 #include <boost/random/uniform_real_distribution.hpp>
 #include <boost/random/variate_generator.hpp>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

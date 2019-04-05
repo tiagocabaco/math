@@ -1,9 +1,12 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_BESSEL_FIRST_KIND_HPP
-#define STAN_MATH_REV_SCAL_FUN_BESSEL_FIRST_KIND_HPP
+#ifndef STAN_MATH_REV_FUN_BESSEL_FIRST_KIND_HPP
+#define STAN_MATH_REV_FUN_BESSEL_FIRST_KIND_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/bessel_first_kind.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/bessel_first_kind.hpp>
+
+
+
 
 namespace stan {
 namespace math {

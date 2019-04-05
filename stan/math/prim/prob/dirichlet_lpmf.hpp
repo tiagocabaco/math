@@ -1,21 +1,36 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_DIRICHLET_LPMF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_DIRICHLET_LPMF_HPP
+#ifndef STAN_MATH_PRIM_PROB_DIRICHLET_LPMF_HPP
+#define STAN_MATH_PRIM_PROB_DIRICHLET_LPMF_HPP
 
-#include <stan/math/prim/scal/meta/include_summand.hpp>
-#include <stan/math/prim/scal/meta/partials_return_type.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/scal/err/check_positive.hpp>
-#include <stan/math/prim/mat/err/check_simplex.hpp>
-#include <stan/math/prim/mat/fun/lgamma.hpp>
-#include <stan/math/prim/mat/fun/digamma.hpp>
-#include <stan/math/prim/mat/fun/value_of.hpp>
-#include <stan/math/prim/mat/meta/is_vector.hpp>
-#include <stan/math/prim/mat/meta/operands_and_partials.hpp>
-#include <stan/math/prim/mat/meta/is_constant_struct.hpp>
-#include <stan/math/prim/mat/meta/get.hpp>
-#include <stan/math/prim/mat/meta/length.hpp>
-#include <stan/math/prim/mat/meta/vector_seq_view.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+#include <stan/math/prim/meta/partials_return_type.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/err/check_positive.hpp>
+#include <stan/math/prim/err/check_simplex.hpp>
+#include <stan/math/prim/fun/lgamma.hpp>
+#include <stan/math/prim/fun/digamma.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/meta/is_vector.hpp>
+#include <stan/math/prim/meta/operands_and_partials.hpp>
+#include <stan/math/prim/meta/is_constant_struct.hpp>
+#include <stan/math/prim/meta/get.hpp>
+#include <stan/math/prim/meta/length.hpp>
+#include <stan/math/prim/meta/vector_seq_view.hpp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

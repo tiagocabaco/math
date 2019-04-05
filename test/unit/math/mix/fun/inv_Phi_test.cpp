@@ -1,13 +1,23 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/prim/mat/vectorize/prim_scalar_unary_test.hpp>
-#include <test/unit/math/rev/mat/vectorize/rev_scalar_unary_test.hpp>
-#include <test/unit/math/fwd/mat/vectorize/fwd_scalar_unary_test.hpp>
-#include <test/unit/math/mix/mat/vectorize/mix_scalar_unary_test.hpp>
-#include <stan/math/prim/mat/fun/inv_Phi.hpp>
-#include <test/unit/math/prim/mat/vectorize/vector_builder.hpp>
-#include <vector>
 
+
+
+
+
+
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/prim/vectorize/prim_scalar_unary_test.hpp>
+#include <test/unit/math/rev/vectorize/rev_scalar_unary_test.hpp>
+#include <test/unit/math/fwd/vectorize/fwd_scalar_unary_test.hpp>
+#include <test/unit/math/mix/vectorize/mix_scalar_unary_test.hpp>
+#include <stan/math/prim.hpp>
+#include <test/unit/math/prim/vectorize/vector_builder.hpp>
+
+#include <vector>
 /**
  * This is the structure for testing vectorized inv_Phi (defined in the
  * testing framework).

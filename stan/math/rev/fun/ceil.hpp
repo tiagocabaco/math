@@ -1,11 +1,18 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_CEIL_HPP
-#define STAN_MATH_REV_SCAL_FUN_CEIL_HPP
+#ifndef STAN_MATH_REV_FUN_CEIL_HPP
+#define STAN_MATH_REV_FUN_CEIL_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/is_nan.hpp>
-#include <stan/math/prim/scal/meta/likely.hpp>
+#include <stan/math/prim/fun/is_nan.hpp>
+#include <stan/math/prim/meta/likely.hpp>
+
+
 #include <cmath>
 #include <limits>
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,7 +1,11 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 TEST(grad_reg_inc_beta, 1) {
   double alpha = 1.0;
   double beta = 1.0;

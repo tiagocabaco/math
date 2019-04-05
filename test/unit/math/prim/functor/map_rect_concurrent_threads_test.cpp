@@ -2,22 +2,30 @@
 // enforce that STAN_MPI is NOT defined and these tests only run if
 // STAN_THREADS is defined
 
+
+#include <gtest/gtest.h>
+#include <stan/math/prim.hpp>
+#include <test/unit/math/prim/functor/hard_work.hpp>
+#include <stdlib.h>
+#include <iostream>
+#include <vector>
+#include <string>
 #ifdef STAN_THREADS
 
 #ifdef STAN_MPI
 #undef STAN_MPI
 #endif
 
-#include <stdlib.h>
 
-#include <gtest/gtest.h>
-#include <stan/math/prim/mat.hpp>
 
-#include <test/unit/math/prim/mat/functor/hard_work.hpp>
 
-#include <iostream>
-#include <vector>
-#include <string>
+
+
+
+
+
+
+
 
 // utility to set number of threads to use
 void set_n_threads(int num_threads) {

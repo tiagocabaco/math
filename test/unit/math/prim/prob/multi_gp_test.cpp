@@ -1,7 +1,11 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 using Eigen::Dynamic;
 using Eigen::Matrix;
 

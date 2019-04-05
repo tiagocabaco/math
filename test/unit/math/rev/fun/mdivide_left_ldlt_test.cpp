@@ -1,9 +1,15 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
-#include <vector>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <vector>
 std::vector<double> finite_differences(const size_t row, const size_t col,
                                        const stan::math::matrix_d A,
                                        const bool calc_A_partials,

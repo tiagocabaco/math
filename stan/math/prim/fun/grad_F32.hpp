@@ -1,11 +1,18 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_GRAD_F32_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_GRAD_F32_HPP
+#ifndef STAN_MATH_PRIM_FUN_GRAD_F32_HPP
+#define STAN_MATH_PRIM_FUN_GRAD_F32_HPP
 
-#include <stan/math/prim/scal/fun/inv.hpp>
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/scal/err/check_3F2_converges.hpp>
+#include <stan/math/prim/fun/inv.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/err/check_3F2_converges.hpp>
+
+
 #include <cmath>
 #include <limits>
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,7 +1,9 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_FUNCTOR_HARD_WORK_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_FUNCTOR_HARD_WORK_HPP
+#ifndef TEST_UNIT_MATH_PRIM_FUNCTOR_HARD_WORK_HPP
+#define TEST_UNIT_MATH_PRIM_FUNCTOR_HARD_WORK_HPP
+
 
 #include <vector>
+
 
 struct hard_work {
   hard_work() {}

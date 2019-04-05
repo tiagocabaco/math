@@ -1,14 +1,24 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_LOCSCALE_CONSTRAIN_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_LOCSCALE_CONSTRAIN_HPP
+#ifndef STAN_MATH_PRIM_FUN_LOCSCALE_CONSTRAIN_HPP
+#define STAN_MATH_PRIM_FUN_LOCSCALE_CONSTRAIN_HPP
 
 #include <boost/math/tools/promotion.hpp>
-#include <stan/math/prim/scal/fun/identity_constrain.hpp>
-#include <stan/math/prim/scal/fun/abs.hpp>
-#include <stan/math/prim/scal/meta/size_of.hpp>
-#include <stan/math/prim/scal/err/check_positive_finite.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
+#include <stan/math/prim/fun/identity_constrain.hpp>
+#include <stan/math/prim/fun/abs.hpp>
+#include <stan/math/prim/meta/size_of.hpp>
+#include <stan/math/prim/err/check_positive_finite.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+
+
 #include <cmath>
 #include <limits>
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

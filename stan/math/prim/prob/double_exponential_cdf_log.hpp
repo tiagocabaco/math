@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_PRIM_SCAL_PROB_DOUBLE_EXPONENTIAL_CDF_LOG_HPP
-#define STAN_MATH_PRIM_SCAL_PROB_DOUBLE_EXPONENTIAL_CDF_LOG_HPP
+#ifndef STAN_MATH_PRIM_PROB_DOUBLE_EXPONENTIAL_CDF_LOG_HPP
+#define STAN_MATH_PRIM_PROB_DOUBLE_EXPONENTIAL_CDF_LOG_HPP
 
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/prob/double_exponential_lcdf.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/prob/double_exponential_lcdf.hpp>
+
+
 
 namespace stan {
 namespace math {

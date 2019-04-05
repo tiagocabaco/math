@@ -1,6 +1,9 @@
-#include <test/unit/math/mix/mat/util/autodiff_tester.hpp>
-#include <vector>
 
+
+
+#include <test/unit/math/mix/util/autodiff_tester.hpp>
+
+#include <vector>
 struct log_modified_bessel_first_kind_f {
   template <typename T1, typename T2>
   static typename boost::math::tools::promote_args<T1, T2>::type apply(

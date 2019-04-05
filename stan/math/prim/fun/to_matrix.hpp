@@ -1,11 +1,17 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_TO_MATRIX_HPP
-#define STAN_MATH_PRIM_MAT_FUN_TO_MATRIX_HPP
+#ifndef STAN_MATH_PRIM_FUN_TO_MATRIX_HPP
+#define STAN_MATH_PRIM_FUN_TO_MATRIX_HPP
 
 #include <boost/math/tools/promotion.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/err/invalid_argument.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/invalid_argument.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+
 #include <vector>
+
+
+
+
+
 
 namespace stan {
 namespace math {

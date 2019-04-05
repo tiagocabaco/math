@@ -1,7 +1,10 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
 using stan::math::fvar;
 TEST(AgradMixMatrixMultiplyLowerTriSelfTranspose, fv_3x3_matrix_1stDeriv) {
   using stan::math::matrix_d;

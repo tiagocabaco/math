@@ -1,8 +1,13 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/util.hpp>
-#include <vector>
 
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/util.hpp>
+
+#include <vector>
 // test sum of first n numbers for sum of a
 void test_sum(stan::math::accumulator<stan::math::var>& a, int n) {
   EXPECT_FLOAT_EQ((n * (n + 1)) / 2, a.sum().val());

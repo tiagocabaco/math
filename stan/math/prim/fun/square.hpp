@@ -1,5 +1,7 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_SQUARE_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_SQUARE_HPP
+#ifndef STAN_MATH_PRIM_FUN_SQUARE_HPP
+#define STAN_MATH_PRIM_FUN_SQUARE_HPP
+
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
 
 namespace stan {
 namespace math {
@@ -18,6 +20,43 @@ namespace math {
  * @return Square of input.
  */
 inline double square(double x) { return x * x; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap square() so that it can be vectorized.
+ * @param x Variable.
+ * @tparam T Variable type.
+ * @return x squared.
+ */
+struct square_fun {
+  template <typename T>
+  static inline T fun(const T& x) {
+    return square(x);
+  }
+};
+
+/**
+ * Vectorized version of square().
+ * @param x Container.
+ * @tparam T Container type.
+ * @return Each value in x squared.
+ */
+template <typename T>
+inline typename apply_scalar_unary<square_fun, T>::return_t square(const T& x) {
+  return apply_scalar_unary<square_fun, T>::apply(x);
+}
 
 }  // namespace math
 }  // namespace stan

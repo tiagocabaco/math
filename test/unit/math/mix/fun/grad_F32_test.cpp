@@ -1,7 +1,10 @@
-#include <stan/math/mix/scal.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/scal/fun/util.hpp>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
 TEST(ProbInternalMath, gradF32_fd1) {
   using stan::math::fvar;
 

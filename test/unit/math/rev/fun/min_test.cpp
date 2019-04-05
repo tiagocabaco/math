@@ -1,10 +1,17 @@
-#include <stan/math/rev/mat.hpp>
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+
 #include <limits>
 #include <algorithm>
-
 TEST(AgradRevMatrix, min_vector) {
   using stan::math::min;
   using stan::math::vector_d;

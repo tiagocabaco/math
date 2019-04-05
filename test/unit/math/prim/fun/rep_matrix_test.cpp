@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, rep_matrix) {
   using stan::math::rep_matrix;
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> x

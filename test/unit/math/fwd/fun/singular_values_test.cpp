@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(AgradFwdMatrixSingularValues, mat_fd) {
   stan::math::matrix_fd m0(2, 2);
   stan::math::vector_fd res;

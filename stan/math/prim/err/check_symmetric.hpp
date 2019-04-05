@@ -1,15 +1,26 @@
-#ifndef STAN_MATH_PRIM_MAT_ERR_CHECK_SYMMETRIC_HPP
-#define STAN_MATH_PRIM_MAT_ERR_CHECK_SYMMETRIC_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_SYMMETRIC_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_SYMMETRIC_HPP
 
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/mat/err/check_square.hpp>
-#include <stan/math/prim/mat/err/constraint_tolerance.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
-#include <stan/math/prim/mat/fun/value_of.hpp>
-#include <stan/math/prim/scal/meta/error_index.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/err/check_square.hpp>
+#include <stan/math/prim/err/constraint_tolerance.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/meta/error_index.hpp>
+
+
 #include <sstream>
 #include <string>
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

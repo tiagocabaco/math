@@ -1,8 +1,12 @@
-#include <stan/math/prim/mat/fun/cholesky_decompose.hpp>
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/util.hpp>
 
+
+
+
+
+#include <stan/math/prim.hpp>
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/util.hpp>
 using Eigen::Dynamic;
 using Eigen::Matrix;
 using std::vector;

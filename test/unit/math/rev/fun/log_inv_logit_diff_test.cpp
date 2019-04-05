@@ -1,8 +1,12 @@
-#include <stan/math/rev/scal.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <gtest/gtest.h>
 
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <test/unit/math/rev/util.hpp>
+#include <test/unit/math/rev/fun/util.hpp>
+#include <gtest/gtest.h>
 TEST(AgradRev, log_inv_logit_diff) {
   AVAR x = 1.2;
   AVAR y = 0.6;

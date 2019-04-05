@@ -1,11 +1,17 @@
-#ifndef TEST_UNIT_MATH_REV_MAT_VECTORIZE_EXPECT_REV_SCALAR_VALUE_HPP
-#define TEST_UNIT_MATH_REV_MAT_VECTORIZE_EXPECT_REV_SCALAR_VALUE_HPP
+#ifndef TEST_UNIT_MATH_REV_VECTORIZE_EXPECT_REV_SCALAR_VALUE_HPP
+#define TEST_UNIT_MATH_REV_VECTORIZE_EXPECT_REV_SCALAR_VALUE_HPP
 
-#include <stan/math/rev/core/var.hpp>
+#include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/vectorize/build_rev_vector.hpp>
-#include <test/unit/math/rev/mat/vectorize/expect_val_deriv_eq.hpp>
+#include <test/unit/math/rev/vectorize/build_rev_vector.hpp>
+#include <test/unit/math/rev/vectorize/expect_val_deriv_eq.hpp>
+
 #include <vector>
+
+
+
+
+
 
 template <typename F>
 void expect_rev_scalar_value() {

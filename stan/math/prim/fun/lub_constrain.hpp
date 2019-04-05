@@ -1,12 +1,20 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_LUB_CONSTRAIN_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_LUB_CONSTRAIN_HPP
+#ifndef STAN_MATH_PRIM_FUN_LUB_CONSTRAIN_HPP
+#define STAN_MATH_PRIM_FUN_LUB_CONSTRAIN_HPP
 
-#include <stan/math/prim/scal/err/check_less.hpp>
-#include <stan/math/prim/scal/fun/lb_constrain.hpp>
-#include <stan/math/prim/scal/fun/ub_constrain.hpp>
+#include <stan/math/prim/err/check_less.hpp>
+#include <stan/math/prim/fun/lb_constrain.hpp>
+#include <stan/math/prim/fun/ub_constrain.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
 #include <cmath>
 #include <limits>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

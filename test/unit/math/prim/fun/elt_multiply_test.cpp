@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(MathMatrix, eltMultiplyVec) {
   stan::math::vector_d v1(2);
   stan::math::vector_d v2(2);

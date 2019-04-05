@@ -1,9 +1,15 @@
-#include <stan/math/prim/scal.hpp>
+
+
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <boost/random/mersenne_twister.hpp>
 #include <boost/math/distributions.hpp>
-#include <vector>
 
+#include <vector>
 TEST(ProbDistributionsHypergeometric, error_check) {
   boost::random::mt19937 rng;
   EXPECT_NO_THROW(stan::math::hypergeometric_rng(10, 10, 15, rng));

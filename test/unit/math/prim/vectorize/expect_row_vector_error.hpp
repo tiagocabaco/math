@@ -1,10 +1,15 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_ROW_VECTOR_ERROR_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_ROW_VECTOR_ERROR_HPP
+#ifndef TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_ROW_VECTOR_ERROR_HPP
+#define TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_ROW_VECTOR_ERROR_HPP
 
 #include <gtest/gtest.h>
 #include <Eigen/Dense>
+
 #include <vector>
 #include <exception>
+
+
+
+
 
 template <typename F, typename V>
 void expect_row_vector_error() {

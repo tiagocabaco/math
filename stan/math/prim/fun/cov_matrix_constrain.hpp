@@ -1,12 +1,19 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_COV_MATRIX_CONSTRAIN_HPP
-#define STAN_MATH_PRIM_MAT_FUN_COV_MATRIX_CONSTRAIN_HPP
+#ifndef STAN_MATH_PRIM_FUN_COV_MATRIX_CONSTRAIN_HPP
+#define STAN_MATH_PRIM_FUN_COV_MATRIX_CONSTRAIN_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/fun/multiply_lower_tri_self_transpose.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/fun/multiply_lower_tri_self_transpose.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+
 #include <cmath>
+
+
+
+
+
+
 
 namespace stan {
 

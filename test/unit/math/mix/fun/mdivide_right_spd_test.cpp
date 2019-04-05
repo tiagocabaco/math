@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <vector>
 
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+
+#include <vector>
 using stan::math::fvar;
 using stan::math::var;
 TEST(AgradMixMatrixMdivideRightSPD, matrix_fv_matrix_fv1) {

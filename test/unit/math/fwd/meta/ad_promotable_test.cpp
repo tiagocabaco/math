@@ -1,7 +1,11 @@
-#include <stan/math/fwd/scal/meta/ad_promotable.hpp>
-#include <gtest/gtest.h>
-#include <string>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <string>
 TEST(MathMeta, primitive_to_fvar) {
   EXPECT_TRUE(
       (stan::math::ad_promotable<bool, stan::math::fvar<double>>::value));

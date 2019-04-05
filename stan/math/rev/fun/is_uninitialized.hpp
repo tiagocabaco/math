@@ -1,8 +1,10 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_IS_UNINITIALIZED_HPP
-#define STAN_MATH_REV_SCAL_FUN_IS_UNINITIALIZED_HPP
+#ifndef STAN_MATH_REV_FUN_IS_UNINITIALIZED_HPP
+#define STAN_MATH_REV_FUN_IS_UNINITIALIZED_HPP
 
 #include <stan/math/rev/core.hpp>
-#include <stan/math/prim/scal/fun/is_uninitialized.hpp>
+#include <stan/math/prim/fun/is_uninitialized.hpp>
+
+
 
 namespace stan {
 namespace math {

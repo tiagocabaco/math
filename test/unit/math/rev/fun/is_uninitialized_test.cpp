@@ -1,7 +1,11 @@
-#include <stan/math/rev/scal.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 TEST(AgradRev, undefined) {
   stan::math::var a;
   EXPECT_TRUE(a.is_uninitialized());

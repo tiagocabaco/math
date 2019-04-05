@@ -1,17 +1,23 @@
 // the tests here check that map_rect_concurrent works correct as such
 // we enforce that STAN_MPI is NOT defined
 
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/prim/functor/hard_work.hpp>
+
+#include <iostream>
+#include <vector>
 #ifdef STAN_MPI
 #undef STAN_MPI
 #endif
 
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
 
-#include <test/unit/math/prim/mat/functor/hard_work.hpp>
 
-#include <iostream>
-#include <vector>
+
+
+
+
+
 
 STAN_REGISTER_MAP_RECT(0, hard_work)
 

@@ -1,5 +1,13 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_TRIGAMMA_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_TRIGAMMA_HPP
+#ifndef STAN_MATH_PRIM_FUN_TRIGAMMA_HPP
+#define STAN_MATH_PRIM_FUN_TRIGAMMA_HPP
+
+#include <stan/math/prim/fun/constants.hpp>
+
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
+
+#include <cmath>
+
+
 
 // Reference:
 //   BE Schneider,
@@ -8,8 +16,8 @@
 //   Applied Statistics,
 //   Volume 27, Number 1, pages 97-99, 1978.
 
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <cmath>
+
+
 
 namespace stan {
 namespace math {
@@ -120,6 +128,53 @@ inline double trigamma(double u) { return trigamma_impl(u); }
  * @return second derivative of log Gamma function at argument
  */
 inline double trigamma(int u) { return trigamma(static_cast<double>(u)); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap trigamma() so it can be vectorized.
+ */
+struct trigamma_fun {
+  /**
+   * Return the approximate value of the Phi() function applied to
+   * the argument.
+   *
+   * @tparam T argument type
+   * @param x argument
+   * @return aprpoximate value of Phi applied to argument.
+   */
+  template <typename T>
+  static inline T fun(const T& x) {
+    return trigamma(x);
+  }
+};
+
+/**
+ * Return the elementwise application of <code>trigamma()</code> to
+ * specified argument container.  The return type promotes the
+ * underlying scalar argument type to double if it is an integer,
+ * and otherwise is the argument type.
+ *
+ * @tparam T container type
+ * @param x container
+ * @return elementwise trigamma of container elements
+ */
+template <typename T>
+inline typename apply_scalar_unary<trigamma_fun, T>::return_t trigamma(
+    const T& x) {
+  return apply_scalar_unary<trigamma_fun, T>::apply(x);
+}
 
 }  // namespace math
 }  // namespace stan

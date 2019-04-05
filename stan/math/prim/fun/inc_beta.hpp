@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_INC_BETA_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_INC_BETA_HPP
+#ifndef STAN_MATH_PRIM_FUN_INC_BETA_HPP
+#define STAN_MATH_PRIM_FUN_INC_BETA_HPP
 
 #include <boost/math/special_functions/beta.hpp>
+
 
 namespace stan {
 namespace math {

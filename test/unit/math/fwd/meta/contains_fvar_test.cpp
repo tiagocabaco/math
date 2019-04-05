@@ -1,6 +1,8 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(MetaTraits, containsFvar) {
   using stan::contains_fvar;
   using stan::math::fvar;

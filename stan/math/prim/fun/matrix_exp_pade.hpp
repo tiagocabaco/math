@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_MATRIX_EXP_PADE_HPP
-#define STAN_MATH_PRIM_MAT_FUN_MATRIX_EXP_PADE_HPP
+#ifndef STAN_MATH_PRIM_FUN_MATRIX_EXP_PADE_HPP
+#define STAN_MATH_PRIM_FUN_MATRIX_EXP_PADE_HPP
 
-#include <stan/math/prim/mat/fun/MatrixExponential.h>
+#include <stan/math/prim/fun/MatrixExponential.h>
+
 
 namespace stan {
 namespace math {

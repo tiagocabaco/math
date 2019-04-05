@@ -1,7 +1,9 @@
-#ifndef STAN_MATH_PRIM_SCAL_META_IS_CONSTANT_HPP
-#define STAN_MATH_PRIM_SCAL_META_IS_CONSTANT_HPP
+#ifndef STAN_MATH_PRIM_META_IS_CONSTANT_HPP
+#define STAN_MATH_PRIM_META_IS_CONSTANT_HPP
+
 
 #include <type_traits>
+
 
 namespace stan {
 

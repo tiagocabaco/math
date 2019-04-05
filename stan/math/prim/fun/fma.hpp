@@ -1,7 +1,8 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_FMA_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_FMA_HPP
+#ifndef STAN_MATH_PRIM_FUN_FMA_HPP
+#define STAN_MATH_PRIM_FUN_FMA_HPP
 
 #include <boost/math/tools/promotion.hpp>
+
 
 namespace stan {
 namespace math {

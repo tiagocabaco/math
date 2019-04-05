@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
+
+
+
+
+
+#include <stan/math/mix.hpp>
 #include <gtest/gtest.h>
+
 #include <limits>
 #include <vector>
-
 TEST(AgradMixMath, fv_gp_periodic_cov1) {
   using stan::math::fvar;
   using stan::math::gp_periodic_cov;

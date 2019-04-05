@@ -1,7 +1,10 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
 
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
 TEST(AgradMixMatrixMdivideLeftTriLow, fv_vector_fv_matrix_fv_1stDeriv) {
   using stan::math::matrix_fv;
   using stan::math::vector_fv;

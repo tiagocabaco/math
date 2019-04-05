@@ -1,6 +1,8 @@
-#include <stan/math/fwd/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 TEST(MetaTraits, isConstant) {
   using stan::is_constant;
   using stan::math::fvar;

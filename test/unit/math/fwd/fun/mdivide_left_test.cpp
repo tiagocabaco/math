@@ -1,6 +1,8 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
 using stan::math::fvar;
 TEST(AgradFwdMatrixMdivideLeft, fd_matrix_matrix) {
   using stan::math::matrix_d;

@@ -1,8 +1,11 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_SINH_HPP
-#define STAN_MATH_PRIM_MAT_FUN_SINH_HPP
+#ifndef STAN_MATH_PRIM_FUN_SINH_HPP
+#define STAN_MATH_PRIM_FUN_SINH_HPP
 
-#include <stan/math/prim/mat/vectorize/apply_scalar_unary.hpp>
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
+
 #include <cmath>
+
+
 
 namespace stan {
 namespace math {

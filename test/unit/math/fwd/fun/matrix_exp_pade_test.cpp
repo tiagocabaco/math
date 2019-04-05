@@ -1,9 +1,15 @@
-#include <stan/math/fwd/mat.hpp>
-#include <stan/math/prim/mat/fun/matrix_exp_pade.hpp>
+
+
+
+
+
+
+#include <stan/math/fwd.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 #include <algorithm>
 #include <random>
-
 using stan::math::fvar;
 using stan::math::matrix_exp_pade;
 using stan::math::matrix_fd;

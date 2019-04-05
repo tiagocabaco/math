@@ -1,9 +1,13 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_MATCH_RETURN_T_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_MATCH_RETURN_T_HPP
+#ifndef TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_MATCH_RETURN_T_HPP
+#define TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_MATCH_RETURN_T_HPP
 
-#include <stan/math/prim/mat/vectorize/apply_scalar_unary.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
+
 #include <type_traits>
+
+
+
 
 namespace stan {
 

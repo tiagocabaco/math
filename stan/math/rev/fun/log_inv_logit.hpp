@@ -1,10 +1,14 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_LOG_INV_LOGIT_HPP
-#define STAN_MATH_REV_SCAL_FUN_LOG_INV_LOGIT_HPP
+#ifndef STAN_MATH_REV_FUN_LOG_INV_LOGIT_HPP
+#define STAN_MATH_REV_FUN_LOG_INV_LOGIT_HPP
 
-#include <stan/math/prim/scal/fun/inv_logit.hpp>
-#include <stan/math/prim/scal/fun/log_inv_logit.hpp>
+#include <stan/math/prim/fun/inv_logit.hpp>
+#include <stan/math/prim/fun/log_inv_logit.hpp>
 #include <stan/math/rev/core.hpp>
 #include <stan/math/rev/core/precomp_v_vari.hpp>
+
+
+
+
 
 namespace stan {
 namespace math {

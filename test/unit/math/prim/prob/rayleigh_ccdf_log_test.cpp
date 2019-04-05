@@ -1,6 +1,8 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbRayleigh, ccdf_log_matches_lccdf) {
   double y = 0.8;
   double sigma = 2.3;

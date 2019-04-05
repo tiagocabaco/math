@@ -1,9 +1,17 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_LOG1M_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_LOG1M_HPP
+#ifndef STAN_MATH_PRIM_FUN_LOG1M_HPP
+#define STAN_MATH_PRIM_FUN_LOG1M_HPP
 
-#include <stan/math/prim/scal/fun/log1p.hpp>
-#include <stan/math/prim/scal/fun/is_nan.hpp>
-#include <stan/math/prim/scal/err/check_less_or_equal.hpp>
+#include <stan/math/prim/fun/log1p.hpp>
+#include <stan/math/prim/fun/is_nan.hpp>
+#include <stan/math/prim/err/check_less_or_equal.hpp>
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {
@@ -42,6 +50,43 @@ inline double log1m(double x) {
   if (!is_nan(x))
     check_less_or_equal("log1m", "x", x, 1);
   return stan::math::log1p(-x);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap log1m() so it can be vectorized.
+ * @param x Variable.
+ * @tparam T Variable type.
+ * @return Natural log of (1 - x).
+ */
+struct log1m_fun {
+  template <typename T>
+  static inline T fun(const T& x) {
+    return log1m(x);
+  }
+};
+
+/**
+ * Vectorized version of log1m().
+ * @param x Container.
+ * @tparam T Container type.
+ * @return Natural log of 1 minus each value in x.
+ */
+template <typename T>
+inline typename apply_scalar_unary<log1m_fun, T>::return_t log1m(const T& x) {
+  return apply_scalar_unary<log1m_fun, T>::apply(x);
 }
 
 }  // namespace math

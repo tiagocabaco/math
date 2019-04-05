@@ -1,11 +1,17 @@
-#ifndef TEST_UNIT_MATH_FWD_SCAL_FUN_NAN_UTIL_HPP
-#define TEST_UNIT_MATH_FWD_SCAL_FUN_NAN_UTIL_HPP
+#ifndef TEST_UNIT_MATH_FWD_FUN_NAN_UTIL_HPP
+#define TEST_UNIT_MATH_FWD_FUN_NAN_UTIL_HPP
 
-#include <stan/math/fwd/scal.hpp>
+#include <stan/math/fwd.hpp>
 #include <boost/math/special_functions/fpclassify.hpp>
 #include <boost/math/tools/promotion.hpp>
 #include <Eigen/Dense>
+
 #include <limits>
+
+
+
+
+
 
 template <typename F>
 void test_nan_fd(const F& f, const double& arg1, const bool& throws) {

@@ -1,7 +1,9 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_IS_INF_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_IS_INF_HPP
+#ifndef STAN_MATH_PRIM_FUN_IS_INF_HPP
+#define STAN_MATH_PRIM_FUN_IS_INF_HPP
+
 
 #include <cmath>
+
 
 namespace stan {
 namespace math {

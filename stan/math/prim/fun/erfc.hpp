@@ -1,7 +1,13 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_ERFC_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_ERFC_HPP
+#ifndef STAN_MATH_PRIM_FUN_ERFC_HPP
+#define STAN_MATH_PRIM_FUN_ERFC_HPP
+
+
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
 
 #include <cmath>
+
+
+
 
 namespace stan {
 namespace math {
@@ -27,6 +33,43 @@ inline double erfc(double x) { return std::erfc(x); }
  */
 inline double erfc(int x) { return std::erfc(x); }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Structure to wrap erfc() so that it can be vectorized.
+ * @param x Variable.
+ * @tparam T Variable type.
+ * @return Complementary error function applied to x.
+ */
+struct erfc_fun {
+  template <typename T>
+  static inline T fun(const T& x) {
+    return erfc(x);
+  }
+};
+
+/**
+ * Vectorized version of erfc().
+ * @param x Container.
+ * @tparam T Container type.
+ * @return Complementary error function applied to each value in x.
+ */
+template <typename T>
+inline typename apply_scalar_unary<erfc_fun, T>::return_t erfc(const T& x) {
+  return apply_scalar_unary<erfc_fun, T>::apply(x);
+}
+
 }  // namespace math
 }  // namespace stan
+
 #endif

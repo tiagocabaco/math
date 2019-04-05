@@ -1,11 +1,14 @@
-#ifndef TEST_UNIT_MATH_REV_MAT_FUN_JACOBIAN_HPP
-#define TEST_UNIT_MATH_REV_MAT_FUN_JACOBIAN_HPP
+#ifndef TEST_UNIT_MATH_REV_FUN_JACOBIAN_HPP
+#define TEST_UNIT_MATH_REV_FUN_JACOBIAN_HPP
 
+#include <stan/math/rev.hpp>
+
+#include <vector>
 // ********* here because it's only used for testing **********
 // ********* superseded by version in autodiff.hpp for API ****
 
-#include <stan/math/rev/mat.hpp>
-#include <vector>
+
+
 
 namespace stan {
 

@@ -1,7 +1,11 @@
-#include <stan/math/fwd/mat.hpp>
-#include <gtest/gtest.h>
-#include <cmath>
 
+
+
+
+#include <stan/math/fwd.hpp>
+#include <gtest/gtest.h>
+
+#include <cmath>
 template <typename T>
 void deriv_chol_fwd(const Eigen::Matrix<T, -1, -1>& parent_mat,
                     Eigen::Matrix<double, -1, -1>& vals,

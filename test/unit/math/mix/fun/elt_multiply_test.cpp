@@ -1,8 +1,13 @@
-#include <stan/math/mix/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/util.hpp>
-#include <vector>
 
+
+
+
+
+#include <stan/math/mix.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/util.hpp>
+
+#include <vector>
 TEST(AgradMixMatrixEltMultiply, fv_vec_vv_1stDeriv) {
   using stan::math::elt_multiply;
   using stan::math::fvar;

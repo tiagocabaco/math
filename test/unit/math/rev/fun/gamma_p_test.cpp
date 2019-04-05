@@ -1,10 +1,16 @@
-#include <stan/math/rev/scal.hpp>
-#include <stan/math/prim/scal/fun/grad_reg_lower_inc_gamma.hpp>
+
+
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/gamma.hpp>
-#include <test/unit/math/rev/scal/fun/nan_util.hpp>
-#include <test/unit/math/rev/scal/util.hpp>
-
+#include <test/unit/math/rev/fun/nan_util.hpp>
+#include <test/unit/math/rev/util.hpp>
 TEST(AgradRev, gamma_p_var_var) {
   AVAR a = 0.5001;
   AVAR b = 1.0001;

@@ -1,9 +1,14 @@
-#ifndef STAN_MATH_PRIM_SCAL_ERR_CHECK_POSITIVE_SIZE_HPP
-#define STAN_MATH_PRIM_SCAL_ERR_CHECK_POSITIVE_SIZE_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_POSITIVE_SIZE_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_POSITIVE_SIZE_HPP
 
-#include <stan/math/prim/scal/err/invalid_argument.hpp>
+#include <stan/math/prim/err/invalid_argument.hpp>
+
+
 #include <sstream>
 #include <string>
+
+
+
 
 namespace stan {
 namespace math {

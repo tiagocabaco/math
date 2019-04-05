@@ -1,9 +1,15 @@
-#include <stan/math/rev/mat.hpp>
-#include <gtest/gtest.h>
-#include <test/unit/math/rev/mat/fun/jacobian.hpp>
-#include <test/unit/math/rev/mat/util.hpp>
-#include <vector>
 
+
+
+
+
+
+#include <stan/math/rev.hpp>
+#include <gtest/gtest.h>
+#include <test/unit/math/rev/fun/jacobian.hpp>
+#include <test/unit/math/rev/util.hpp>
+
+#include <vector>
 using Eigen::Dynamic;
 using Eigen::Matrix;
 

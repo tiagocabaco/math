@@ -1,10 +1,14 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_DIAG_POST_MULTIPLY_HPP
-#define STAN_MATH_PRIM_MAT_FUN_DIAG_POST_MULTIPLY_HPP
+#ifndef STAN_MATH_PRIM_FUN_DIAG_POST_MULTIPLY_HPP
+#define STAN_MATH_PRIM_FUN_DIAG_POST_MULTIPLY_HPP
 
-#include <stan/math/prim/mat/err/check_vector.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_vector.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
 #include <boost/math/tools/promotion.hpp>
+
+
+
+
 
 namespace stan {
 namespace math {

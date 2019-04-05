@@ -1,10 +1,17 @@
-#include <stan/math/fwd/mat.hpp>
+
+
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
+
 #include <cstdlib>
 #include <random>
 #include <ctime>
 #include <algorithm>
-
 TEST(MathMatrix, matrix_exp_1x1) {
   using stan::math::fvar;
   using stan::math::matrix_fd;

@@ -1,7 +1,11 @@
-#include <stan/math/prim/scal.hpp>
-#include <gtest/gtest.h>
-#include <limits>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <limits>
 TEST(MathFunctions, is_nan) {
   using stan::math::is_nan;
   double infinity = std::numeric_limits<double>::infinity();

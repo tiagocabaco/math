@@ -1,9 +1,12 @@
-#ifndef STAN_MATH_PRIM_SCAL_FUN_LMGAMMA_HPP
-#define STAN_MATH_PRIM_SCAL_FUN_LMGAMMA_HPP
+#ifndef STAN_MATH_PRIM_FUN_LMGAMMA_HPP
+#define STAN_MATH_PRIM_FUN_LMGAMMA_HPP
 
 #include <boost/math/tools/promotion.hpp>
-#include <stan/math/prim/scal/fun/constants.hpp>
-#include <stan/math/prim/scal/fun/lgamma.hpp>
+#include <stan/math/prim/fun/constants.hpp>
+#include <stan/math/prim/fun/lgamma.hpp>
+
+
+
 
 namespace stan {
 namespace math {

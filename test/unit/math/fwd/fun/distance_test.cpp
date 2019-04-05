@@ -1,8 +1,13 @@
-#include <stan/math/fwd/mat.hpp>
+
+
+
+
+
+#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <boost/math/special_functions/fpclassify.hpp>
-#include <limits>
 
+#include <limits>
 using stan::math::fvar;
 
 TEST(AgradFwdMatrixDistance, vector_fd_vector_fd) {

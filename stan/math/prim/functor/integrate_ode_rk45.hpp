@@ -1,22 +1,38 @@
-#ifndef STAN_MATH_PRIM_ARR_FUNCTOR_INTEGRATE_ODE_RK45_HPP
-#define STAN_MATH_PRIM_ARR_FUNCTOR_INTEGRATE_ODE_RK45_HPP
+#ifndef STAN_MATH_PRIM_FUNCTOR_INTEGRATE_ODE_RK45_HPP
+#define STAN_MATH_PRIM_FUNCTOR_INTEGRATE_ODE_RK45_HPP
 
-#include <stan/math/prim/arr/err/check_nonzero_size.hpp>
-#include <stan/math/prim/arr/err/check_ordered.hpp>
-#include <stan/math/prim/arr/functor/coupled_ode_system.hpp>
-#include <stan/math/prim/arr/functor/coupled_ode_observer.hpp>
-#include <stan/math/prim/scal/fun/value_of.hpp>
-#include <stan/math/prim/scal/err/check_less.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/invalid_argument.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
+#include <stan/math/prim/err/check_nonzero_size.hpp>
+#include <stan/math/prim/err/check_ordered.hpp>
+#include <stan/math/prim/functor/coupled_ode_system.hpp>
+#include <stan/math/prim/functor/coupled_ode_observer.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/err/check_less.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/invalid_argument.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
 #include <boost/version.hpp>
-#if BOOST_VERSION == 106400
 #include <boost/serialization/array_wrapper.hpp>
-#endif
 #include <boost/numeric/odeint.hpp>
+
+
 #include <ostream>
 #include <vector>
+
+
+
+
+
+
+
+
+
+
+#if BOOST_VERSION == 106400
+
+#endif
+
+
+
 
 namespace stan {
 namespace math {

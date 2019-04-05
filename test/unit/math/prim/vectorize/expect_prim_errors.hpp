@@ -1,14 +1,22 @@
-#ifndef TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_PRIM_ERRORS_HPP
-#define TEST_UNIT_MATH_PRIM_MAT_VECTORIZE_EXPECT_PRIM_ERRORS_HPP
+#ifndef TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_PRIM_ERRORS_HPP
+#define TEST_UNIT_MATH_PRIM_VECTORIZE_EXPECT_PRIM_ERRORS_HPP
 
-#include <test/unit/math/prim/mat/vectorize/expect_int_scalar_error.hpp>
-#include <test/unit/math/prim/mat/vectorize/expect_scalar_error.hpp>
-#include <test/unit/math/prim/mat/vectorize/expect_int_std_vector_error.hpp>
-#include <test/unit/math/prim/mat/vectorize/expect_std_vector_error.hpp>
-#include <test/unit/math/prim/mat/vectorize/expect_matrix_error.hpp>
-#include <test/unit/math/prim/mat/vectorize/expect_vector_error.hpp>
-#include <test/unit/math/prim/mat/vectorize/expect_row_vector_error.hpp>
+#include <test/unit/math/prim/vectorize/expect_int_scalar_error.hpp>
+#include <test/unit/math/prim/vectorize/expect_scalar_error.hpp>
+#include <test/unit/math/prim/vectorize/expect_int_std_vector_error.hpp>
+#include <test/unit/math/prim/vectorize/expect_std_vector_error.hpp>
+#include <test/unit/math/prim/vectorize/expect_matrix_error.hpp>
+#include <test/unit/math/prim/vectorize/expect_vector_error.hpp>
+#include <test/unit/math/prim/vectorize/expect_row_vector_error.hpp>
 #include <gtest/gtest.h>
+
+
+
+
+
+
+
+
 
 /**
  * Tests that the function defined statically in the template class

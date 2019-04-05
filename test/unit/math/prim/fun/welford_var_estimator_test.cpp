@@ -1,6 +1,8 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
 
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
 TEST(ProbWelfordVarEstimator, restart) {
   const int n = 10;
   Eigen::VectorXd q = Eigen::VectorXd::Ones(n);

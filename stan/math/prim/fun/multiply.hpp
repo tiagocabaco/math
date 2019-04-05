@@ -1,10 +1,15 @@
-#ifndef STAN_MATH_PRIM_MAT_FUN_MULTIPLY_HPP
-#define STAN_MATH_PRIM_MAT_FUN_MULTIPLY_HPP
+#ifndef STAN_MATH_PRIM_FUN_MULTIPLY_HPP
+#define STAN_MATH_PRIM_FUN_MULTIPLY_HPP
 
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/arr/err/check_matching_sizes.hpp>
-#include <stan/math/prim/mat/err/check_multiplicable.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/err/check_matching_sizes.hpp>
+#include <stan/math/prim/err/check_multiplicable.hpp>
+
 #include <type_traits>
+
+
+
+
 
 namespace stan {
 namespace math {

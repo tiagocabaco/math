@@ -1,7 +1,10 @@
-#include <stan/math/prim/mat.hpp>
+
+
+
+
+#include <stan/math/prim.hpp>
 #include <test/unit/util.hpp>
 #include <gtest/gtest.h>
-
 using Eigen::Dynamic;
 using Eigen::Matrix;
 using Eigen::MatrixXd;

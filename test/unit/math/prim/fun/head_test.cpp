@@ -1,7 +1,11 @@
-#include <stan/math/prim/mat.hpp>
-#include <gtest/gtest.h>
-#include <vector>
 
+
+
+
+#include <stan/math/prim.hpp>
+#include <gtest/gtest.h>
+
+#include <vector>
 TEST(MathMatrixHead, HeadVector1) {
   using stan::math::head;
   Eigen::VectorXd v(3);

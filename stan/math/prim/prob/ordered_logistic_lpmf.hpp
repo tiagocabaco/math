@@ -1,28 +1,51 @@
-#ifndef STAN_MATH_PRIM_MAT_PROB_ORDERED_LOGISTIC_LPMF_HPP
-#define STAN_MATH_PRIM_MAT_PROB_ORDERED_LOGISTIC_LPMF_HPP
+#ifndef STAN_MATH_PRIM_PROB_ORDERED_LOGISTIC_LPMF_HPP
+#define STAN_MATH_PRIM_PROB_ORDERED_LOGISTIC_LPMF_HPP
 
-#include <stan/math/prim/mat/fun/value_of.hpp>
-#include <stan/math/prim/mat/fun/size.hpp>
-#include <stan/math/prim/mat/meta/vector_seq_view.hpp>
-#include <stan/math/prim/mat/meta/length_mvt.hpp>
-#include <stan/math/prim/mat/err/check_ordered.hpp>
-#include <stan/math/prim/scal/fun/inv_logit.hpp>
-#include <stan/math/prim/scal/fun/log1p_exp.hpp>
-#include <stan/math/prim/scal/fun/log_inv_logit_diff.hpp>
-#include <stan/math/prim/scal/fun/is_integer.hpp>
-#include <stan/math/prim/scal/err/domain_error_vec.hpp>
-#include <stan/math/prim/scal/err/check_bounded.hpp>
-#include <stan/math/prim/scal/err/check_size_match.hpp>
-#include <stan/math/prim/scal/err/check_finite.hpp>
-#include <stan/math/prim/scal/err/check_greater.hpp>
-#include <stan/math/prim/scal/err/check_consistent_sizes.hpp>
-#include <stan/math/prim/scal/meta/include_summand.hpp>
-#include <stan/math/prim/scal/meta/return_type.hpp>
-#include <stan/math/prim/scal/meta/partials_return_type.hpp>
-#include <stan/math/prim/scal/meta/operands_and_partials.hpp>
-#include <stan/math/prim/scal/meta/is_constant_struct.hpp>
-#include <stan/math/prim/scal/meta/scalar_seq_view.hpp>
+#include <stan/math/prim/fun/value_of.hpp>
+#include <stan/math/prim/fun/size.hpp>
+#include <stan/math/prim/meta/vector_seq_view.hpp>
+#include <stan/math/prim/meta/length_mvt.hpp>
+#include <stan/math/prim/err/check_ordered.hpp>
+#include <stan/math/prim/fun/inv_logit.hpp>
+#include <stan/math/prim/fun/log1p_exp.hpp>
+#include <stan/math/prim/fun/log_inv_logit_diff.hpp>
+#include <stan/math/prim/fun/is_integer.hpp>
+#include <stan/math/prim/err/domain_error_vec.hpp>
+#include <stan/math/prim/err/check_bounded.hpp>
+#include <stan/math/prim/err/check_size_match.hpp>
+#include <stan/math/prim/err/check_finite.hpp>
+#include <stan/math/prim/err/check_greater.hpp>
+#include <stan/math/prim/err/check_consistent_sizes.hpp>
+#include <stan/math/prim/meta/include_summand.hpp>
+#include <stan/math/prim/meta/return_type.hpp>
+#include <stan/math/prim/meta/partials_return_type.hpp>
+#include <stan/math/prim/meta/operands_and_partials.hpp>
+#include <stan/math/prim/meta/is_constant_struct.hpp>
+#include <stan/math/prim/meta/scalar_seq_view.hpp>
+
 #include <vector>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

@@ -1,12 +1,20 @@
-#ifndef STAN_MATH_PRIM_MAT_ERR_CHECK_POSITIVE_ORDERED_HPP
-#define STAN_MATH_PRIM_MAT_ERR_CHECK_POSITIVE_ORDERED_HPP
+#ifndef STAN_MATH_PRIM_ERR_CHECK_POSITIVE_ORDERED_HPP
+#define STAN_MATH_PRIM_ERR_CHECK_POSITIVE_ORDERED_HPP
 
-#include <stan/math/prim/scal/err/domain_error.hpp>
-#include <stan/math/prim/mat/err/check_ordered.hpp>
-#include <stan/math/prim/mat/fun/Eigen.hpp>
-#include <stan/math/prim/mat/meta/index_type.hpp>
+#include <stan/math/prim/err/domain_error.hpp>
+#include <stan/math/prim/err/check_ordered.hpp>
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/meta/index_type.hpp>
+
+
 #include <sstream>
 #include <string>
+
+
+
+
+
+
 
 namespace stan {
 namespace math {

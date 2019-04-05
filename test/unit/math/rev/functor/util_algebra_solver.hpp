@@ -1,11 +1,19 @@
+
+
+
+
+
+
+
+
 #include <gtest/gtest.h>
-#include <stan/math/rev/mat/functor/algebra_solver.hpp>
+#include <stan/math/rev.hpp>
 #include <test/unit/util.hpp>
+
 #include <sstream>
 #include <vector>
 #include <limits>
 #include <string>
-
 /* define algebraic functions which get solved */
 
 struct simple_eq_functor {

@@ -1,9 +1,12 @@
-#ifndef STAN_MATH_REV_SCAL_FUN_TGAMMA_HPP
-#define STAN_MATH_REV_SCAL_FUN_TGAMMA_HPP
+#ifndef STAN_MATH_REV_FUN_TGAMMA_HPP
+#define STAN_MATH_REV_FUN_TGAMMA_HPP
 
-#include <stan/math/prim/scal/fun/digamma.hpp>
-#include <stan/math/prim/scal/fun/tgamma.hpp>
+#include <stan/math/prim/fun/digamma.hpp>
+#include <stan/math/prim/fun/tgamma.hpp>
 #include <stan/math/rev/core.hpp>
+
+
+
 
 namespace stan {
 namespace math {
