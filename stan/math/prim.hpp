@@ -439,7 +439,7 @@
 #include <stan/math/prim/err/check_matching_sizes.hpp>
 #include <stan/math/prim/err/check_nonzero_size.hpp>
 #include <stan/math/prim/err/check_ordered.hpp>
-#ifdef STAN_OPENCL
+//#ifdef STAN_OPENCL
 #include <stan/math/prim/err/check_opencl.hpp>
 #include <stan/math/prim/err/is_matching_size.hpp>
 #include <stan/math/prim/err/is_nonzero_size.hpp>
@@ -716,6 +716,6 @@
 #include <stan/math/prim/prob/wishart_rng.hpp>
 #include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
 #include <cmath>
-#endif
+//#endif
 
 #endif
