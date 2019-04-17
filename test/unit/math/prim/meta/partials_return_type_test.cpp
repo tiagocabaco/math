@@ -1,19 +1,7 @@
-
-
-
-
-
-
-
-#include <stan/math/rev.hpp>
-#include <stan/math/fwd.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/util.hpp>
+#include <stan/math/prim.hpp>
 
-
-
-using stan::math::fvar;
-using stan::math::var;
 using stan::partials_return_type;
 
 TEST(MetaTraits, PartialsReturnTypeDouble) {
