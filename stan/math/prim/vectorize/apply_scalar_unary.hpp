@@ -2,7 +2,6 @@
 #define STAN_MATH_PRIM_VECTORIZE_APPLY_SCALAR_UNARY_HPP
 
 #include <Eigen/Dense>
-
 #include <vector>
 
 
