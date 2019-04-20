@@ -1,22 +1,9 @@
 #ifndef STAN_MATH_PRIM_FUN_ACOSH_HPP
 #define STAN_MATH_PRIM_FUN_ACOSH_HPP
 
-#include <stan/math/prim/fun/is_nan.hpp>
-#include <stan/math/prim/fun/is_inf.hpp>
-#include <stan/math/prim/err/check_greater_or_equal.hpp>
-
+#include <stan/math/prim.hpp>
 #include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
-
 #include <cmath>
-
-
-
-
-
-
-
-
-
 
 namespace stan {
 namespace math {
@@ -61,18 +48,6 @@ inline double acosh(int x) {
     return std::acosh(x);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Structure to wrap acosh() so it can be vectorized.
