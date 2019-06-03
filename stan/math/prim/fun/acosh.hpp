@@ -2,7 +2,6 @@
 #define STAN_MATH_PRIM_FUN_ACOSH_HPP
 
 #include <stan/math/prim.hpp>
-#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
 #include <cmath>
 
 namespace stan {
