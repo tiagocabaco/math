@@ -36,6 +36,10 @@
 #include <stan/math/prim/meta/value_type.hpp>
 #include <stan/math/prim/meta/StdVectorBuilder.hpp>
 #include <stan/math/prim/meta/VectorBuilder.hpp>
+
+#include <stan/math/prim/fun/Eigen.hpp>
+#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
+
 #include <stan/math/prim/err/check_2F1_converges.hpp>
 #include <stan/math/prim/err/check_3F2_converges.hpp>
 #include <stan/math/prim/err/check_bounded.hpp>
@@ -490,7 +494,6 @@
 #include <stan/math/prim/err/check_vector.hpp>
 #include <stan/math/prim/err/constraint_tolerance.hpp>
 #include <stan/math/prim/err/validate_non_negative_index.hpp>
-#include <stan/math/prim/fun/Eigen.hpp>
 #include <stan/math/prim/fun/LDLT_factor.hpp>
 #include <stan/math/prim/fun/accumulator.hpp>
 #include <stan/math/prim/fun/acos.hpp>
@@ -714,8 +717,6 @@
 #include <stan/math/prim/prob/wishart_log.hpp>
 #include <stan/math/prim/prob/wishart_lpdf.hpp>
 #include <stan/math/prim/prob/wishart_rng.hpp>
-#include <stan/math/prim/vectorize/apply_scalar_unary.hpp>
 #include <cmath>
-//#endif
 
 #endif
