@@ -6,7 +6,12 @@
 #include <stan/math/rev/meta/is_var.hpp>
 #include <stan/math/rev/meta/partials_type.hpp>
 #include <stan/math/rev/meta/operands_and_partials.hpp>
+
+
+#include <stan/math/rev/fun/Eigen_NumTraits.hpp>
+#include <stan/math/rev/vectorize/apply_scalar_unary.hpp>
 #include <stan/math/prim.hpp>
+
 #include <stan/math/rev/fun/abs.hpp>
 #include <stan/math/rev/fun/acos.hpp>
 #include <stan/math/rev/fun/acosh.hpp>
@@ -102,8 +107,8 @@
 #include <stan/math/rev.hpp>
 #include <stan/math/rev/functor/coupled_ode_system.hpp>
 #include <stan/math/rev/functor/integrate_1d.hpp>
-#include <stan/math/rev/fun/Eigen_NumTraits.hpp>
-#include <stan/math/rev/vectorize/apply_scalar_unary.hpp>
+//#include <stan/math/rev/fun/Eigen_NumTraits.hpp>
+//#include <stan/math/rev/vectorize/apply_scalar_unary.hpp>
 #include <stan/math/rev/fun/cholesky_decompose.hpp>
 #include <stan/math/rev/fun/columns_dot_product.hpp>
 #include <stan/math/rev/fun/columns_dot_self.hpp>
