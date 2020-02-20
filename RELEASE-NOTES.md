@@ -1,5 +1,67 @@
 # Stan Math Library Release Notes
 
+Current development version
+======================================================================
+
+## Features
+- refactored the var constructor to put the respective vari on the nochain stack to avoid unnecessary chain() calls
+- updated positive definiteness checks to check after computing the LLT factors
+- changed the behavior of inverse to not throw on size zero matrices
+- added discrete_range_rng(lower, upper) and discrete_range_lpmf
+- added positive definite checks to mdivide_left_spd
+- allowed multiply for size 0 inputs
+- improved checks by running checks for consistent sizes before comparing arguments
+- cleaned up neg_binomial and neg_binomial_2 functions, fixed the behavior on non-same sized inputs
+- added row vector, array and int_array construction utilities
+- added the implementation of reverse for vectors, row vectors and arrays
+- reimplemented lbeta to be stable when one argument is large and other small
+- removed unnecessary loops from:
+  * categorical_logit_lpmf
+  * categorical_lpmf
+  * check_cholesky_factor
+  * check_cholesky_factor_corr
+  * corr_matrix_free
+  * cov_matrix_free
+  * gaussian_dlm_obs_lpdf
+  * ordered_logistic_lpmf
+  * ordered_logistic_rng
+- removed unnecessary chain calls for the gradient functional
+- upgraded to Sundials 5.1.0
+- extended the OpenCL kernel generator with:
+  * selection operation
+  * comparisons and logical operations
+  * rowwise reductions
+- cleaned up the makefiles of the `GNU find` use
+
+## Developer-aimed features
+- new framework for generalizing unary vector functions to work with Eigen column and row vectors
+- changed std_normal tests to use expect_ad
+- added documentation for the missing template parameters in /prim
+- cleaned up poisson_cdf, poisson_lccdf and poisson_lcdft to use VectorBuilder to precompute values
+- moved the file in /vectorize to /meta
+- added additional tests for bernoulli_logit_lpmf, inv_gamma_lpmf, weibull_lpmf and neg_binomial_lpmf
+- cleaned up the codebase to use index_type_t, return_type_t and partials_return_t
+- adedd std::iterator_traits specializations for var and fvar
+- added cmath member functions to the stan::math namespace for autodiff types
+- made  the relative tolerance in expect_near_rel continuous
+- get, size, size_mvt, max_size, max_size_mvt were moved from prim/meta to prim/fun; common_type from prim/fun to prim/meta
+- explicitly call stan::math::size to avoid ambiguity
+- improved tests and documentation for quad_form and quad_form_sym
+- generalize operator-like functions to now accept and return general Eigen expressions
+- cleaned up include-what-you-use issues in /prim/fun
+- removed promote_common and common_type
+- cleaned up mdivide_* functions and tests of unused headers and erroneous use of return_type
+
+## Bugfixes
+- fixed read_corr_L for matrices of size 1
+- added type to variable only declarred with `const` in the multiply_transpose OpenCL kernel 
+
+v3.1.1 (29 January 2020)
+======================================================================
+
+Fixed the bug to prevent functions from returning Eigen expressions.
+
+
 v3.1.0 (24 January 2020)
 ======================================================================
 
