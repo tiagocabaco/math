@@ -6,15 +6,12 @@ Current development version
 ## Features
 - refactored the var constructor to put the respective vari on the nochain stack to avoid unnecessary chain() calls
 - updated positive definiteness checks to check after computing the LLT factors
-- changed the behavior of inverse to not throw on size zero matrices
 - added discrete_range_rng(lower, upper) and discrete_range_lpmf
 - added positive definite checks to mdivide_left_spd
 - allowed multiply for size 0 inputs
 - improved checks by running checks for consistent sizes before comparing arguments
-- cleaned up neg_binomial and neg_binomial_2 functions, fixed the behavior on non-same sized inputs
 - added row vector, array and int_array construction utilities
 - added the implementation of reverse for vectors, row vectors and arrays
-- reimplemented lbeta to be stable when one argument is large and other small
 - removed unnecessary loops from:
   * categorical_logit_lpmf
   * categorical_lpmf
@@ -25,13 +22,19 @@ Current development version
   * gaussian_dlm_obs_lpdf
   * ordered_logistic_lpmf
   * ordered_logistic_rng
-- removed unnecessary chain calls for the gradient functional
 - upgraded to Sundials 5.1.0
 - extended the OpenCL kernel generator with:
   * selection operation
   * comparisons and logical operations
   * rowwise reductions
-- cleaned up the makefiles of the `GNU find` use
+- cleaned up the makefiles of the use of `GNU find`
+
+## Bugfixes
+- fixed read_corr_L for matrices of size 1
+- added type to variable only declarred with `const` in the multiply_transpose OpenCL kernel 
+- reimplemented lbeta to be stable when one argument is large and other small
+- cleaned up neg_binomial and neg_binomial_2 functions, fixed the behavior on non-same sized inputs
+- changed the behavior of inverse to not throw on size zero matrices
 
 ## Developer-aimed features
 - new framework for generalizing unary vector functions to work with Eigen column and row vectors
@@ -52,9 +55,6 @@ Current development version
 - removed promote_common and common_type
 - cleaned up mdivide_* functions and tests of unused headers and erroneous use of return_type
 
-## Bugfixes
-- fixed read_corr_L for matrices of size 1
-- added type to variable only declarred with `const` in the multiply_transpose OpenCL kernel 
 
 v3.1.1 (29 January 2020)
 ======================================================================
