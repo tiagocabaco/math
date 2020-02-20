@@ -1,6 +1,5 @@
-Stan Math Library Release Notes
+# Stan Math Library Release Notes
 
-======================================================================
 v3.1.0 (24 January 2020)
 ======================================================================
 
@@ -42,7 +41,6 @@ Last but not least he cleaned up the use of trailing underscores in our codebase
 
 [martinmodrak](https://github.com/martinmodrak) fixed some notable edge cases for neg_binomial_2 and neg_binomial_2_log. [wds15](https://github.com/wds15) fixed the static init order bug. [bgoodri](https://github.com/bgoodri) fixed a bug that issued a warning for catching without a constant reference. [peterwicksstringfield](https://github.com/peterwicksstringfield) cleaned up some potentialy misleading docs in negated require template metaprograms and other documentation and also cleaned up the use of ibeta and fixed the loop order in loops dealing with Eigen matrics.[seantalts](https://github.com/seantalts) refactored integrate_1d to use std::ostream* instead of std::ostream&. [mitzimorris](https://github.com/mitzimorris) cleaned up the doxygen config file of unneeded directives.
 
-======================================================================
 v3.0.0 (18 October 2019)
 ======================================================================
 
@@ -130,7 +128,7 @@ We are now using TBB for threading in map_rect. With performance tests on a non-
 |[t4c1](https://github.com/t4c1) : ([#1261](https://github.com/stan-dev/math/pull/1261))                 |GLM tests improvements                                                          |
 |[wds15](https://github.com/wds15) : ([#1255](https://github.com/stan-dev/math/pull/1255))               |Bugfix/issue 1250 lgamma                                                        |
 
-======================================================================
+
 v2.20.0 (18 July 2019)
 ======================================================================
 
