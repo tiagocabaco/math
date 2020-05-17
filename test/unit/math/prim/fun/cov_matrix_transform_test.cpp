@@ -2,12 +2,9 @@
 #include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 
-using Eigen::Dynamic;
-using Eigen::Matrix;
-using Eigen::MatrixXd;
-using Eigen::VectorXd;
-
 TEST(prob_transform, cov_matrix_rt) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
   unsigned int K = 4;
   unsigned int K_choose_2 = 6;
   Matrix<double, Dynamic, 1> x(K_choose_2 + K);
@@ -19,12 +16,17 @@ TEST(prob_transform, cov_matrix_rt) {
     EXPECT_FLOAT_EQ(x[i], xrt[i]);
   }
 }
+
 TEST(prob_transform, cov_matrix_constrain_exception) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
   Matrix<double, Dynamic, 1> x(7);
   int K = 12;
   EXPECT_THROW(stan::math::cov_matrix_constrain(x, K), std::invalid_argument);
 }
 TEST(prob_transform, cov_matrix_free_exception) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
   Matrix<double, Dynamic, Dynamic> y(0, 0);
 
   EXPECT_THROW(stan::math::cov_matrix_free(y), std::invalid_argument);
@@ -41,6 +43,8 @@ TEST(prob_transform, cov_matrix_free_exception) {
   EXPECT_THROW(stan::math::cov_matrix_free(y), std::domain_error);
 }
 TEST(covMatrixTransform, symmetry) {
+  using Eigen::MatrixXd;
+  using Eigen::VectorXd;
   using stan::math::cov_matrix_constrain;
   for (int K = 1; K <= 50; ++K) {
     int N = (K * (K + 1)) / 2;

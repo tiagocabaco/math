@@ -2,9 +2,6 @@
 #include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 
-using Eigen::Dynamic;
-using Eigen::Matrix;
-
 TEST(ProbTransform, choleskyFactor) {
   using Eigen::Dynamic;
   using Eigen::Matrix;

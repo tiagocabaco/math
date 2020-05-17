@@ -1,12 +1,11 @@
 #include <stan/math/prim.hpp>
-#include <test/unit/math/prim/fun/expect_matrix_eq.hpp>
+#include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 
-using Eigen::Dynamic;
-using Eigen::Matrix;
-using stan::math::diag_post_multiply;
-
 TEST(MathMatrixPrimMat, diagPostMultiply) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
+  using stan::math::diag_post_multiply;
   Matrix<double, Dynamic, Dynamic> m(1, 1);
   m << 3;
 
@@ -20,6 +19,9 @@ TEST(MathMatrixPrimMat, diagPostMultiply) {
 }
 
 TEST(MathMatrixPrimMat, diagPostMultiply2) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
+  using stan::math::diag_post_multiply;
   Matrix<double, Dynamic, Dynamic> m(2, 2);
   m << 2, 3, 4, 5;
 
@@ -37,6 +39,9 @@ TEST(MathMatrixPrimMat, diagPostMultiply2) {
 }
 
 TEST(MathMatrixPrimMat, diagPostMultiplyException) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
+  using stan::math::diag_post_multiply;
   Matrix<double, Dynamic, Dynamic> m(2, 2);
   m << 2, 3, 4, 5;
   Matrix<double, Dynamic, 1> v(3);

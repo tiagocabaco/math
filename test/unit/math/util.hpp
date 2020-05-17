@@ -33,6 +33,41 @@
 namespace stan {
 namespace test {
 
+template <int R, int C>
+void correct_type_row_vector(const Eigen::Matrix<double, R, C>& x) {
+  EXPECT_EQ(Eigen::Dynamic, C);
+  EXPECT_EQ(1, R);
+}
+
+template <int R, int C>
+void correct_type_matrix(const Eigen::Matrix<double, R, C>& x) {
+  EXPECT_EQ(Eigen::Dynamic, C);
+  EXPECT_EQ(Eigen::Dynamic, R);
+}
+
+template <int R, int C>
+void correct_type_vector(const Eigen::Matrix<double, R, C>& x) {
+  EXPECT_EQ(Eigen::Dynamic, R);
+  EXPECT_EQ(1, C);
+}
+
+void expect_matrix_eq(
+    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& a,
+    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& b) {
+  EXPECT_EQ(a.rows(), b.rows());
+  EXPECT_EQ(a.cols(), b.cols());
+  for (int i = 0; i < a.rows(); ++i)
+    for (int j = 0; j < a.cols(); ++j)
+      EXPECT_FLOAT_EQ(a(i, j), b(i, j));
+}
+
+template <typename T, typename = stan::require_arithmetic_t<T>>
+void expect_std_vector_eq(const std::vector<T>& a, const std::vector<T>& b) {
+  EXPECT_EQ(a.size(), b.size());
+  for (int i = 0; i < a.size(); ++i)
+    EXPECT_FLOAT_EQ(a[i], b[i]);
+}
+
 /**
  * Return the Eigen vector with the same size and elements as the
  * specified standard vector.  Elements are copied from the specified

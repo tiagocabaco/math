@@ -8,7 +8,7 @@ TEST(ProbAutocorrelation, test1) {
   // ar1.csv generated in R with
   //   > x[1] <- rnorm(1, 0, 1)
   //   > for (n in 2:1000) x[n] <- rnorm(1, 0.8 * x[n-1], 1)
-  std::fstream f("test/unit/math/prim/fun/ar1.csv");
+  std::fstream f("test/unit/resources/ar1.csv");
   size_t N = 1000;
   std::vector<double> y;
   for (size_t i = 0; i < N; ++i) {
@@ -35,7 +35,7 @@ TEST(ProbAutocorrelation, test2) {
   // ar1.csv generated in R with
   //   > x[1] <- rnorm(1, 0, 1)
   //   > for (n in 2:1000) x[n] <- rnorm(1, 0.8 * x[n-1], 1)
-  std::fstream f("test/unit/math/prim/fun/ar1.csv");
+  std::fstream f("test/unit/resources/ar1.csv");
   size_t N = 1000;
   Eigen::VectorXd y(N);
   for (size_t i = 0; i < N; ++i) {

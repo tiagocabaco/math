@@ -2,9 +2,6 @@
 #include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 
-using Eigen::Dynamic;
-using Eigen::Matrix;
-
 TEST(ProbTransform, CholeskyCorrelation4) {
   using Eigen::Dynamic;
   using Eigen::Matrix;
@@ -28,8 +25,10 @@ TEST(ProbTransform, CholeskyCorrelation4) {
       EXPECT_FLOAT_EQ(L(m, n), x(m, n));
 }
 
-void test_cholesky_correlation_values(
+void test_prim_cholesky_corr_transform(
     const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& L) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
   using stan::math::cholesky_corr_constrain;
   using stan::math::cholesky_corr_free;
   using std::vector;
@@ -69,6 +68,7 @@ void test_cholesky_correlation_values(
     for (int n = 0; n < K; ++n)
       EXPECT_FLOAT_EQ(L(m, n), x2(m, n));
 }
+}
 
 TEST(ProbTransform, CholeskyCorrelationRoundTrips) {
   using Eigen::Dynamic;
@@ -76,14 +76,14 @@ TEST(ProbTransform, CholeskyCorrelationRoundTrips) {
 
   Matrix<double, Dynamic, Dynamic> L1(1, 1);
   L1 << 1;
-  test_cholesky_correlation_values(L1);
+  test_prim_cholesky_corr_transform(L1);
 
   Matrix<double, Dynamic, Dynamic> L2(2, 2);
   L2 << 1, 0, -0.5, 0.8660254;
-  test_cholesky_correlation_values(L2);
+  test_prim_cholesky_corr_transform(L2);
 
   Matrix<double, Dynamic, Dynamic> L4(4, 4);
   L4 << 1, 0, 0, 0, -0.2, 0.9797959, 0, 0, 0.5, -0.3, 0.8124038, 0, 0.7, -0.2,
       0.6, 0.3316625;
-  test_cholesky_correlation_values(L4);
+  test_prim_cholesky_corr_transform(L4);
 }

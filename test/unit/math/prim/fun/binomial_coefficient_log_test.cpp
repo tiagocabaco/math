@@ -3,12 +3,14 @@
 #include <gtest/gtest.h>
 #include <cmath>
 
+namespace prim_binomial_coefficient_log_test {
 template <typename T_N, typename T_n>
 void test_binom_coefficient(const T_N& N, const T_n& n) {
   using stan::math::binomial_coefficient_log;
   EXPECT_FLOAT_EQ(lgamma(N + 1) - lgamma(n + 1) - lgamma(N - n + 1),
                   binomial_coefficient_log(N, n))
       << "N = " << N << ", n = " << n;
+}
 }
 
 TEST(MathFunctions, binomial_coefficient_log) {
@@ -28,15 +30,15 @@ TEST(MathFunctions, binomial_coefficient_log) {
   EXPECT_EQ(binomial_coefficient_log(10, -1), stan::math::NEGATIVE_INFTY);
 
   for (int n = 0; n < 1010; ++n) {
-    test_binom_coefficient(1010, n);
-    test_binom_coefficient(1010.0, n);
-    test_binom_coefficient(1010, static_cast<double>(n));
-    test_binom_coefficient(1010.0, static_cast<double>(n));
+    prim_binomial_coefficient_log_test::test_binom_coefficient(1010, n);
+    prim_binomial_coefficient_log_test::test_binom_coefficient(1010.0, n);
+    prim_binomial_coefficient_log_test::test_binom_coefficient(1010, static_cast<double>(n));
+    prim_binomial_coefficient_log_test::test_binom_coefficient(1010.0, static_cast<double>(n));
   }
 
-  test_binom_coefficient(1e9, 1e5);
-  test_binom_coefficient(1e50, 1e45);
-  test_binom_coefficient(1e20, 1e15);
+  prim_binomial_coefficient_log_test::test_binom_coefficient(1e9, 1e5);
+  prim_binomial_coefficient_log_test::test_binom_coefficient(1e50, 1e45);
+  prim_binomial_coefficient_log_test::test_binom_coefficient(1e20, 1e15);
 }
 
 TEST(MathFunctions, binomial_coefficient_log_nan) {

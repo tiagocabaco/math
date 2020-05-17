@@ -3,7 +3,7 @@
 #include <vector>
 
 template <typename T>
-void test_cumulative_sum() {
+void test_prim_cumulative_sum() {
   using stan::math::cumulative_sum;
 
   T c(1);
@@ -42,7 +42,7 @@ TEST(MathMatrixPrimMat, cumulative_sum) {
   Eigen::Matrix<double, 1, Eigen::Dynamic> b;
   EXPECT_FLOAT_EQ(0, cumulative_sum(b).size());
 
-  test_cumulative_sum<std::vector<double> >();
-  test_cumulative_sum<Eigen::Matrix<double, Eigen::Dynamic, 1> >();
-  test_cumulative_sum<Eigen::Matrix<double, 1, Eigen::Dynamic> >();
+  test_prim_cumulative_sum<std::vector<double> >();
+  test_prim_cumulative_sum<Eigen::Matrix<double, Eigen::Dynamic, 1> >();
+  test_prim_cumulative_sum<Eigen::Matrix<double, 1, Eigen::Dynamic> >();
 }
