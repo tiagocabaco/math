@@ -7,7 +7,7 @@
 void expect_linspaced_array(int K, double low, double high,
                             const std::vector<double>& expected) {
   std::vector<double> found = stan::math::linspaced_array(K, low, high);
-  expect_std_vector_eq(expected, found);
+  stan::test::expect_std_vector_eq(expected, found);
 }
 
 TEST(MathFunctions, linspaced_array) {

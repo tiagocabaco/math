@@ -30,6 +30,10 @@
 #define EXPECT_SUM(A, N) \
   EXPECT_TRUE((N * (N + 1)) / 2 == A.sum())
 
+#define EXPECT_MATRIX_EQ(A, B)       \
+  for (int i = 0; i < A.size(); i++) \
+    EXPECT_EQ(A(i), B(i));
+
 namespace stan {
 namespace test {
 

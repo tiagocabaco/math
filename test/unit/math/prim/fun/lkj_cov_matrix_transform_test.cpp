@@ -2,10 +2,9 @@
 #include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 
-using Eigen::Dynamic;
-using Eigen::Matrix;
-
 TEST(prob_transform, lkj_cov_matrix_rt) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
   unsigned int K = 4;
   unsigned int K_choose_2 = 6;
   Matrix<double, Dynamic, 1> x(K_choose_2 + K);
@@ -20,6 +19,8 @@ TEST(prob_transform, lkj_cov_matrix_rt) {
 }
 
 TEST(prob_transform, lkj_cov_matrix_free_exception) {
+  using Eigen::Dynamic;
+  using Eigen::Matrix;
   Matrix<double, Dynamic, Dynamic> y(0, 0);
 
   EXPECT_THROW(stan::math::cov_matrix_free_lkj(y), std::invalid_argument);

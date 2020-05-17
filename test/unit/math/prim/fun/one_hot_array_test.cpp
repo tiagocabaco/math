@@ -8,7 +8,7 @@ TEST(MathFunctions, one_hot_array) {
     for (int k = 1; k <= K; k++) {
       std::vector<double> v(K);
       v[k - 1] = 1;
-      expect_std_vector_eq(v, stan::math::one_hot_array(K, k));
+      stan::test::expect_std_vector_eq(v, stan::math::one_hot_array(K, k));
     }
   }
 }

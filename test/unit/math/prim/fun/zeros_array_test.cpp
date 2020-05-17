@@ -6,7 +6,7 @@
 TEST(MathFunctions, zeros_array) {
   for (int K = 0; K < 5; K++) {
     std::vector<double> v(K, 0);
-    expect_std_vector_eq(v, stan::math::zeros_array(K));
+    stan::test::expect_std_vector_eq(v, stan::math::zeros_array(K));
   }
 }
 

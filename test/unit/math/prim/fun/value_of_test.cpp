@@ -1,13 +1,10 @@
 #include <stan/math/prim.hpp>
+#include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 #include <cmath>
 #include <limits>
 #include <type_traits>
 #include <vector>
-
-#define stan::test::expect_matrix_eq(A, B)       \
-  for (int i = 0; i < A.size(); i++) \
-    EXPECT_EQ(A(i), B(i));
 
 TEST(MathFunctions, value_of) {
   using stan::math::value_of;
@@ -91,17 +88,17 @@ TEST(MathMatrixPrimMat, value_of_expression) {
   Eigen::MatrixXd a = Eigen::MatrixXd::Random(5, 4);
   Eigen::MatrixXd res_a = value_of(2 * a);
   Eigen::MatrixXd correct_a = 2 * a;
-  stan::test::expect_matrix_eq(res_a, correct_a);
+  EXPECT_MATRIX_EQ(res_a, correct_a);
 
   Eigen::VectorXi b = Eigen::VectorXi::Random(7);
   Eigen::VectorXi res_b = value_of(2 * b);
   Eigen::VectorXi correct_b = 2 * b;
-  stan::test::expect_matrix_eq(res_b, correct_b);
+  EXPECT_MATRIX_EQ(res_b, correct_b);
 
   Eigen::ArrayXXd c = a.array();
   Eigen::ArrayXXd res_c = value_of(2 * c);
   Eigen::ArrayXXd correct_c = 2 * c;
-  stan::test::expect_matrix_eq(res_c, correct_c);
+  EXPECT_MATRIX_EQ(res_c, correct_c);
 }
 
 TEST(MathFunctions, value_of_return_type_short_circuit_std_vector) {

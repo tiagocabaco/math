@@ -5,10 +5,6 @@
 #include <stdexcept>
 #include <vector>
 
-using stan::math::log_mix;
-using stan::math::row_vector_d;
-using stan::math::vector_d;
-
 TEST(MathFunctions, log_mix_exceptions) {
   using stan::math::log_mix;
   EXPECT_THROW(log_mix(-1, 10, 20), std::domain_error);
@@ -34,7 +30,10 @@ TEST(MathFunctions, log_mix_values) {
 }
 
 template <typename T_a, typename T_b>
-void val_test(T_a a, T_b b) {
+void test_log_mix_values(T_a a, T_b b) {
+  using stan::math::log_mix;
+  using stan::math::row_vector_d;
+  using stan::math::vector_d;
   a[0] = 0.321;
   a[1] = 0.115;
   a[2] = 0.261;
@@ -69,6 +68,9 @@ void val_test(T_a a, T_b b) {
 }
 
 TEST(MatrixFunctions, LogMix_Combin) {
+  using stan::math::log_mix;
+  using stan::math::row_vector_d;
+  using stan::math::vector_d;
   /**
    * Test that all possible combinations of inputs return
    * the same result.
@@ -81,20 +83,23 @@ TEST(MatrixFunctions, LogMix_Combin) {
   std::vector<double> std_prob(4);
   std::vector<double> std_dens(4);
 
-  val_test(vecd_prob, vecd_dens);
-  val_test(vecd_prob, row_vecd_dens);
-  val_test(vecd_prob, std_dens);
+  test_log_mix_values(vecd_prob, vecd_dens);
+  test_log_mix_values(vecd_prob, row_vecd_dens);
+  test_log_mix_values(vecd_prob, std_dens);
 
-  val_test(row_vecd_prob, vecd_dens);
-  val_test(row_vecd_prob, row_vecd_dens);
-  val_test(row_vecd_prob, std_dens);
+  test_log_mix_values(row_vecd_prob, vecd_dens);
+  test_log_mix_values(row_vecd_prob, row_vecd_dens);
+  test_log_mix_values(row_vecd_prob, std_dens);
 
-  val_test(std_prob, vecd_dens);
-  val_test(std_prob, row_vecd_dens);
-  val_test(std_prob, std_dens);
+  test_log_mix_values(std_prob, vecd_dens);
+  test_log_mix_values(std_prob, row_vecd_dens);
+  test_log_mix_values(std_prob, std_dens);
 }
 
 TEST(MatrixFunctions, LogMix_Values) {
+  using stan::math::log_mix;
+  using stan::math::row_vector_d;
+  using stan::math::vector_d;
   /**
    * Test that the function is equivalent to scalar and
    * log_sum_exp implementations.
@@ -124,6 +129,9 @@ TEST(MatrixFunctions, LogMix_Values) {
 }
 
 TEST(MatrixFunctions, LogMix_Throws) {
+  using stan::math::log_mix;
+  using stan::math::row_vector_d;
+  using stan::math::vector_d;
   /**
    * Test invalid vector of probabilities
    */
