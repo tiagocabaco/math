@@ -31,7 +31,7 @@ TEST(AgradRev, test_scalar_sin_stack) {
 
   y1 = stan::math::adj_jac_apply<ScalarSinFunctor>(x1);
 
-  stan::test:check_varis_on_stack(y1);
+  stan::test::check_varis_on_stack(y1);
 }
 
 TEST(AgradRev, test_scalar_sin_values) {
@@ -95,7 +95,7 @@ TEST(AgradRev, test_std_vector_sin_stack) {
 
   y1 = stan::math::adj_jac_apply<StdVectorSinFunctor>(x1);
 
-  stan::test:check_varis_on_stack(y1);
+  stan::test::check_varis_on_stack(y1);
 }
 
 TEST(AgradRev, test_std_vector_sin_values) {
@@ -170,8 +170,8 @@ TEST(AgradRev, test_vector_sin_stack) {
   y1 = stan::math::adj_jac_apply<SinFunctor>(x1);
   y2 = stan::math::adj_jac_apply<SinFunctor>(x2);
 
-  stan::test:check_varis_on_stack(y1);
-  stan::test:check_varis_on_stack(y2);
+  stan::test::check_varis_on_stack(y1);
+  stan::test::check_varis_on_stack(y2);
 }
 
 TEST(AgradRev, test_vector_sin_values) {
@@ -267,8 +267,8 @@ TEST(AgradRev, test_row_vector_sin_stack) {
   y1 = stan::math::adj_jac_apply<RowVectorSinFunctor>(x1);
   y2 = stan::math::adj_jac_apply<RowVectorSinFunctor>(x2);
 
-  stan::test:check_varis_on_stack(y1);
-  stan::test:check_varis_on_stack(y2);
+  stan::test::check_varis_on_stack(y1);
+  stan::test::check_varis_on_stack(y2);
 }
 
 TEST(AgradRev, test_row_vector_sin_values) {
@@ -365,7 +365,7 @@ TEST(AgradRev, test_matrix_sin_stack) {
 
   y = stan::math::adj_jac_apply<MatrixSinFunctor>(x);
 
-  stan::test:check_varis_on_stack(y);
+  stan::test::check_varis_on_stack(y);
 }
 
 TEST(AgradRev, test_matrix_sin_values) {
@@ -1710,8 +1710,8 @@ TEST(AgradRev, test_sincos_stack) {
   y2 = stan::math::adj_jac_apply<SinCosFunctor>(x21, 0, std::vector<int>(5, 0),
                                                 x22);
 
-  stan::test:check_varis_on_stack(y1);
-  stan::test:check_varis_on_stack(y2);
+  stan::test::check_varis_on_stack(y1);
+  stan::test::check_varis_on_stack(y2);
 }
 
 TEST(AgradRev, test_sincos_values) {
@@ -1941,8 +1941,8 @@ TEST(AgradRev, test_eigen_vector_scalar_stack) {
   y1 = stan::math::adj_jac_apply<SinCosFunctor2>(x11, x12);
   y2 = stan::math::adj_jac_apply<SinCosFunctor2>(x21, x22);
 
-  stan::test:check_varis_on_stack(y1);
-  stan::test:check_varis_on_stack(y2);
+  stan::test::check_varis_on_stack(y1);
+  stan::test::check_varis_on_stack(y2);
 }
 
 TEST(AgradRev, test_eigen_vector_scalar_values) {
@@ -2152,8 +2152,8 @@ TEST(AgradRev, test_sincos_scalar_eigen_vector_stack) {
   y1 = stan::math::adj_jac_apply<SinCosFunctor3>(x12, x11);
   y2 = stan::math::adj_jac_apply<SinCosFunctor3>(x22, x21);
 
-  stan::test:check_varis_on_stack(y1);
-  stan::test:check_varis_on_stack(y2);
+  stan::test::check_varis_on_stack(y1);
+  stan::test::check_varis_on_stack(y2);
 }
 
 TEST(AgradRev, test_sincos_scalar_eigen_vector_values) {

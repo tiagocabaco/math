@@ -27,6 +27,9 @@
         << "found message:    " << e.what();               \
   }
 
+#define EXPECT_SUM(A, N) \
+  EXPECT_TRUE((N * (N + 1)) / 2 == A.sum())
+
 namespace stan {
 namespace test {
 

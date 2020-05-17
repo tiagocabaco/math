@@ -88,5 +88,5 @@ TEST(AgradRevMatrix, stored_gradient_vari_check_varis_on_stack) {
   partials[2] = 1000;
 
   var sum = var(new stan::math::stored_gradient_vari(-14.7, 3, xs, partials));
-  stan::test:check_varis_on_stack(sum);
+  stan::test::check_varis_on_stack(sum);
 }

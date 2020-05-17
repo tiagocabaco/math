@@ -85,7 +85,7 @@ TEST(AgradRevMatrix, to_var_check_varis_on_stack) {
   stan::math::row_vector_v rv(2);
   rv << 1, 2;
 
-  stan::test:check_varis_on_stack(stan::math::to_var(m));
-  stan::test:check_varis_on_stack(stan::math::to_var(v));
-  stan::test:check_varis_on_stack(stan::math::to_var(rv));
+  stan::test::check_varis_on_stack(stan::math::to_var(m));
+  stan::test::check_varis_on_stack(stan::math::to_var(v));
+  stan::test::check_varis_on_stack(stan::math::to_var(rv));
 }

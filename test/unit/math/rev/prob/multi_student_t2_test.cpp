@@ -506,64 +506,64 @@ TEST(ProbDistributionsMultiStudentT, check_varis_on_stack) {
 
   using stan::math::multi_student_t_log;
   using stan::math::to_var;
-  stan::test:check_varis_on_stack(multi_student_t_log<false>(
+  stan::test::check_varis_on_stack(multi_student_t_log<false>(
       to_var(y), to_var(nu), to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(to_var(y), to_var(nu), to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(to_var(y), to_var(nu), mu, to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(to_var(y), to_var(nu), mu, Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(to_var(y), nu, to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(to_var(y), nu, to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(to_var(y), nu, mu, to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(to_var(y), nu, mu, Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(y, to_var(nu), to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(y, to_var(nu), to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(y, to_var(nu), mu, to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(y, to_var(nu), mu, Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(y, nu, to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(y, nu, to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<false>(y, nu, mu, to_var(Sigma)));
-  stan::test:check_varis_on_stack(multi_student_t_log<true>(
+  stan::test::check_varis_on_stack(multi_student_t_log<true>(
       to_var(y), to_var(nu), to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(to_var(y), to_var(nu), to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(to_var(y), to_var(nu), mu, to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(to_var(y), to_var(nu), mu, Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(to_var(y), nu, to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(to_var(y), nu, to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(to_var(y), nu, mu, to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(to_var(y), nu, mu, Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(y, to_var(nu), to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(y, to_var(nu), to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(y, to_var(nu), mu, to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(y, to_var(nu), mu, Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(y, nu, to_var(mu), to_var(Sigma)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(y, nu, to_var(mu), Sigma));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       multi_student_t_log<true>(y, nu, mu, to_var(Sigma)));
 }

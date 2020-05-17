@@ -39,6 +39,6 @@ TEST(AgradDistributionsMultinomial, check_varis_on_stack) {
   Matrix<var, Dynamic, 1> theta(3, 1);
   theta << 0.3, 0.5, 0.2;
 
-  stan::test:check_varis_on_stack(stan::math::multinomial_log<false>(ns, theta));
-  stan::test:check_varis_on_stack(stan::math::multinomial_log<true>(ns, theta));
+  stan::test::check_varis_on_stack(stan::math::multinomial_log<false>(ns, theta));
+  stan::test::check_varis_on_stack(stan::math::multinomial_log<true>(ns, theta));
 }

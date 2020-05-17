@@ -77,27 +77,27 @@ TEST(Wishart, check_varis_on_stack) {
   Eigen::MatrixXd S(2, 2);
   S << 1.848220, 1.899623, 1.899623, 12.751941;
 
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<false>(to_var(W), to_var(nu), to_var(S)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<false>(to_var(W), to_var(nu), S));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<false>(to_var(W), nu, to_var(S)));
-  stan::test:check_varis_on_stack(stan::math::wishart_log<false>(to_var(W), nu, S));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(stan::math::wishart_log<false>(to_var(W), nu, S));
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<false>(W, to_var(nu), to_var(S)));
-  stan::test:check_varis_on_stack(stan::math::wishart_log<false>(W, to_var(nu), S));
-  stan::test:check_varis_on_stack(stan::math::wishart_log<false>(W, nu, to_var(S)));
+  stan::test::check_varis_on_stack(stan::math::wishart_log<false>(W, to_var(nu), S));
+  stan::test::check_varis_on_stack(stan::math::wishart_log<false>(W, nu, to_var(S)));
 
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<true>(to_var(W), to_var(nu), to_var(S)));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<true>(to_var(W), to_var(nu), S));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<true>(to_var(W), nu, to_var(S)));
-  stan::test:check_varis_on_stack(stan::math::wishart_log<true>(to_var(W), nu, S));
-  stan::test:check_varis_on_stack(
+  stan::test::check_varis_on_stack(stan::math::wishart_log<true>(to_var(W), nu, S));
+  stan::test::check_varis_on_stack(
       stan::math::wishart_log<true>(W, to_var(nu), to_var(S)));
-  stan::test:check_varis_on_stack(stan::math::wishart_log<true>(W, to_var(nu), S));
-  stan::test:check_varis_on_stack(stan::math::wishart_log<true>(W, nu, to_var(S)));
+  stan::test::check_varis_on_stack(stan::math::wishart_log<true>(W, to_var(nu), S));
+  stan::test::check_varis_on_stack(stan::math::wishart_log<true>(W, nu, to_var(S)));
 }

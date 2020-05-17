@@ -25,5 +25,5 @@ TEST(AgradRevMatrix, get_lp_check_varis_on_stack) {
   accumulator<var> lp_accum;
   lp_accum.add(2);
   lp_accum.add(3);
-  stan::test:check_varis_on_stack(stan::math::get_lp(lp, lp_accum));
+  stan::test::check_varis_on_stack(stan::math::get_lp(lp, lp_accum));
 }

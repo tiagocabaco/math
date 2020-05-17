@@ -52,10 +52,10 @@ TEST(AgradRev, if_else_nan) {
 TEST(AgradRev, if_else_check_varis_on_stack) {
   stan::math::var x = 1.0;
   stan::math::var y = 2.0;
-  stan::test:check_varis_on_stack(stan::math::if_else(true, x, y));
-  stan::test:check_varis_on_stack(stan::math::if_else(false, x, y));
-  stan::test:check_varis_on_stack(stan::math::if_else(true, x, 2.0));
-  stan::test:check_varis_on_stack(stan::math::if_else(false, x, 2.0));
-  stan::test:check_varis_on_stack(stan::math::if_else(true, 1.0, y));
-  stan::test:check_varis_on_stack(stan::math::if_else(false, 1.0, y));
+  stan::test::check_varis_on_stack(stan::math::if_else(true, x, y));
+  stan::test::check_varis_on_stack(stan::math::if_else(false, x, y));
+  stan::test::check_varis_on_stack(stan::math::if_else(true, x, 2.0));
+  stan::test::check_varis_on_stack(stan::math::if_else(false, x, 2.0));
+  stan::test::check_varis_on_stack(stan::math::if_else(true, 1.0, y));
+  stan::test::check_varis_on_stack(stan::math::if_else(false, 1.0, y));
 }
