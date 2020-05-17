@@ -1,7 +1,7 @@
 #ifdef STAN_OPENCL
 #include <stan/math/prim.hpp>
 #include <stan/math/opencl/opencl.hpp>
-#include <test/util/expect_macros.hpp>
+#include <test/unit/util.hpp>
 #include <boost/random/mersenne_twister.hpp>
 #include <gtest/gtest.h>
 #include <algorithm>

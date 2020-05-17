@@ -2,7 +2,7 @@
 
 #include <stan/math/prim.hpp>
 #include <stan/math/opencl/opencl.hpp>
-#include <test/util/expect_macros.hpp>
+#include <test/unit/util.hpp>
 #include <gtest/gtest.h>
 
 // Test we can handle a semi-complicated but normal queue

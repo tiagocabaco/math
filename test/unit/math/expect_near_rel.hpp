@@ -123,7 +123,7 @@ void expect_near_rel(const std::string& msg, EigMat1&& x1, EigMat2&& x2,
 }
 
 /**
- * Tewsts that the elements of the specified standard vectors are
+ * Tests that the elements of the specified standard vectors are
  * relatively near one another by calling `expect_near_rel`
  * recursively.
  *

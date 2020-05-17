@@ -4,7 +4,7 @@
 #include <stan/math/prim/fun/inv_cloglog.hpp>
 #include <stan/math/prim/fun/constants.hpp>
 #include <stan/math/prim/fun/typedefs.hpp>
-#include <test/util/expect_macros.hpp>
+#include <test/unit/util.hpp>
 #include <gtest/gtest.h>
 #include <limits>
 

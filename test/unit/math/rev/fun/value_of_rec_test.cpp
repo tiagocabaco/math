@@ -1,6 +1,6 @@
 #include <stan/math/rev.hpp>
 #include <test/unit/math/rev/fun/util.hpp>
-#include <test/util/expect_macros.hpp>
+#include <test/unit/util.hpp>
 #include <gtest/gtest.h>
 #include <vector>
 

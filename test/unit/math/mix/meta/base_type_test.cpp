@@ -16,14 +16,14 @@ using ffv_t = fvar<fv_t>;
 
 template <typename R, typename T>
 void expect_base() {
-  test::expect_same_type<R, typename stan::base_type<T>::type>();
-  test::expect_same_type<R, stan::base_type_t<T>>();
-  test::expect_same_type<R, typename stan::base_type<T&>::type>();
-  test::expect_same_type<R, stan::base_type_t<T&>>();
-  test::expect_same_type<R, typename stan::base_type<const T&>::type>();
-  test::expect_same_type<R, stan::base_type_t<const T&>>();
-  test::expect_same_type<R, typename stan::base_type<const T>::type>();
-  test::expect_same_type<R, stan::base_type_t<const T>>();
+  stan::test::expect_same_type<R, typename stan::base_type<T>::type>();
+  stan::test::expect_same_type<R, stan::base_type_t<T>>();
+  stan::test::expect_same_type<R, typename stan::base_type<T&>::type>();
+  stan::test::expect_same_type<R, stan::base_type_t<T&>>();
+  stan::test::expect_same_type<R, typename stan::base_type<const T&>::type>();
+  stan::test::expect_same_type<R, stan::base_type_t<const T&>>();
+  stan::test::expect_same_type<R, typename stan::base_type<const T>::type>();
+  stan::test::expect_same_type<R, stan::base_type_t<const T>>();
 }
 
 template <typename T>

@@ -1,5 +1,5 @@
 #include <stan/math/prim.hpp>
-#include <test/util/expect_macros.hpp>
+#include <test/unit/util.hpp>
 #include <gtest/gtest.h>
 
 TEST(MathMatrixPrim, multiply_c_v) {

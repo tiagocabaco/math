@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 #include <test/unit/math/rev/fun/util.hpp>
 #include <test/unit/math/rev/util.hpp>
-#include <test/util/expect_macros.hpp>
+#include <test/unit/util.hpp>
 #include <boost/random/mersenne_twister.hpp>
 
 // TODO(carpenter): move this to test framework;  should be able to put

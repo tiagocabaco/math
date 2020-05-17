@@ -99,7 +99,7 @@ using sum_return_t = decltype(stan::math::sum(std::declval<T>()));
 
 TEST(MathMatrixPrimMat, sumIsTemplated) {
   using Eigen::Matrix;
-  test::expect_same_type<int, sum_return_t<Matrix<int, 2, 3>>>();
-  test::expect_same_type<double, sum_return_t<Matrix<double, 4, 2>>>();
-  test::expect_same_type<float, sum_return_t<std::vector<float>>>();
+  stan::test::expect_same_type<int, sum_return_t<Matrix<int, 2, 3>>>();
+  stan::test::expect_same_type<double, sum_return_t<Matrix<double, 4, 2>>>();
+  stan::test::expect_same_type<float, sum_return_t<std::vector<float>>>();
 }
