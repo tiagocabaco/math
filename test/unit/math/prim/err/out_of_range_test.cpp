@@ -4,10 +4,6 @@
 #include <vector>
 #include <string>
 
-const char* function_ = "function";
-const char* msg1_ = "error_message1 ";
-const char* msg2_ = "error_message2 ";
-
 class ErrorHandlingScalar_out_of_range : public ::testing::Test {
  public:
   void SetUp() {}
@@ -27,7 +23,7 @@ class ErrorHandlingScalar_out_of_range : public ::testing::Test {
   std::string expected_message_with_1_message(T y, size_t i) {
     std::stringstream expected_message;
     expected_message << expected_message_with_0_messages(y, i);
-    expected_message << msg1_;
+    expected_message << "error_message1 ";
     return expected_message.str();
   }
 
@@ -35,7 +31,7 @@ class ErrorHandlingScalar_out_of_range : public ::testing::Test {
   std::string expected_message_with_2_messages(T y, size_t i) {
     std::stringstream expected_message;
     expected_message << expected_message_with_1_message(y, i);
-    expected_message << msg2_;
+    expected_message << "error_message2 ";
     return expected_message.str();
   }
 
@@ -45,8 +41,8 @@ class ErrorHandlingScalar_out_of_range : public ::testing::Test {
     expected_message << "function: "
                      << "accessing element out of range. "
                      << "index " << i << " out of range; "
-                     << "container is empty and cannot be indexed" << msg1_
-                     << msg2_;
+                     << "container is empty and cannot be indexed" << "error_message1 "
+                     << "error_message2 ";
     return expected_message.str();
   }
 
@@ -54,13 +50,13 @@ class ErrorHandlingScalar_out_of_range : public ::testing::Test {
   void test_throw(T y, size_t i) {
     using stan::math::out_of_range;
 
-    EXPECT_THROW_MSG(out_of_range(function_, y.size(), i, msg1_, msg2_),
+    EXPECT_THROW_MSG(out_of_range("function", y.size(), i, "error_message1 ", "error_message2 "),
                      std::out_of_range, expected_message_with_2_messages(y, i));
 
-    EXPECT_THROW_MSG(out_of_range(function_, y.size(), i, msg1_),
+    EXPECT_THROW_MSG(out_of_range("function", y.size(), i, "error_message1 "),
                      std::out_of_range, expected_message_with_1_message(y, i));
 
-    EXPECT_THROW_MSG(out_of_range(function_, y.size(), i), std::out_of_range,
+    EXPECT_THROW_MSG(out_of_range("function", y.size(), i), std::out_of_range,
                      expected_message_with_0_messages(y, i));
   }
 
@@ -68,7 +64,7 @@ class ErrorHandlingScalar_out_of_range : public ::testing::Test {
   void test_throw_empty(T y, size_t i) {
     using stan::math::out_of_range;
 
-    EXPECT_THROW_MSG(out_of_range(function_, y.size(), i, msg1_, msg2_),
+    EXPECT_THROW_MSG(out_of_range("function", y.size(), i, "error_message1 ", "error_message2 "),
                      std::out_of_range, expected_message_empty_container(y, i));
   }
 };

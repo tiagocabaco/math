@@ -2,9 +2,9 @@
 #include <gtest/gtest.h>
 #include <limits>
 
-using stan::math::check_bounded;
-
 TEST(ErrorHandlingScalar, CheckBounded_x) {
+  using stan::math::check_bounded;
+
   const char* function = "check_bounded";
   const char* name = "x";
   double x = 0;

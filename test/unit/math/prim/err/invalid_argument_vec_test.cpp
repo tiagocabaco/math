@@ -3,11 +3,6 @@
 #include <vector>
 #include <string>
 
-const char* function_ = "function";
-const char* y_name_ = "y";
-const char* msg1_ = "error_message ";
-const char* msg2_ = " second message";
-
 class ErrorHandlingScalar_invalid_argument_vec : public ::testing::Test {
  public:
   void SetUp() { index_ = 0; }
@@ -16,7 +11,7 @@ class ErrorHandlingScalar_invalid_argument_vec : public ::testing::Test {
   std::string expected_message_with_message(T y) {
     using stan::value_type;
     std::stringstream expected_message;
-    expected_message << "function: " << y_name_ << "[" << 1 + index_ << "] "
+    expected_message << "function: " << "y" << "[" << 1 + index_ << "] "
                      << "error_message " << y[index_] << " second message";
     return expected_message.str();
   }
@@ -25,7 +20,7 @@ class ErrorHandlingScalar_invalid_argument_vec : public ::testing::Test {
   std::string expected_message_without_message(T y) {
     using stan::value_type;
     std::stringstream expected_message;
-    expected_message << "function: " << y_name_ << "[" << 1 + index_ << "] "
+    expected_message << "function: " << "y" << "[" << 1 + index_ << "] "
                      << "error_message " << y[index_];
     return expected_message.str();
   }
@@ -33,8 +28,8 @@ class ErrorHandlingScalar_invalid_argument_vec : public ::testing::Test {
   template <class T>
   void test_throw(T y) {
     try {
-      stan::math::invalid_argument_vec<T>(function_, y_name_, y, index_, msg1_,
-                                          msg2_);
+      stan::math::invalid_argument_vec<T>("function", "y", y, index_, "error_message ",
+                                          " second message");
       FAIL() << "expecting call to invalid_argument_vec<> "
              << "to throw a invalid_argument, "
              << "but threw nothing";
@@ -47,7 +42,7 @@ class ErrorHandlingScalar_invalid_argument_vec : public ::testing::Test {
     }
 
     try {
-      stan::math::invalid_argument_vec<T>(function_, y_name_, y, index_, msg1_);
+      stan::math::invalid_argument_vec<T>("function", "y", y, index_, "error_message ");
       FAIL() << "expecting call to invalid_argument_vec<> "
              << "to throw a invalid_argument, "
              << "but threw nothing";
@@ -81,7 +76,7 @@ TEST_F(ErrorHandlingScalar_invalid_argument_vec, one_indexed) {
   int n = 5;
   std::vector<double> y(20);
   try {
-    stan::math::invalid_argument_vec(function_, y_name_, y, n, msg1_, msg2_);
+    stan::math::invalid_argument_vec("function", "y", y, n, "error_message ", " second message");
     FAIL() << "expecting call to invalid_argument_vec<> "
            << "to throw a invalid_argument, "
            << "but threw nothing";

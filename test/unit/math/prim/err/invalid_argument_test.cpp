@@ -2,11 +2,6 @@
 #include <gtest/gtest.h>
 #include <string>
 
-const char* function_ = "function";
-const char* y_name_ = "y";
-const char* msg1_ = "error_message ";
-const char* msg2_ = " after y";
-
 class ErrorHandlingScalar_invalid_argument : public ::testing::Test {
  public:
   void SetUp() {}
@@ -14,7 +9,7 @@ class ErrorHandlingScalar_invalid_argument : public ::testing::Test {
   template <class T>
   std::string expected_message_with_message(T y) {
     std::stringstream expected_message;
-    expected_message << "function: " << y_name_ << " error_message " << y
+    expected_message << "function: " << "y" << " error_message " << y
                      << " after y";
     return expected_message.str();
   }
@@ -22,14 +17,14 @@ class ErrorHandlingScalar_invalid_argument : public ::testing::Test {
   template <class T>
   std::string expected_message_without_message(T y) {
     std::stringstream expected_message;
-    expected_message << "function: " << y_name_ << " error_message " << y;
+    expected_message << "function: " << "y" << " error_message " << y;
     return expected_message.str();
   }
 
   template <class T>
   void test_throw(T y) {
     try {
-      stan::math::invalid_argument<T>(function_, y_name_, y, msg1_, msg2_);
+      stan::math::invalid_argument<T>("function", "y", y, "error_message ", " after y");
       FAIL() << "expecting call to invalid_argument<> "
              << "to throw a invalid_argument, "
              << "but threw nothing";
@@ -42,7 +37,7 @@ class ErrorHandlingScalar_invalid_argument : public ::testing::Test {
     }
 
     try {
-      stan::math::invalid_argument<T>(function_, y_name_, y, msg1_);
+      stan::math::invalid_argument<T>("function", "y", y, "error_message ");
       FAIL() << "expecting call to invalid_argument<> "
              << "to throw a invalid_argument, "
              << "but threw nothing";

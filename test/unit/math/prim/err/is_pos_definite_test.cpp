@@ -3,17 +3,10 @@
 #include <test/unit/math/util.hpp>
 #include <limits>
 
-using stan::math::is_pos_definite;
+TEST(ErrorHandlingMatrix, isPosDefinite) {
+  using stan::math::is_pos_definite;
 
-class ErrorHandlingMatrix : public ::testing::Test {
- public:
-  void SetUp() {}
-
-  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y;
-};
-
-TEST_F(ErrorHandlingMatrix, isPosDefinite) {
-  y.resize(1, 1);
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y(1,1);
   y << 1;
   EXPECT_TRUE(is_pos_definite(y));
 
@@ -36,12 +29,15 @@ TEST_F(ErrorHandlingMatrix, isPosDefinite) {
   EXPECT_TRUE(is_pos_definite(ldlt_2));
 }
 
-TEST_F(ErrorHandlingMatrix, isPosDefinite_not_square) {
-  y.resize(3, 4);
+TEST(ErrorHandlingMatrix, isPosDefinite_not_square) {
+  using stan::math::is_pos_definite;
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y(3, 4);
   EXPECT_FALSE(is_pos_definite(y));
 }
 
-TEST_F(ErrorHandlingMatrix, isPosDefinite_0_size) {
+TEST(ErrorHandlingMatrix, isPosDefinite_0_size) {
+  using stan::math::is_pos_definite;
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y;
   EXPECT_FALSE(is_pos_definite(y));
 
   Eigen::MatrixXd x;
@@ -52,8 +48,9 @@ TEST_F(ErrorHandlingMatrix, isPosDefinite_0_size) {
   EXPECT_TRUE(is_pos_definite(llt));
 }
 
-TEST_F(ErrorHandlingMatrix, isPosDefinite_non_symmetric) {
-  y.resize(3, 3);
+TEST(ErrorHandlingMatrix, isPosDefinite_non_symmetric) {
+  using stan::math::is_pos_definite;
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y(3, 3);
   y << 1, 0, 0, 0, 1, 0.5, 0, 0, 1;
   EXPECT_FALSE(is_pos_definite(y));
 
@@ -65,8 +62,9 @@ TEST_F(ErrorHandlingMatrix, isPosDefinite_non_symmetric) {
   EXPECT_TRUE(is_pos_definite(ldlt));
 }
 
-TEST_F(ErrorHandlingMatrix, isPosDefinite_non_pos_definite) {
-  y.resize(3, 3);
+TEST(ErrorHandlingMatrix, isPosDefinite_non_pos_definite) {
+  using stan::math::is_pos_definite;
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y(3, 3);
   y << -1, 0, 0, 0, -1, 0, 0, 0, -1;
   EXPECT_FALSE(is_pos_definite(y));
 
@@ -102,10 +100,11 @@ TEST_F(ErrorHandlingMatrix, isPosDefinite_non_pos_definite) {
   EXPECT_FALSE(is_pos_definite(ldlt_err3));
 }
 
-TEST_F(ErrorHandlingMatrix, isPosDefinite_nan) {
+TEST(ErrorHandlingMatrix, isPosDefinite_nan) {
+  using stan::math::is_pos_definite;
   double nan = std::numeric_limits<double>::quiet_NaN();
 
-  y.resize(1, 1);
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> y(1, 1);
   y << nan;
   EXPECT_FALSE(is_pos_definite(y));
 
