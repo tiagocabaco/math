@@ -1,13 +1,10 @@
+#ifdef STAN_OPENCL
 #include <stan/math/rev.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/math/rev/fun/util.hpp>
 #include <test/unit/math/rev/util.hpp>
-
-#ifdef STAN_OPENCL
+#include <test/util/expect_macros.hpp>
 #include <boost/random/mersenne_twister.hpp>
-#define EXPECT_MATRIX_NEAR(A, B, DELTA) \
-  for (int i = 0; i < A.size(); i++)    \
-    EXPECT_NEAR(stan::math::value_of(A(i)), stan::math::value_of(B(i)), DELTA);
 
 boost::random::mt19937 rng;
 #define MULTIPLY_OPENCL_OVERRIDE 0
