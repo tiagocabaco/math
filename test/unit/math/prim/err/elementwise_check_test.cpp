@@ -138,11 +138,11 @@ TEST(elementwise_check, error_messages_look_good) {
   const double bad = stan::math::NOT_A_NUMBER;
   Eigen::VectorXd bad_eigen_v = Eigen::VectorXd::Zero(3);
   bad_eigen_v[1] = bad;
-  EXPECT_THROW_MSG(do_check(bad_eigen_v), std::domain_error, "[2]");
+  EXPECT_THROW_MSG(elementwise_check_test::do_check(bad_eigen_v), std::domain_error, "[2]");
   Eigen::MatrixXd bad_m = Eigen::MatrixXd::Zero(3, 3);
   bad_m(1, 2) = bad;
-  EXPECT_THROW_MSG(do_check(bad_m), std::domain_error, "[row=2, col=3]");
+  EXPECT_THROW_MSG(elementwise_check_test::do_check(bad_m), std::domain_error, "[row=2, col=3]");
   std::vector<std::vector<double> > bad_vv{std::vector<double>{},
                                            std::vector<double>{bad}};
-  EXPECT_THROW_MSG(do_check(bad_vv), std::domain_error, "[2][1]");
+  EXPECT_THROW_MSG(elementwise_check_test::do_check(bad_vv), std::domain_error, "[2][1]");
 }

@@ -1,6 +1,7 @@
 #include <stan/math/rev.hpp>
-#include <gtest/gtest.h>
 #include <test/unit/math/util.hpp>
+#include <test/unit/math/rev/util.hpp>
+#include <gtest/gtest.h>
 #include <vector>
 
 TEST(AgradRevMatrix, accumulateDouble) {
