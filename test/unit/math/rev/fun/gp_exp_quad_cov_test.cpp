@@ -1338,15 +1338,15 @@ TEST(AgradRevMatrix, gp_exp_quad_cov_check_varis_on_stack) {
   x[1] = -1;
   x[2] = -0.5;
 
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_exp_quad_cov(to_var(x), to_var(sigma), to_var(l)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_exp_quad_cov(to_var(x), to_var(sigma), l));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_exp_quad_cov(to_var(x), sigma, to_var(l)));
-  test::check_varis_on_stack(stan::math::gp_exp_quad_cov(to_var(x), sigma, l));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(stan::math::gp_exp_quad_cov(to_var(x), sigma, l));
+  stan::test:check_varis_on_stack(
       stan::math::gp_exp_quad_cov(x, to_var(sigma), to_var(l)));
-  test::check_varis_on_stack(stan::math::gp_exp_quad_cov(x, to_var(sigma), l));
-  test::check_varis_on_stack(stan::math::gp_exp_quad_cov(x, sigma, to_var(l)));
+  stan::test:check_varis_on_stack(stan::math::gp_exp_quad_cov(x, to_var(sigma), l));
+  stan::test:check_varis_on_stack(stan::math::gp_exp_quad_cov(x, sigma, to_var(l)));
 }

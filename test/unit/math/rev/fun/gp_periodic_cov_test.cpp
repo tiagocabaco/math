@@ -2680,35 +2680,35 @@ TEST(AgradRevMatrix, gp_periodic_cov_check_varis_on_stack) {
   x[1] = -1;
   x[2] = -0.5;
 
-  test::check_varis_on_stack(stan::math::gp_periodic_cov(
+  stan::test:check_varis_on_stack(stan::math::gp_periodic_cov(
       to_var(x), to_var(sigma), to_var(l), to_var(p)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(to_var(x), to_var(sigma), to_var(l), p));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(to_var(x), to_var(sigma), l, to_var(p)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(to_var(x), sigma, to_var(l), to_var(p)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(to_var(x), to_var(sigma), l, p));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(to_var(x), sigma, to_var(l), p));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(to_var(x), sigma, l, to_var(p)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(to_var(x), sigma, l, p));
 
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(x, to_var(sigma), to_var(l), to_var(p)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(x, to_var(sigma), to_var(l), p));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(x, to_var(sigma), l, to_var(p)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(x, sigma, to_var(l), to_var(p)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(x, to_var(sigma), l, p));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(x, sigma, to_var(l), p));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::gp_periodic_cov(x, sigma, l, to_var(p)));
 }

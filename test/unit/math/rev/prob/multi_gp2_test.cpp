@@ -191,33 +191,33 @@ TEST(MultiGP, check_varis_on_stack) {
   Matrix<double, Dynamic, Dynamic> Sigma(3, 3);
   Sigma << 9.0, -3.0, 0.0, -3.0, 4.0, 0.0, 0.0, 0.0, 5.0;
 
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<true>(to_var(y), to_var(Sigma), to_var(w)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<true>(to_var(y), to_var(Sigma), w));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<true>(to_var(y), Sigma, to_var(w)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<true>(to_var(y), Sigma, w));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<true>(y, to_var(Sigma), to_var(w)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<true>(y, to_var(Sigma), w));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<true>(y, Sigma, to_var(w)));
 
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<false>(to_var(y), to_var(Sigma), to_var(w)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<false>(to_var(y), to_var(Sigma), w));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<false>(to_var(y), Sigma, to_var(w)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<false>(to_var(y), Sigma, w));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<false>(y, to_var(Sigma), to_var(w)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<false>(y, to_var(Sigma), w));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::multi_gp_log<false>(y, Sigma, to_var(w)));
 }

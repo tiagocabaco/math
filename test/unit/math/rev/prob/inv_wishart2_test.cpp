@@ -77,33 +77,33 @@ TEST(InvWishart, check_varis_on_stack) {
   Eigen::MatrixXd S(2, 2);
   S << 1.848220, 1.899623, 1.899623, 12.751941;
 
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<false>(to_var(W), to_var(nu), to_var(S)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<false>(to_var(W), to_var(nu), S));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<false>(to_var(W), nu, to_var(S)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<false>(to_var(W), nu, S));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<false>(W, to_var(nu), to_var(S)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<false>(W, to_var(nu), S));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<false>(W, nu, to_var(S)));
 
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<true>(to_var(W), to_var(nu), to_var(S)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<true>(to_var(W), to_var(nu), S));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<true>(to_var(W), nu, to_var(S)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<true>(to_var(W), nu, S));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<true>(W, to_var(nu), to_var(S)));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<true>(W, to_var(nu), S));
-  test::check_varis_on_stack(
+  stan::test:check_varis_on_stack(
       stan::math::inv_wishart_log<true>(W, nu, to_var(S)));
 }
