@@ -1,7 +1,7 @@
 #include <stan/math/mix.hpp>
 
 #include <gtest/gtest.h>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 
 using stan::partials_return_type;
 using stan::math::fvar;

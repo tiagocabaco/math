@@ -1,5 +1,5 @@
 #include <stan/math/prim.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <test/unit/math/prim/functor/utils_threads.hpp>
 #include <gtest/gtest.h>
 

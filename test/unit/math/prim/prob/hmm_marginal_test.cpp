@@ -2,7 +2,7 @@
 #include <boost/math/distributions.hpp>
 #include <boost/random.hpp>
 #include <test/unit/math/test_ad.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 #include <limits>
 #include <vector>

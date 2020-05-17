@@ -1,6 +1,6 @@
 #include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <vector>
 #include <string>
 

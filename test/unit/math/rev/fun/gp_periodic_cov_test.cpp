@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <stan/math/rev.hpp>
 #include <test/unit/math/rev/util.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <limits>
 #include <string>
 #include <vector>

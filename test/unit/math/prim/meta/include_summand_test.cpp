@@ -1,6 +1,6 @@
 #include <stan/math/prim/meta.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 
 using stan::math::include_summand;
 

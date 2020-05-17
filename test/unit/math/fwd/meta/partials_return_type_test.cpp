@@ -1,5 +1,5 @@
 #include <stan/math/fwd.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 #include <vector>
 

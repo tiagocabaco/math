@@ -3,7 +3,7 @@
 #include <stan/math/rev.hpp>
 #include <test/unit/math/prim/functor/harmonic_oscillator.hpp>
 #include <test/unit/math/prim/functor/mock_ode_functor.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 #include <vector>
 #include <string>

@@ -2,7 +2,7 @@
 #include <boost/numeric/odeint.hpp>
 #include <gtest/gtest.h>
 #include <test/unit/math/prim/functor/harmonic_oscillator.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <iostream>
 #include <sstream>
 #include <vector>

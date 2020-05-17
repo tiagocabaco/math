@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <stan/math/prim.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <limits>
 
 const char* function = "function";

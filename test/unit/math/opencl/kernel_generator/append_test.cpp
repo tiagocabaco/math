@@ -4,7 +4,7 @@
 #include <stan/math/opencl/matrix_cl.hpp>
 #include <stan/math/opencl/copy.hpp>
 #include <stan/math/prim/fun.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <Eigen/Dense>
 #include <gtest/gtest.h>
 

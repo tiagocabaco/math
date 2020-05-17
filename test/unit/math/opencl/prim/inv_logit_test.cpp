@@ -3,7 +3,7 @@
 #include <stan/math/prim/fun/inv_logit.hpp>
 #include <stan/math/prim/fun/constants.hpp>
 #include <stan/math/prim/fun/typedefs.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 #include <limits>
 

@@ -1,6 +1,6 @@
 #include <stan/math/prim.hpp>
 #include <gtest/gtest.h>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 
 TEST(MathMatrixPrimMat, cholesky_decompose) {
   stan::math::matrix_d m0;

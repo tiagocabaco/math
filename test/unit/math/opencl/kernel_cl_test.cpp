@@ -2,7 +2,7 @@
 
 #include <stan/math/prim.hpp>
 #include <stan/math/opencl/opencl.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <gtest/gtest.h>
 #include <algorithm>
 

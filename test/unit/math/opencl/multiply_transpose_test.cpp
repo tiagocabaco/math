@@ -3,7 +3,7 @@
 #include <stan/math/prim.hpp>
 #include <stan/math/opencl/multiply_transpose.hpp>
 #include <stan/math/opencl/copy.hpp>
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <boost/random/mersenne_twister.hpp>
 #include <gtest/gtest.h>
 #include <algorithm>

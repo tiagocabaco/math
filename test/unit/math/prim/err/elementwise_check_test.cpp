@@ -1,4 +1,4 @@
-#include <test/unit/util.hpp>
+#include <test/unit/math/util.hpp>
 #include <stan/math/prim.hpp>
 #include <stan/math/prim/fun/is_nan.hpp>
 #include <gtest/gtest.h>
