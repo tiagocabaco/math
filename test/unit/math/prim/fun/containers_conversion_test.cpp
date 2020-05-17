@@ -122,7 +122,7 @@ TEST(MathMatrixPrimMat, conversions_1) {
 
   // matrix to_matrix(vector)
   a2 = to_matrix(a1);
-  expect_matrix_eq(a1, a2);
+  stan::test::expect_matrix_eq(a1, a2);
 
   // matrix to_matrix(vector)
   a2 = to_matrix(c1);
@@ -172,7 +172,7 @@ TEST(MathMatrixPrimMat, conversions_1) {
 
   // vector to_vector(vector)
   c2 = to_vector(c1);
-  expect_matrix_eq(c1, c2);
+  stan::test::expect_matrix_eq(c1, c2);
 
   // vector to_vector(real[])
   c2 = to_vector(e1);
@@ -204,7 +204,7 @@ TEST(MathMatrixPrimMat, conversions_1) {
 
   // row_vector to_row_vector(row_vector)
   d2 = to_row_vector(d1);
-  expect_matrix_eq(d1, d2);
+  stan::test::expect_matrix_eq(d1, d2);
 
   // row_vector to_row_vector(real[])
   d2 = to_row_vector(e1);
@@ -253,13 +253,13 @@ TEST(MathMatrixPrimMat, conversions_1) {
   EXPECT_EQ(c1(2), e2[2]);
 
   // Now we play with some lossless operations
-  expect_matrix_eq(a1, to_matrix(to_array_2d(a1)));
-  expect_matrix_eq(c1, to_vector(to_array_1d(c1)));
-  expect_matrix_eq(c1, to_vector(to_matrix(c1)));
-  expect_matrix_eq(c1, to_vector(to_row_vector(c1)));
-  expect_matrix_eq(d1, to_row_vector(to_array_1d(d1)));
-  expect_matrix_eq(d1, to_row_vector(to_matrix(d1)));
-  expect_matrix_eq(d1, to_row_vector(to_vector(d1)));
+  stan::test::expect_matrix_eq(a1, to_matrix(to_array_2d(a1)));
+  stan::test::expect_matrix_eq(c1, to_vector(to_array_1d(c1)));
+  stan::test::expect_matrix_eq(c1, to_vector(to_matrix(c1)));
+  stan::test::expect_matrix_eq(c1, to_vector(to_row_vector(c1)));
+  stan::test::expect_matrix_eq(d1, to_row_vector(to_array_1d(d1)));
+  stan::test::expect_matrix_eq(d1, to_row_vector(to_matrix(d1)));
+  stan::test::expect_matrix_eq(d1, to_row_vector(to_vector(d1)));
 }
 
 TEST(MathMatrixPrimMat, conversions_2) {

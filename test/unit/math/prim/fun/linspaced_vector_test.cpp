@@ -6,7 +6,7 @@
 void expect_linspaced_vector(int K, double low, double high,
                              const Eigen::VectorXd& expected) {
   Eigen::VectorXd found = stan::math::linspaced_vector(K, low, high);
-  expect_matrix_eq(expected, found);
+  stan::test::expect_matrix_eq(expected, found);
 }
 
 TEST(MathFunctions, linspaced_vector) {

@@ -15,7 +15,7 @@ TEST(MathMatrixPrimMat, diagPreMultiply) {
   Matrix<double, Dynamic, Dynamic> v_m(1, 1);
   v_m << 9;
 
-  expect_matrix_eq(v_m * m, diag_pre_multiply(v, m));
+  stan::test::expect_matrix_eq(v_m * m, diag_pre_multiply(v, m));
 }
 
 TEST(MathMatrixPrimMat, diagPreMultiply2) {
@@ -31,11 +31,11 @@ TEST(MathMatrixPrimMat, diagPreMultiply2) {
   Matrix<double, Dynamic, Dynamic> v_m(3, 3);
   v_m << 1, 0, 0, 0, 2, 0, 0, 0, 3;
 
-  expect_matrix_eq(v_m * m, diag_pre_multiply(v, m));
+  stan::test::expect_matrix_eq(v_m * m, diag_pre_multiply(v, m));
 
   Matrix<double, 1, Dynamic> rv(3);
   rv << 1, 2, 3;
-  expect_matrix_eq(v_m * m, diag_pre_multiply(rv, m));
+  stan::test::expect_matrix_eq(v_m * m, diag_pre_multiply(rv, m));
 }
 
 TEST(MathMatrixPrimMat, diagPreMultiplyException) {

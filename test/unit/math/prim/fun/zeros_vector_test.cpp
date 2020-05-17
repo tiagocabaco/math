@@ -5,7 +5,7 @@
 TEST(MathFunctions, zeros_vector) {
   for (int K = 0; K < 5; K++) {
     Eigen::VectorXd v = Eigen::VectorXd::Zero(K);
-    expect_matrix_eq(v, stan::math::zeros_vector(K));
+    stan::test::expect_matrix_eq(v, stan::math::zeros_vector(K));
   }
 }
 

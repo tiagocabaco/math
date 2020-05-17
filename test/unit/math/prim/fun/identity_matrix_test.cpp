@@ -12,7 +12,7 @@ TEST(MathFunctions, identity_matrix) {
 
   for (int K = 1; K < 5; K++) {
     MatrixXd m = Eigen::MatrixXd::Identity(K, K);
-    expect_matrix_eq(m, identity_matrix(K));
+    stan::test::expect_matrix_eq(m, identity_matrix(K));
   }
 }
 

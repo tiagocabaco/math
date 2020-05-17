@@ -5,7 +5,7 @@
 TEST(MathFunctions, zeros_row_vector) {
   for (int K = 0; K < 5; K++) {
     Eigen::RowVectorXd v = Eigen::RowVectorXd::Zero(K);
-    expect_matrix_eq(v, stan::math::zeros_row_vector(K));
+    stan::test::expect_matrix_eq(v, stan::math::zeros_row_vector(K));
   }
 }
 
