@@ -35,9 +35,9 @@ typedef struct {
   bool bckwd_pass_running;
   double fwd_pass_time;
   double bckwd_pass_time;
-} profile;
+} profiler_state;
 
-using profiles = std::map<int, profile>;
+using profilers = std::map<std::string, profiler_state>;
 
 }  // namespace math
 }  // namespace stan
