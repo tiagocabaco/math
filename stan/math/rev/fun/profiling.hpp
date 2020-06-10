@@ -37,21 +37,13 @@ class start_profiling_vari : public vari {
       p[id].bckwd_pass_time = 0.0;
     }
     p[id].fwd_pass_time_start = std::chrono::steady_clock::now();
-    if (p[id].fwd_pass_running) {
-      // std::stringstream s;
-      // s << "profiling with id = " << id << " was already started!" << std::endl;
-      // throw std::runtime_error(s.str());
-    } else {
-      p[id].fwd_pass_running = true;
-    }
-    //std::cout << "Forward pass start: " << id << std::endl;
+    p[id].fwd_pass_running = true;
   }
   void chain() {
     std::chrono::duration<double> diff
         = std::chrono::steady_clock::now() - pp[id_].bkcwd_pass_time_start;
     pp[id_].bckwd_pass_time += diff.count();
     pp[id_].bckwd_pass_running = false;
-    //std::cout << "Reverse pass end: " << id_ << std::endl;
   }
 };
 
@@ -71,12 +63,10 @@ class stop_profiling_vari : public vari {
     } else {
       p[id].fwd_pass_running = false;
     }
-    //std::cout << "Forward pass stop: " << id << std::endl;
   }
   void chain() {
     pp[id_].bkcwd_pass_time_start = std::chrono::steady_clock::now();
     pp[id_].bckwd_pass_running = true;
-    //std::cout << "Reverse pass start: " << id_ << std::endl;
   }
 };
 }  // namespace internal
@@ -89,28 +79,6 @@ inline var start_profiling(std::string id, profilers& p) {
 template <typename... Types>
 inline var stop_profiling(std::string id, profilers& p) {
   return var(new internal::stop_profiling_vari(id, p));
-}
-
-// class profiler {
-//   std::string id_;
-//   profilers& pp;
-//   public:
-//   profiler(std::string id, profilers& p) : id_(id), pp(p)  {
-//     start_profiling(id_, pp);
-//   }
-//   void stop() {
-//     stop_profiling(id_, pp);
-//   }
-//   ~profiler() {
-//     //stop_profiling(id_, pp);
-//   }
-// };
-
-inline void print_profiling(profilers& p) {
-  std::cout << "section,fun_eval,gradient" << std::endl;
-  for (auto const& x : p) {
-    std::cout << x.first << "," << x.second.fwd_pass_time << "," << x.second.bckwd_pass_time << std::endl;
-  }
 }
 
 }  // namespace math
