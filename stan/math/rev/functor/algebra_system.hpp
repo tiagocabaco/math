@@ -26,7 +26,7 @@ namespace math {
 template <typename F, typename T0, typename T1, bool x_is_iv>
 struct system_functor {
   /** algebraic system functor */
-  F f_;
+  F&& f_;
   /** unknowns */
   Eigen::Matrix<T0, Eigen::Dynamic, 1> x_;
   /** auxiliary parameters */
@@ -40,11 +40,11 @@ struct system_functor {
 
   system_functor() {}
 
-  system_functor(const F& f, const Eigen::Matrix<T0, Eigen::Dynamic, 1>& x,
+  system_functor(F&& f, const Eigen::Matrix<T0, Eigen::Dynamic, 1>& x,
                  const Eigen::Matrix<T1, Eigen::Dynamic, 1>& y,
                  const std::vector<double>& dat,
                  const std::vector<int>& dat_int, std::ostream* msgs)
-      : f_(f), x_(x), y_(y), dat_(dat), dat_int_(dat_int), msgs_(msgs) {}
+      : f_(std::forward<F>(f)), x_(x), y_(y), dat_(dat), dat_int_(dat_int), msgs_(msgs) {}
 
   /**
    * An operator that takes in an independent variable. The

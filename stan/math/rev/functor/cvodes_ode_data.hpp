@@ -24,7 +24,7 @@ namespace math {
  */
 template <typename F, typename T_initial, typename T_param>
 class cvodes_ode_data {
-  const F& f_;
+  F&& f_;
   const std::vector<T_initial>& y0_;
   const std::vector<T_param>& theta_;
   const std::vector<double> theta_dbl_;
@@ -40,7 +40,7 @@ class cvodes_ode_data {
   using param_var = stan::is_var<T_param>;
 
  public:
-  const coupled_ode_system<F, T_initial, T_param> coupled_ode_;
+  const coupled_ode_system<F, const std::vector<T_initial>&, const std::vector<T_param>&> coupled_ode_;
   std::vector<double> coupled_state_;
   N_Vector nv_state_;
   N_Vector* nv_state_sens_;
@@ -73,7 +73,7 @@ class cvodes_ode_data {
                   const std::vector<T_param>& theta,
                   const std::vector<double>& x, const std::vector<int>& x_int,
                   std::ostream* msgs)
-      : f_(f),
+      : f_(std::forward<F>(f)),
         y0_(y0),
         theta_(theta),
         theta_dbl_(value_of(theta)),
@@ -167,7 +167,7 @@ class cvodes_ode_data {
     nested_rev_autodiff nested;
 
     const std::vector<var> y_vec_var(y, y + N_);
-    coupled_ode_system<F, var, double> ode_jacobian(f_, y_vec_var, theta_dbl_,
+    coupled_ode_system<F, const std::vector<var>&, const std::vector<double>&> ode_jacobian(f_, y_vec_var, theta_dbl_,
                                                     x_, x_int_, msgs_);
     std::vector<double>&& jacobian_y = std::vector<double>(ode_jacobian.size());
     ode_jacobian(ode_jacobian.initial_state(), jacobian_y, t);

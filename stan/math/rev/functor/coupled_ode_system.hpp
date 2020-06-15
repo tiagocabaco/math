@@ -55,11 +55,11 @@ namespace math {
  *          std::vector<double> x, std::vector<int>x_int, std::ostream*
  * msgs)</code>
  */
-template <typename F>
-struct coupled_ode_system<F, double, var> {
-  const F& f_;
-  const std::vector<double>& y0_dbl_;
-  const std::vector<var>& theta_;
+template <typename F, typename T1, typename T2>
+struct coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmetic, T1>, require_all_std_vector_vt<is_var, T2>> {
+  F&& f_;
+  T1 y0_dbl_;
+  T2 theta_;
   std::vector<var> theta_nochain_;
   const std::vector<double>& x_;
   const std::vector<int>& x_int_;
@@ -80,13 +80,14 @@ struct coupled_ode_system<F, double, var> {
    * @param[in] x_int integer data
    * @param[in, out] msgs stream for messages
    */
-  coupled_ode_system(const F& f, const std::vector<double>& y0,
-                     const std::vector<var>& theta,
+     template <typename YVec, typename ThetaVec>
+  coupled_ode_system(F&& f, YVec&& y0,
+                     ThetaVec&& theta,
                      const std::vector<double>& x,
                      const std::vector<int>& x_int, std::ostream* msgs)
-      : f_(f),
-        y0_dbl_(y0),
-        theta_(theta),
+      : f_(std::forward<F>(f)),
+        y0_dbl_(std::forward<T1>(y0)),
+        theta_(std::forward<T2>(theta)),
         x_(x),
         x_int_(x_int),
         N_(y0.size()),
@@ -212,11 +213,11 @@ struct coupled_ode_system<F, double, var> {
  *          std::vector<double> x, std::vector<int>x_int, std::ostream*
  * msgs)</code>
  */
-template <typename F>
-struct coupled_ode_system<F, var, double> {
-  const F& f_;
-  const std::vector<var>& y0_;
-  const std::vector<double>& theta_dbl_;
+template <typename F, typename T1, typename T2>
+struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_std_vector_vt<std::is_arithmetic, T2>> {
+  F&& f_;
+  T1 y0_;
+  T2 theta_dbl_;
   const std::vector<double>& x_;
   const std::vector<int>& x_int_;
   std::ostream* msgs_;
@@ -236,13 +237,14 @@ struct coupled_ode_system<F, var, double> {
    * @param[in] x_int integer data
    * @param[in, out] msgs stream for messages
    */
-  coupled_ode_system(const F& f, const std::vector<var>& y0,
-                     const std::vector<double>& theta,
+     template <typename YVec, typename ThetaVec>
+  coupled_ode_system(F&& f, YVec&& y0,
+                     ThetaVec&& theta,
                      const std::vector<double>& x,
                      const std::vector<int>& x_int, std::ostream* msgs)
-      : f_(f),
-        y0_(y0),
-        theta_dbl_(theta),
+      : f_(std::forward<F>(f)),
+        y0_(std::forward<T1>(y0)),
+        theta_dbl_(std::forward<T2>(theta)),
         x_(x),
         x_int_(x_int),
         msgs_(msgs),
@@ -380,11 +382,11 @@ struct coupled_ode_system<F, var, double> {
  *          std::vector<double> x, std::vector<int>x_int, std::ostream*
  * msgs)</code>
  */
-template <typename F>
-struct coupled_ode_system<F, var, var> {
-  const F& f_;
-  const std::vector<var>& y0_;
-  const std::vector<var>& theta_;
+template <typename F, typename T1, typename T2>
+struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_std_vector_vt<is_var, T2>> {
+  F&& f_;
+  T1 y0_;
+  T2 theta_;
   std::vector<var> theta_nochain_;
   const std::vector<double>& x_;
   const std::vector<int>& x_int_;
@@ -405,13 +407,14 @@ struct coupled_ode_system<F, var, var> {
    * @param[in] x_int integer data
    * @param[in, out] msgs stream for messages
    */
-  coupled_ode_system(const F& f, const std::vector<var>& y0,
-                     const std::vector<var>& theta,
+     template <typename YVec, typename ThetaVec>
+  coupled_ode_system(F&& f, YVec&& y0,
+                     ThetaVec&& theta,
                      const std::vector<double>& x,
                      const std::vector<int>& x_int, std::ostream* msgs)
-      : f_(f),
-        y0_(y0),
-        theta_(theta),
+      : f_(std::forward<F>(f)),
+        y0_(std::forward<T1>(y0)),
+        theta_(std::forward<T2>(theta)),
         x_(x),
         x_int_(x_int),
         N_(y0.size()),

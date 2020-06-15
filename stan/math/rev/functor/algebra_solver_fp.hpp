@@ -33,7 +33,7 @@ namespace math {
 template <typename F>
 struct KinsolFixedPointEnv {
   /** RHS functor. */
-  const F& f_;
+  F&& f_;
   /** val of params for @c y_ to refer to when
    params are @c var type */
   const Eigen::VectorXd y_dummy;
@@ -65,7 +65,7 @@ struct KinsolFixedPointEnv {
                       const std::vector<int>& x_i, std::ostream* msgs,
                       const std::vector<T_u>& u_scale,
                       const std::vector<T_f>& f_scale)
-      : f_(f),
+      : f_(std::forward<F>(f)),
         y_dummy(),
         y_(y),
         N_(x.size()),
@@ -86,13 +86,13 @@ struct KinsolFixedPointEnv {
 
   /** Constructor when y is param */
   template <typename T, typename T_u, typename T_f>
-  KinsolFixedPointEnv(const F& f, const Eigen::Matrix<T, -1, 1>& x,
+  KinsolFixedPointEnv(F&& f, const Eigen::Matrix<T, -1, 1>& x,
                       const Eigen::Matrix<stan::math::var, -1, 1>& y,
                       const std::vector<double>& x_r,
                       const std::vector<int>& x_i, std::ostream* msgs,
                       const std::vector<T_u>& u_scale,
                       const std::vector<T_f>& f_scale)
-      : f_(f),
+      : f_(std::forward<F>(f)),
         y_dummy(stan::math::value_of(y)),
         y_(y_dummy),
         N_(x.size()),
@@ -363,7 +363,7 @@ struct FixedPointSolver<KinsolFixedPointEnv<F>, fp_jac_type> {
  */
 template <typename F, typename T1, typename T2, typename T_u, typename T_f>
 Eigen::Matrix<T2, -1, 1> algebra_solver_fp(
-    const F& f, const Eigen::Matrix<T1, -1, 1>& x,
+    F&& f, const Eigen::Matrix<T1, -1, 1>& x,
     const Eigen::Matrix<T2, -1, 1>& y, const std::vector<double>& x_r,
     const std::vector<int>& x_i, const std::vector<T_u>& u_scale,
     const std::vector<T_f>& f_scale, std::ostream* msgs = nullptr,

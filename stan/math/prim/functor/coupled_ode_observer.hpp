@@ -32,7 +32,7 @@ struct coupled_ode_observer {
   using ops_partials_t
       = operands_and_partials<std::vector<T1>, std::vector<T2>, T_t0, T_ts>;
 
-  const F& f_;
+  F&& f_;
   const std::vector<T1>& y0_;
   const T_t0& t0_;
   const std::vector<T_ts>& ts_;
@@ -67,13 +67,13 @@ struct coupled_ode_observer {
    * @param[out] msgs the print stream for warning messages.
    * @param[out] y reference to a vector of vector of the final return
    */
-  coupled_ode_observer(const F& f, const std::vector<T1>& y0,
+  coupled_ode_observer(F&& f, const std::vector<T1>& y0,
                        const std::vector<T2>& theta, const T_t0& t0,
                        const std::vector<T_ts>& ts,
                        const std::vector<double>& x,
                        const std::vector<int>& x_int, std::ostream* msgs,
                        std::vector<std::vector<return_t>>& y)
-      : f_(f),
+      : f_(std::forward<F>(f)),
         y0_(y0),
         t0_(t0),
         ts_(ts),

@@ -6,15 +6,15 @@
 #include <vector>
 
 struct harm_osc_ode_fun {
-  template <typename T0, typename T1, typename T2>
-  inline std::vector<stan::return_type_t<T1, T2>>
   // initial time
   // initial positions
   // parameters
   // double data
   // integer data
-  operator()(const T0& t_in, const std::vector<T1>& y_in,
-             const std::vector<T2>& theta, const std::vector<double>& x,
+  template <typename T0, typename T1, typename T2>
+  inline std::vector<stan::return_type_t<T1, T2>>
+  operator()(const T0& t_in, T1&& y_in,
+             const T2& theta, const std::vector<double>& x,
              const std::vector<int>& x_int, std::ostream* msgs) const {
     if (y_in.size() != 2)
       throw std::domain_error(

@@ -3,6 +3,7 @@
 
 #include <stan/math/prim/err.hpp>
 #include <stan/math/prim/fun/size.hpp>
+#include <stan/math/prim/meta.hpp>
 #include <ostream>
 #include <vector>
 
@@ -26,7 +27,7 @@ namespace math {
  * @tparam T1 scalar type of the initial state
  * @tparam T2 scalar type of the parameters
  */
-template <typename F, typename T1, typename T2>
+template <typename F, typename T1, typename T2, typename = void, typename = void>
 struct coupled_ode_system {};
 
 /**
@@ -42,12 +43,12 @@ struct coupled_ode_system {};
  *   std::vector<double> theta, std::vector<double> x,
  *   std::vector<int>x_int, std::ostream* msgs)</code>
  */
-template <typename F>
-class coupled_ode_system<F, double, double> {
+template <typename F, typename T1, typename T2>
+class coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmetic, T1, T2>> {
  public:
-  const F& f_;
-  const std::vector<double>& y0_dbl_;
-  const std::vector<double>& theta_dbl_;
+  F&& f_;
+  T1 y0_dbl_;
+  T2 theta_dbl_;
   const std::vector<double>& x_;
   const std::vector<int>& x_int_;
   const size_t N_;
@@ -67,13 +68,13 @@ class coupled_ode_system<F, double, double> {
    * @param[in] x_int integer data
    * @param[in, out] msgs stream for messages
    */
-  coupled_ode_system(const F& f, const std::vector<double>& y0,
-                     const std::vector<double>& theta,
+  template <typename YVec, typename ThetaVec>
+  coupled_ode_system(F&& f, YVec&& y0, ThetaVec&& theta,
                      const std::vector<double>& x,
                      const std::vector<int>& x_int, std::ostream* msgs)
-      : f_(f),
-        y0_dbl_(y0),
-        theta_dbl_(theta),
+      : f_(std::forward<F>(f)),
+        y0_dbl_(std::forward<T1>(y0)),
+        theta_dbl_(std::forward<T2>(theta)),
         x_(x),
         x_int_(x_int),
         N_(y0.size()),
@@ -93,9 +94,9 @@ class coupled_ode_system<F, double, double> {
    * @throw exception if the system function does not return
    * a derivative vector of the same size as the state vector.
    */
-  void operator()(const std::vector<double>& y, std::vector<double>& dy_dt,
-                  double t) const {
-    dy_dt = f_(t, y, theta_dbl_, x_, x_int_, msgs_);
+  template <typename YVec, typename DyVec>
+  void operator()(YVec&& y, DyVec& dy_dt, double t) const {
+    dy_dt = f_(t, std::forward<YVec>(y), theta_dbl_, x_, x_int_, msgs_);
     check_size_match("coupled_ode_system", "y", y.size(), "dy_dt",
                      dy_dt.size());
   }
