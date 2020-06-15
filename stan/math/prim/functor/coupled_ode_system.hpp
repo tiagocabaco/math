@@ -95,7 +95,7 @@ class coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmetic
    * a derivative vector of the same size as the state vector.
    */
   template <typename YVec, typename DyVec>
-  void operator()(YVec&& y, DyVec& dy_dt, double t) const {
+  EIGEN_STRONG_INLINE void operator()(YVec&& y, DyVec& dy_dt, double t) const {
     dy_dt = f_(t, std::forward<YVec>(y), theta_dbl_, x_, x_int_, msgs_);
     check_size_match("coupled_ode_system", "y", y.size(), "dy_dt",
                      dy_dt.size());
@@ -114,7 +114,7 @@ class coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmetic
    *
    * @return initial state of the coupled system
    */
-  std::vector<double> initial_state() const {
+  EIGEN_STRONG_INLINE std::vector<double> initial_state() const {
     std::vector<double> state(size_, 0.0);
     for (size_t n = 0; n < N_; n++) {
       state[n] = y0_dbl_[n];

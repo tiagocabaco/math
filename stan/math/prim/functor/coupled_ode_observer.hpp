@@ -105,7 +105,7 @@ struct coupled_ode_observer {
    * @param t time of solution. The time must correspond to the
    * element ts[next_ts_index_]
    */
-  void operator()(const std::vector<double>& coupled_state, double t) {
+  EIGEN_STRONG_INLINE void operator()(const std::vector<double>& coupled_state, double t) {
     check_less("coupled_ode_observer", "time-state number", next_ts_index_,
                ts_.size());
 

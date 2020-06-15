@@ -94,7 +94,7 @@ struct coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmeti
         M_(theta.size()),
         size_(N_ + N_ * M_),
         msgs_(msgs) {
-    for (const var& p : theta) {
+    for (auto&& p : theta) {
       theta_nochain_.emplace_back(new vari(p.val(), false));
     }
   }
@@ -113,7 +113,7 @@ struct coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmeti
    * @throw exception if the base ode function does not return the
    *    expected number of derivatives, N.
    */
-  void operator()(const std::vector<double>& z, std::vector<double>& dz_dt,
+  EIGEN_STRONG_INLINE void operator()(const std::vector<double>& z, std::vector<double>& dz_dt,
                   double t) const {
     using std::vector;
 
@@ -177,7 +177,7 @@ struct coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmeti
    * @return the initial condition of the coupled system, a vector of
    *   size N + N * M.
    */
-  std::vector<double> initial_state() const {
+  EIGEN_STRONG_INLINE std::vector<double> initial_state() const {
     std::vector<double> state(size_, 0.0);
     for (size_t n = 0; n < N_; n++) {
       state[n] = y0_dbl_[n];
@@ -266,7 +266,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
    * @throw exception if the base ode function does not return the
    *    expected number of derivatives, N.
    */
-  void operator()(const std::vector<double>& z, std::vector<double>& dz_dt,
+  EIGEN_STRONG_INLINE void operator()(const std::vector<double>& z, std::vector<double>& dz_dt,
                   double t) const {
     using std::vector;
 
@@ -307,7 +307,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
    *
    * @return size of the coupled system.
    */
-  size_t size() const { return size_; }
+  inline size_t size() const { return size_; }
 
   /**
    * Returns the initial state of the coupled system.
@@ -322,7 +322,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
    *   correspond to the identity matrix which is the Jacobian of the
    *   integrated function at the initial time-point.
    */
-  std::vector<double> initial_state() const {
+  EIGEN_STRONG_INLINE std::vector<double> initial_state() const {
     std::vector<double> initial(size_, 0.0);
     for (size_t i = 0; i < N_; i++) {
       initial[i] = value_of(y0_[i]);
@@ -421,7 +421,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
         M_(theta.size()),
         size_(N_ + N_ * (N_ + M_)),
         msgs_(msgs) {
-    for (const var& p : theta) {
+    for (auto&& p : theta) {
       theta_nochain_.emplace_back(new vari(p.val(), false));
     }
   }
@@ -440,7 +440,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
    * @throw exception if the base ode function does not return the
    *    expected number of derivatives, N.
    */
-  void operator()(const std::vector<double>& z, std::vector<double>& dz_dt,
+  EIGEN_STRONG_INLINE void operator()(const std::vector<double>& z, std::vector<double>& dz_dt,
                   double t) const {
     using std::vector;
 
@@ -497,7 +497,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
    *
    * @return size of the coupled system.
    */
-  size_t size() const { return size_; }
+  inline size_t size() const { return size_; }
 
   /**
    * Returns the initial state of the coupled system.
@@ -517,7 +517,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
    *   elements are all zero as these are the Jacobian wrt to the
    *   parameters at the initial time-point, which is zero.
    */
-  std::vector<double> initial_state() const {
+  EIGEN_STRONG_INLINE std::vector<double> initial_state() const {
     std::vector<double> initial(size_, 0.0);
     for (size_t i = 0; i < N_; i++) {
       initial[i] = value_of(y0_[i]);

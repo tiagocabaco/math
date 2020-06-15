@@ -67,7 +67,7 @@ namespace math {
  * same size as the state variable, corresponding to a time in ts.
  */
 template <typename F, typename T1, typename T2, typename T_t0, typename T_ts, typename XVec, typename IntVec>
-std::vector<std::vector<return_type_t<T1, T2, T_t0, T_ts>>> integrate_ode_rk45(
+static EIGEN_STRONG_INLINE std::vector<std::vector<return_type_t<T1, T2, T_t0, T_ts>>> integrate_ode_rk45(
     F&& f, T1&& y0, T_t0&& t0, T_ts&& ts, T2&& theta, XVec& x, IntVec&& x_int,
     std::ostream* msgs = nullptr, double relative_tolerance = 1e-6,
     double absolute_tolerance = 1e-6, int max_num_steps = 1E6) {
