@@ -57,7 +57,7 @@ namespace math {
  */
 template <typename F, typename T1, typename T2>
 struct coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmetic, T1>, require_all_std_vector_vt<is_var, T2>> {
-  F&& f_;
+  F f_;
   T1 y0_dbl_;
   T2 theta_;
   std::vector<var> theta_nochain_;
@@ -215,7 +215,7 @@ struct coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmeti
  */
 template <typename F, typename T1, typename T2>
 struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_std_vector_vt<std::is_arithmetic, T2>> {
-  F&& f_;
+  F f_;
   T1 y0_;
   T2 theta_dbl_;
   const std::vector<double>& x_;
@@ -384,7 +384,7 @@ struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_
  */
 template <typename F, typename T1, typename T2>
 struct coupled_ode_system<F, T1, T2, require_std_vector_vt<is_var, T1>, require_std_vector_vt<is_var, T2>> {
-  F&& f_;
+  F f_;
   T1 y0_;
   T2 theta_;
   std::vector<var> theta_nochain_;

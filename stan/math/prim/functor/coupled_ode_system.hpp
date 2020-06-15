@@ -46,7 +46,7 @@ struct coupled_ode_system {};
 template <typename F, typename T1, typename T2>
 class coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmetic, T1, T2>> {
  public:
-  F&& f_;
+  F f_;
   T1 y0_dbl_;
   T2 theta_dbl_;
   const std::vector<double>& x_;

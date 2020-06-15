@@ -87,7 +87,7 @@ namespace math {
 template <typename F, typename Tyy, typename Typ, typename Tpar>
 class idas_system {
  protected:
-  F&& f_;
+  F f_;
   const std::vector<Tyy>& yy_;
   const std::vector<Typ>& yp_;
   std::vector<double> yy_val_;  // workspace

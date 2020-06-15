@@ -33,7 +33,7 @@ namespace math {
 template <typename F>
 struct KinsolFixedPointEnv {
   /** RHS functor. */
-  F&& f_;
+  F f_;
   /** val of params for @c y_ to refer to when
    params are @c var type */
   const Eigen::VectorXd y_dummy;

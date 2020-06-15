@@ -24,7 +24,7 @@ namespace math {
  */
 template <typename F, typename T_initial, typename T_param>
 class cvodes_ode_data {
-  F&& f_;
+  F f_;
   const std::vector<T_initial>& y0_;
   const std::vector<T_param>& theta_;
   const std::vector<double> theta_dbl_;

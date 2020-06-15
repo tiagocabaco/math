@@ -26,7 +26,7 @@ namespace math {
 template <typename F, typename T0, typename T1, bool x_is_iv>
 struct system_functor {
   /** algebraic system functor */
-  F&& f_;
+  F f_;
   /** unknowns */
   Eigen::Matrix<T0, Eigen::Dynamic, 1> x_;
   /** auxiliary parameters */
