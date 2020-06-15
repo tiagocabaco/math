@@ -68,11 +68,11 @@ class coupled_ode_system<F, T1, T2, require_all_std_vector_vt<std::is_arithmetic
    * @param[in] x_int integer data
    * @param[in, out] msgs stream for messages
    */
-  template <typename YVec, typename ThetaVec>
-  coupled_ode_system(F&& f, YVec&& y0, ThetaVec&& theta,
+  template <typename FF, typename YVec, typename ThetaVec>
+  coupled_ode_system(FF&& f, YVec&& y0, ThetaVec&& theta,
                      const std::vector<double>& x,
                      const std::vector<int>& x_int, std::ostream* msgs)
-      : f_(std::forward<F>(f)),
+      : f_(std::forward<FF>(f)),
         y0_dbl_(std::forward<T1>(y0)),
         theta_dbl_(std::forward<T2>(theta)),
         x_(x),

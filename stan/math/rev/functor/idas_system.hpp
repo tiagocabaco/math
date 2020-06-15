@@ -128,11 +128,12 @@ class idas_system {
    * @param[in] x_i integer data vector for the DAE.
    * @param[in] msgs stream to which messages are printed.
    */
-  idas_system(const F& f, const std::vector<int>& eq_id,
+  template <typename FF>
+  idas_system(FF&& f, const std::vector<int>& eq_id,
               const std::vector<Tyy>& yy0, const std::vector<Typ>& yp0,
               const std::vector<Tpar>& theta, const std::vector<double>& x_r,
               const std::vector<int>& x_i, std::ostream* msgs)
-      : f_(std::forward<F>(f)),
+      : f_(std::forward<FF>(f)),
         yy_(yy0),
         yp_(yp0),
         yy_val_(value_of(yy0)),

@@ -69,11 +69,12 @@ class cvodes_ode_data {
    * @param[in] x_int integer data vector for the ODE.
    * @param[in] msgs stream to which messages are printed.
    */
-  cvodes_ode_data(const F& f, const std::vector<T_initial>& y0,
+  template <typename FF>
+  cvodes_ode_data(const FF& f, const std::vector<T_initial>& y0,
                   const std::vector<T_param>& theta,
                   const std::vector<double>& x, const std::vector<int>& x_int,
                   std::ostream* msgs)
-      : f_(std::forward<F>(f)),
+      : f_(std::forward<FF>(f)),
         y0_(y0),
         theta_(theta),
         theta_dbl_(value_of(theta)),

@@ -39,12 +39,12 @@ struct system_functor {
   std::ostream* msgs_;
 
   system_functor() {}
-
-  system_functor(F&& f, const Eigen::Matrix<T0, Eigen::Dynamic, 1>& x,
+  template <typename FF>
+  system_functor(FF&& f, const Eigen::Matrix<T0, Eigen::Dynamic, 1>& x,
                  const Eigen::Matrix<T1, Eigen::Dynamic, 1>& y,
                  const std::vector<double>& dat,
                  const std::vector<int>& dat_int, std::ostream* msgs)
-      : f_(std::forward<F>(f)), x_(x), y_(y), dat_(dat), dat_int_(dat_int), msgs_(msgs) {}
+      : f_(std::forward<FF>(f)), x_(x), y_(y), dat_(dat), dat_int_(dat_int), msgs_(msgs) {}
 
   /**
    * An operator that takes in an independent variable. The
