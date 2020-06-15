@@ -22,25 +22,25 @@ namespace math {
  * @tparam T_initial type of initial values
  * @tparam T_param type of parameters
  */
-template <typename F, typename T_initial, typename T_param>
+template <typename F, typename T_initial, typename T_param, typename XVec, typename IntVec>
 class cvodes_ode_data {
   F f_;
-  const std::vector<T_initial>& y0_;
-  const std::vector<T_param>& theta_;
+  T_initial y0_;
+  T_param theta_;
   const std::vector<double> theta_dbl_;
   const size_t N_;
   const size_t M_;
-  const std::vector<double>& x_;
-  const std::vector<int>& x_int_;
+  XVec x_;
+  IntVec x_int_;
   std::ostream* msgs_;
   const size_t S_;
 
-  using ode_data = cvodes_ode_data<F, T_initial, T_param>;
-  using initial_var = stan::is_var<T_initial>;
-  using param_var = stan::is_var<T_param>;
+  using ode_data = cvodes_ode_data<F, T_initial, T_param, XVec, IntVec>;
+  using initial_var = stan::is_var<value_type_t<T_initial>>;
+  using param_var = stan::is_var<value_type_t<T_param>>;
 
  public:
-  const coupled_ode_system<F, const std::vector<T_initial>&, const std::vector<T_param>&> coupled_ode_;
+  const coupled_ode_system<F, T_initial, T_param> coupled_ode_;
   std::vector<double> coupled_state_;
   N_Vector nv_state_;
   N_Vector* nv_state_sens_;
@@ -69,22 +69,20 @@ class cvodes_ode_data {
    * @param[in] x_int integer data vector for the ODE.
    * @param[in] msgs stream to which messages are printed.
    */
-  template <typename FF>
-  cvodes_ode_data(const FF& f, const std::vector<T_initial>& y0,
-                  const std::vector<T_param>& theta,
-                  const std::vector<double>& x, const std::vector<int>& x_int,
+  template <typename FF, typename Y0Vec, typename ThetaVec, typename XVec1, typename IntVec1>
+  cvodes_ode_data(const FF& f, Y0Vec&& y0, ThetaVec&& theta, XVec1&& x, IntVec1&& x_int,
                   std::ostream* msgs)
       : f_(std::forward<FF>(f)),
-        y0_(y0),
-        theta_(theta),
-        theta_dbl_(value_of(theta)),
-        N_(y0.size()),
-        M_(theta.size()),
-        x_(x),
-        x_int_(x_int),
+        y0_(std::forward<Y0Vec>(y0)),
+        theta_(std::forward<ThetaVec>(theta)),
+        theta_dbl_(value_of(theta_)),
+        N_(y0_.size()),
+        M_(theta_.size()),
+        x_(std::forward<XVec1>(x)),
+        x_int_(std::forward<IntVec1>(x_int)),
         msgs_(msgs),
         S_((initial_var::value ? N_ : 0) + (param_var::value ? M_ : 0)),
-        coupled_ode_(f, y0, theta, x, x_int, msgs),
+        coupled_ode_(f_, y0_, theta_, x_, x_int_, msgs_),
         coupled_state_(coupled_ode_.initial_state()),
         nv_state_(N_VMake_Serial(N_, &coupled_state_[0])),
         nv_state_sens_(nullptr),

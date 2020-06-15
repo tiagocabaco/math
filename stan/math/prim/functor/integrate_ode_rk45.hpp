@@ -66,11 +66,9 @@ namespace math {
  * @return a vector of states, each state being a vector of the
  * same size as the state variable, corresponding to a time in ts.
  */
-template <typename F, typename T1, typename T2, typename T_t0, typename T_ts>
+template <typename F, typename T1, typename T2, typename T_t0, typename T_ts, typename XVec, typename IntVec>
 std::vector<std::vector<return_type_t<T1, T2, T_t0, T_ts>>> integrate_ode_rk45(
-    F&& f, T1&& y0, const T_t0& t0,
-    const std::vector<T_ts>& ts, T2&& theta,
-    const std::vector<double>& x, const std::vector<int>& x_int,
+    F&& f, T1&& y0, T_t0&& t0, T_ts&& ts, T2&& theta, XVec& x, IntVec&& x_int,
     std::ostream* msgs = nullptr, double relative_tolerance = 1e-6,
     double absolute_tolerance = 1e-6, int max_num_steps = 1E6) {
   using boost::numeric::odeint::integrate_times;
@@ -115,15 +113,15 @@ std::vector<std::vector<return_type_t<T1, T2, T_t0, T_ts>>> integrate_ode_rk45(
   std::copy(ts_dbl.begin(), ts_dbl.end(), ts_vec.begin() + 1);
 
   std::vector<std::vector<return_type_t<T1, T2, T_t0, T_ts>>> y;
-  coupled_ode_observer<F, value_type_t<T1>, value_type_t<T2>, T_t0, T_ts> observer(f, y0, theta, t0, ts, x,
-                                                       x_int, msgs, y);
+  using observer_t = coupled_ode_observer<F, T1, T2, T_t0, T_ts, XVec, IntVec>;
+  observer_t observer(f, y0, theta, t0, ts, x, x_int, msgs, y);
   bool observer_initial_recorded = false;
 
   // avoid recording of the initial state which is included by the
   // conventions of odeint in the output
   size_t timestep = 0;
   auto filtered_observer
-      = [&](const std::vector<double>& coupled_state, double t) -> void {
+      = [&](auto&& coupled_state, double t) -> void {
     if (!observer_initial_recorded) {
       observer_initial_recorded = true;
       return;
@@ -131,18 +129,18 @@ std::vector<std::vector<return_type_t<T1, T2, T_t0, T_ts>>> integrate_ode_rk45(
     observer(coupled_state, t);
     timestep++;
   };
-
   // the coupled system creates the coupled initial state
   std::vector<double> initial_coupled_state = coupled_system.initial_state();
 
+  // the coupled system creates the coupled initial state
   const double step_size = 0.1;
   try {
     integrate_times(
         make_dense_output(absolute_tolerance, relative_tolerance,
                           runge_kutta_dopri5<std::vector<double>, double,
                                              std::vector<double>, double>()),
-        std::ref(coupled_system), initial_coupled_state, std::begin(ts_vec),
-        std::end(ts_vec), step_size, filtered_observer,
+        std::move(coupled_system), initial_coupled_state, std::begin(ts_vec),
+        std::end(ts_vec), 0.1, std::move(filtered_observer),
         max_step_checker(max_num_steps));
   } catch (const no_progress_error& e) {
     throw_domain_error("integrate_ode_rk45", "", ts_vec[timestep + 1],

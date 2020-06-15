@@ -25,20 +25,20 @@ namespace math {
  * used in stan-math.
  *
  */
-template <typename F, typename T1, typename T2, typename T_t0, typename T_ts>
+template <typename F, typename T1, typename T2, typename T_t0, typename T_ts, typename XVec, typename IntVec>
 struct coupled_ode_observer {
   using return_t = return_type_t<T1, T2, T_t0, T_ts>;
 
   using ops_partials_t
-      = operands_and_partials<std::vector<T1>, std::vector<T2>, T_t0, T_ts>;
+      = operands_and_partials<T1, T2, T_t0, value_type_t<T_ts>>;
 
   F f_;
-  const std::vector<T1>& y0_;
-  const T_t0& t0_;
-  const std::vector<T_ts>& ts_;
-  const std::vector<T2>& theta_;
-  const std::vector<double>& x_;
-  const std::vector<int>& x_int_;
+  T1 y0_;
+  T_t0 t0_;
+  T_ts ts_;
+  T2 theta_;
+  XVec x_;
+  IntVec x_int_;
   std::ostream* msgs_;
   std::vector<std::vector<return_t>>& y_;
   const std::size_t N_;
@@ -67,29 +67,26 @@ struct coupled_ode_observer {
    * @param[out] msgs the print stream for warning messages.
    * @param[out] y reference to a vector of vector of the final return
    */
-  template <typename FF>
-  coupled_ode_observer(FF&& f, const std::vector<T1>& y0,
-                       const std::vector<T2>& theta, const T_t0& t0,
-                       const std::vector<T_ts>& ts,
-                       const std::vector<double>& x,
-                       const std::vector<int>& x_int, std::ostream* msgs,
+  template <typename FF, typename Y0Vec, typename ThetaVec, typename T0Scalar, typename TsVec, typename XVec1, typename IntVec1>
+  coupled_ode_observer(FF&& f, Y0Vec&& y0, ThetaVec&& theta, T0Scalar&& t0,
+                       TsVec&& ts, XVec1&& x, IntVec1&& x_int, std::ostream* msgs,
                        std::vector<std::vector<return_t>>& y)
       : f_(std::forward<FF>(f)),
-        y0_(y0),
+        y0_(std::forward<Y0Vec>(y0)),
         t0_(t0),
-        ts_(ts),
-        theta_(theta),
-        x_(x),
-        x_int_(x_int),
+        ts_(std::forward<TsVec>(ts)),
+        theta_(std::forward<ThetaVec>(theta)),
+        x_(std::forward<XVec1>(x)),
+        x_int_(std::forward<IntVec1>(x_int)),
         msgs_(msgs),
         y_(y),
-        N_(y0.size()),
-        M_(theta.size()),
+        N_(y0_.size()),
+        M_(theta_.size()),
         index_offset_theta_(is_constant_all<T1>::value ? 0 : N_ * N_),
         next_ts_index_(0) {
     if (!is_constant_all<T_t0>::value) {
       initial_dy_dt_
-          = f(value_of(t0), value_of(y0), value_of(theta_), x_, x_int_, msgs_);
+          = f(value_of(t0_), value_of(y0_), value_of(theta_), x_, x_int_, msgs_);
       check_size_match("coupled_ode_observer", "dy_dt", initial_dy_dt_.size(),
                        "states", N_);
     }
